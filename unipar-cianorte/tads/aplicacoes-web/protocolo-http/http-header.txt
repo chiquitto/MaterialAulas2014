@@ -1,0 +1,45 @@
+GET /diretorio/arquivo.html HTTP/1.0
+Host: www.exemplo.com
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; pt-BR; rv:1.9.2b5) Gecko/20091204 Firefox/3.6b5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: pt-br,pt;q=0.8,en-us;q=0.5,en;q=0.3
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-alive: 115
+Cookie: nome=valor; nome2=valor2
+Connection: keep-alive
+Content-Length: 28
+
+usuario=exemplo&senha=123456
+
+=======================================
+
+Requisição para ser utilizada em sala de aula
+
+=======================================
+
+GET / HTTP/1.0
+Host: www.google.com
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; pt-BR; rv:1.9.2b5) Gecko/20091204 Firefox/3.6b5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: pt-br,pt;q=0.8,en-us;q=0.5,en;q=0.3
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+
+=======================================
+
+Exemplo de Resposta
+
+=======================================
+
+HTTP/1.1 200 OK
+Server: nginx/1.4.4
+Date: Thu, 06 Feb 2014 17:25:04 GMT
+Content-Type: text/html
+Connection: close
+
+<!DOCTYPE html>
+<html>
+<head></head>
+<body></body>
+</html>
