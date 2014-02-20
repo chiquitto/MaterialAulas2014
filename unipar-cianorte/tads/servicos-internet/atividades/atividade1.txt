@@ -1,0 +1,27 @@
+Objetivo: Aprender a utilizar repositorios GIT.
+
+A atividade consiste em pequenos tarefas incrementais, ou seja, para iniciar a tarefa 2 é necessário a conclusão da tarefa 1.
+Cada tarefa tem uma data máxima de entrega. Após a data, a conclusão da tarefa não valerá mais pontos.
+Mesmo sem valer pontos, a tarefa deve ser concluída para que possa ser possível iniciar a próxima tarefa.
+
+A sala será dividida em equipes de 4 alunos.
+
+==
+
+Antes de começar
+
+Leia o livro para conhecer a ferramenta, e saber como funciona:
+http://git-scm.com/book/pt-br
+
+Também é possível fazer um mini curso em:
+http://try.github.com/
+
+==
+
+Tarefa 1:
+. Criar um repositorio no site github.com (e enviar o endereco do repositorio para chiquitto+3ano-git@unipar.br);
+. Criar o arquivo "./alunos.txt" e adicionar o NOME e RA de todos os integrantes da equipe;
+. Fazer o commit;
+. Fazer o push dos commits para o github.com;
+
+==
