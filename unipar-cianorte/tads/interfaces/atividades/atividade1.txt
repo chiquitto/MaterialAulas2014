@@ -1,0 +1,29 @@
+Objetivo: Fazer uma montagem no Fireworks
+
+O que deve ser entregue:
+Um projeto do Fireworks, com tamanho 500x400px;
+
+Elementos do projeto:
+O projeto deve conter obrigatoriamente uma montagem com todos os seguintes elementos descritos abaixo:
+
+. Fundo do cenário em bitmap;
+
+. 3 figuras (bitmap) de personagens de desenhos animados dos desenhos: Simpsons, Pokemon, Pica-Pau, Bob-Esponja;
+
+. 3 elementos de cenário em vetor;
+Ex.: Uma cadeira desenhada com elementos em vetor;
+
+Critérios de avaliação:
+. Qualidade do recorte dos bitmaps: até +0,4 pontos;
+. Detalhes dos vetores: até +0,4;
+. Criatividade: até +0,2;
+. Inexistência de algum dos elementos: -0,1 ponto por elemento;
+
+Valor da atividade: 1,0 ponto
+
+Entrega:
+Entregar a atividade até 06/03/2014, no email: chiquitto+1ano-montagem@unipar.br
+Trabalhos iguais ou entregues após a data de entrega serão zerados.
+
+O email da entrega deve conter o nome de todos os participantes da equipe, com os seus respectivos RAs, mais o projeto do fireworks da atividade;
+
