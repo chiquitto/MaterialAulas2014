@@ -1,0 +1,94 @@
+# Sobreposição de métodos/propriedades
+
+. Os métodos podem ser sobrepostos por redeclaração;
+. Para acessar os métodos sobrepostos, podemos utilizar a palavra chave parent, seguido do operador :: (parent::)
+
+<?php
+
+class Carro {
+	protected $velocidade;
+	
+	public function acelerar() {
+		$this->velocidade++;
+	}
+}
+
+class CarroEsportivo
+extends Carro {
+	public function acelerar() {
+		parent::acelerar();
+		parent::acelerar();
+	}
+}
+?>
+
+# Clonagem de objetos
+
+. No PHP a palavra chave clone faz a clonagem de objetos
+
+<?php
+class Aluno {
+	public $nome;
+}
+
+$aluno1 = new Aluno();
+$aluno2 = clone $aluno1;
+?>
+
+# Classes/métodos abstratas
+
+. Classes abstratas não podem ser instanciadas;
+. Qualquer classe que contenha um método abstrato deve ser abstrata;
+. Quando estendemos um classe abstrata, todos os métodos abstratos devem ser declarados;
+
+<?php
+abstract class Veiculo {
+	abstract public function fabricar($ano);
+}
+class Ford extends Veiculo {
+	public function fabricar($ano) {
+		echo "Fabricado na Alemanda em $ano";
+	}
+}
+class Fiat extends Veiculo {
+	public function fabricar($ano) {
+		echo "Fabricado nos EUA em $ano";
+	}
+}
+?>
+
+# Métodos mágicos
+
+. No PHP existe o recurso chamado de métodos mágicos. Estes métodos são gatilhos, que são executados após alguma ação;
+
+Métodos mágicos
+__construct();
+__destruct();
+__toString();
+__invoke();
+__call();
+__set();
+__get();
+__clone();
+
+# Atividade 1
+
+Criar as seguintes classes: Escola e Aluno;
+- A classe Escola deve conter:
+– Propriedade $alunos = array();
+– Método matricular($aluno) que irá adicionar $aluno à propriedade $alunos;
+– Método mostrarAlunos() que lista os nomes dos alunos matriculados;
+- A classe Aluno deve conter:
+– Propriedade $nome;
+- Matricular alguns alunos na Escola;
+- Mostrar os nomes dos alunos matriculados;
+
+# Criar uma classe Aritmetica com:
+– Propriedades protegidas $n1 e $n2;
+– Métodos públicos para atribuir valores à $n1 e $n2;
+- Classe Soma que estende Aritmetica;
+– Método público somar() que retorna a soma entre $n1 e $n2;
+- Classe Divisao que estende Aritmetica;
+– Método público dividir() que retorna a divisao de $n1 por $n2;
+– Método público mod() que retorna o mod de $n1 por $n2;
+- Usar as classes Soma e Divisao para obter somas, divisões e restos entre 2 números qualquer;
