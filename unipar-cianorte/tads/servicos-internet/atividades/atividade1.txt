@@ -18,8 +18,8 @@ http://try.github.com/
 
 ==
 
-Tarefa 1:
-. Criar um repositorio no site github.com (e enviar o endereco do repositorio para chiquitto+3ano-git@unipar.br);
+Tarefa 1 (entrega até 28/02):
+. Criar um repositório no site github.com (e enviar o endereco do repositório para chiquitto+3ano-git@unipar.br);
 . Criar o arquivo "./alunos.txt" e adicionar o NOME e RA de todos os integrantes da equipe;
 . Fazer o commit;
 . Fazer o push dos commits para o github.com;
