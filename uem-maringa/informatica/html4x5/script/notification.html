@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Web Notification Sample</title>
+</head>
+<body>
+
+<button id="authorize">Authorize notification</button>
+<button id="show">Show notification</button>
+<button id="show_another">Show another notification</button>
+
+<script>
+function authorizeNotification() {
+    Notification.requestPermission(function(perm) {
+        alert(perm);
+    });
+}
+function showNotification(myTag) {
+    var notification = new Notification("Titulo de: " + myTag, {
+        dir: "auto",
+        lang: "pt-br",
+        body: "Mensagem: " + myTag,
+        tag: myTag,
+        icon: './assets/darth-vader.jpg',
+    });
+}
+document.querySelector("#authorize").onclick = authorizeNotification;
+document.querySelector("#show").onclick = function(){ showNotification("firstTag"); };
+document.querySelector("#show_another").onclick = function(){ showNotification("secondTag"); };
+</script>
+
+</body>
+</html>
