@@ -8,3 +8,4 @@ class Matematica {
 		return self::$resultado;
 	}
 }
+

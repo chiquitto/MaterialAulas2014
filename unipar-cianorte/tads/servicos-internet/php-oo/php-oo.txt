@@ -22,6 +22,9 @@ extends Carro {
 }
 ?>
 
+============================================
+============================================
+
 # Clonagem de objetos
 
 . No PHP a palavra chave clone faz a clonagem de objetos
@@ -34,6 +37,9 @@ class Aluno {
 $aluno1 = new Aluno();
 $aluno2 = clone $aluno1;
 ?>
+
+============================================
+============================================
 
 # Classes/métodos abstratas
 
@@ -57,6 +63,9 @@ class Fiat extends Veiculo {
 }
 ?>
 
+============================================
+============================================
+
 # Métodos mágicos
 
 . No PHP existe o recurso chamado de métodos mágicos. Estes métodos são gatilhos, que são executados após alguma ação;
@@ -71,7 +80,139 @@ __set();
 __get();
 __clone();
 
-# Atividade 1
+============================================
+============================================
+
+# Indução de tipo
+
+PHP 5 introduz Indução de Tipo. Funções podem forçar que os parâmetros sejam objetos (especificando o nome da classe no protótipo da função), interfaces, ou então array.
+
+class MinhaClasse {
+    public function teste(OutraClasse $outraclasse) {
+        echo $outraclasse->var;
+    }
+
+    public function testa_array(array $array_de_entrada) {
+        print_r($array_de_entrada);
+    }
+}
+
+============================================
+============================================
+
+# Verificação de tipo
+
+O operador instanceof é usado para determinar se um variável do PHP é uma objeto instânciado de uma certa classe:
+
+<?php
+
+interface Maquina {}
+class Computador implements Maquina {}
+class Notebook extends Computador {}
+
+$pc = new Notebook();
+
+// true
+var_dump($pc instanceof Notebook);
+
+// true
+var_dump($pc instanceof Computador);
+
+// true
+var_dump($pc instanceof Maquina);
+
+?>
+
+============================================
+============================================
+
+# Exceptions
+
+Exceções é uma abordagem da Orientação a Objetos para o tratamento de eventos inesperados (Exceção);
+
+No PHP existe a classe Exception, que pode ser estendida para representar vários tipos de exceção.
+
+A classe Exception no PHP se parece muito com:
+
+<?php
+class Exception {
+	/* Properties */
+	protected string $message ;
+	private string $string ;
+	protected int $code ;
+	protected string $file ;
+	protected int $line ;
+	private array $trace ;
+	/* Methods */
+	public __construct ([ string $message = NULL [, int $code ]] )
+	final public string getMessage ( void )
+	final public int getCode ( void )
+	final public string getFile ( void )
+	final public string getLine ( void )
+	final public array getTrace ( void )
+	final public string getTraceAsString ( void )
+	public string __toString ( void )
+	final private string __clone ( void )
+}
+?>
+
+Exemplo:
+
+<?php
+
+class Conta {
+	private $limite = 0;
+	private $saldo = 0;
+	private $numero;
+
+	public function __construct($numero) {
+		$this->numero = $numero;
+	}
+
+	public function depositar($valor) {
+		if ($valor <= 0) {
+			throw new ContaException('Você não pode depositar valores negativos');
+		}
+
+		$this->saldo += $valor;
+	}
+	public function retirar($valor) {
+		if ($valor <= 0) {
+			throw new ContaException('Você não pode fazer retiradas com valores negativos');
+		}
+
+		$novoSaldo = $this->saldo - $valor;
+
+		if ($novoSaldo < $this->limite) {
+			throw new ContaException('Você não tem saldo/limite para realizar esta retirada');
+		}
+	}
+}
+
+class ContaException extends Exception {}
+
+?>
+
+============================================
+============================================
+
+# Atividade 4
+
+Na atividade anterior, foram criados as classes Pessoa, Pai, Mae e Filho. As classes Pai e Mae possuem métodos em comum, e que fazem praticamente a mesma coisa.
+
+- Remover a propriedade esposa e marido das classes Pai/Mae, e criar um atributo protegido $conjuge na classe Pessoa;
+- Mover os métodos casar, divorciar, ficarViuvo e morrer das classes Pai/Mae para a classe Pessoa;
+- Sobrescrever o método casar nas classes Pai/Mae. O método de sobreposição deve receber apenas instancias de Pai na classe Mae, e instancias de Mae na classe Pai;
+
+# Atividade 5
+
+Até agora trabalhamos com 4 classes: Pessoa, Pai, Mae e Filho.
+O problema é que um dia o Filho cresce pode virar Pai e Mae.
+
+- Criar classes Pessoa, Homem e Mulher.
+- Estas 3 classes juntas devem substituir o funcionamento das 4 classes da atividade anterior;
+
+# Atividade 6
 
 Criar as seguintes classes: Escola e Aluno;
 - A classe Escola deve conter:
@@ -83,7 +224,9 @@ Criar as seguintes classes: Escola e Aluno;
 - Matricular alguns alunos na Escola;
 - Mostrar os nomes dos alunos matriculados;
 
-# Criar uma classe Aritmetica com:
+# Atividade 7
+
+Criar uma classe Aritmetica com:
 – Propriedades protegidas $n1 e $n2;
 – Métodos públicos para atribuir valores à $n1 e $n2;
 - Classe Soma que estende Aritmetica;
