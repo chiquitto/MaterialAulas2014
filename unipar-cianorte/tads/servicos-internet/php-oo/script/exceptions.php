@@ -25,7 +25,7 @@ class Conta {
 		$novoSaldo = $this->saldo - $valor;
 
 		if ($novoSaldo < $this->limite) {
-			throw new ContaException('Você não tem saldo/limite para realizar esta retirada. Seu limite é R$' . $this->limite . ', e seu saldo é R$' . $this->saldo);
+			throw new LimiteContaException('Você não tem saldo/limite para realizar esta retirada. Seu limite é R$' . $this->limite . ', e seu saldo é R$' . $this->saldo);
 		}
 
 		$this->saldo = $novoSaldo;
@@ -33,6 +33,7 @@ class Conta {
 }
 
 class ContaException extends Exception {}
+class LimiteContaException extends ContaException {}
 
 header('content-type:text/html; charset=utf-8');
 
@@ -43,7 +44,15 @@ try {
 	$conta->retirar(1500);
 	$conta->retirar(-100);
 }
+catch(LimiteContaException $e) {
+	echo 'LimiteContaException: ', $e->getMessage();
+	exit;
+}
 catch(ContaException $e) {
-	echo $e->getMessage();
+	echo 'ContaException: ', $e->getMessage();
+	exit;
+}
+catch(Exception $e) {
+	echo 'Exception: ', $e->getMessage();
 	exit;
 }
