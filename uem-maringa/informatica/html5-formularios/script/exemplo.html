@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>O elemento form</title>
+  <meta charset="utf-8">
+</head>
+<body>
+
+  <form name="form1" action="processar.php" method="post">
+
+  	<fieldset>
+  		<legend>Primeiros dados</legend>
+    
+    <p>
+    	<label>Email:</label>
+    	<input name="email" type="email" required>
+    </p>
+    
+    <p>
+    	UF: <input name="uf" type="text" required pattern="[A-Z][A-Z]" title="Sigla do UF" placeholder="SC">
+    </p>
+
+    </fieldset>
+
+    <p>
+    	<input name="enviar" type="submit" value="Fazer login">
+    </p>
+
+    <p>
+    	Senha: <input name="senha" type="password" required>
+    </p>
+
+    <p>
+    	Data/Hora: <input name="datahora" type="datetime">
+    </p>
+
+    <p>
+    	Data: <input name="data" type="date">
+    </p>
+
+    <p>
+    	Número: <input name="numero" type="number" value="10" min="10" max="50" step="5">
+    </p>
+
+    <p>
+    	Range: <input name="range" type="range">
+    </p>
+
+    <p>
+    	Color: <input name="cor" type="color">
+    </p>
+
+    <p>
+    	Checkbox: <input name="ok" type="checkbox" checked>
+    </p>
+
+    <p>
+    	Sexo:
+    	<label for="sexoM">Masculino</label>
+    	<input name="sexo" type="radio" value="M" id="sexoM">
+    	Feminino <input name="sexo" type="radio" value="F" checked>
+    </p>
+
+    <p>
+    	Arquivo: <input name="arquivo" type="file">
+    </p>
+
+    <p>
+    	Button: <input name="bt" type="button" value="Não faz nada">
+    </p>
+
+    <p>
+    	<input name="limpar" type="reset" value="Limpar formulario">
+    </p>
+
+    <p>
+    	Lista simples: <select name="ufs">
+	    	<option value="PR">Paraná</option>
+	    	<option value="BA" selected>Bahia</option>
+	    	<option value="AC">Acre</option>
+	    </select>
+    </p>
+
+    <p>
+    	Lista múltipla seleção: <select name="ufs" multiple>
+	    	<option value="PR" selected>Paraná</option>
+	    	<option value="BA" selected>Bahia</option>
+	    	<option value="AC" selected>Acre</option>
+	    </select>
+    </p>
+
+    <datalist id="listaUf">
+		<option value="Parana">
+		<option value="Santa Catarina">
+		<option value="Minas Gerais">
+	</datalist>
+
+    <p>
+    	Campo de texto com sugestões:
+    	<input type="text" name="ufpreferido" list="listaUf">
+    </p>
+
+    <p>
+    	Comentários:
+    	<textarea readonly name="comentarios">OLÁ
+UEM</textarea>
+    </p>
+
+    <p>
+    	Estados agrupados:
+    	<select name="ufs">
+	    	<optgroup label="Sul">
+	    		<option value="PR">Paraná</option>
+	    		<option value="RS">R. G. Sul</option>
+	    	</optgroup>
+	    	<optgroup label="Sudeste">
+	    		<option value="SP">São Paulo</option>
+	    		<option value="MG">Minas Gerais</option>
+	    	</optgroup>
+	    </select>
+    </p>
+
+    <p>x</p>
+    <p>x</p>
+    <p>x</p>
+
+  </form>
+  
+</body>
+</html>
+
