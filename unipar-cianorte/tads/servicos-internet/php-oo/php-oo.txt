@@ -216,22 +216,22 @@ O problema é que um dia o Filho cresce pode virar Pai e Mae.
 
 Criar as seguintes classes: Escola e Aluno;
 - A classe Escola deve conter:
-– Propriedade $alunos = array();
-– Método matricular($aluno) que irá adicionar $aluno à propriedade $alunos;
-– Método mostrarAlunos() que lista os nomes dos alunos matriculados;
+- Propriedade $alunos = array();
+- Método matricular($aluno) que irá adicionar $aluno à propriedade $alunos;
+- Método mostrarAlunos() que lista os nomes dos alunos matriculados;
 - A classe Aluno deve conter:
-– Propriedade $nome;
+- Propriedade $nome;
 - Matricular alguns alunos na Escola;
 - Mostrar os nomes dos alunos matriculados;
 
 # Atividade 7
 
 Criar uma classe Aritmetica com:
-– Propriedades protegidas $n1 e $n2;
-– Métodos públicos para atribuir valores à $n1 e $n2;
+- Propriedades protegidas $n1 e $n2;
+- Métodos públicos para atribuir valores à $n1 e $n2;
 - Classe Soma que estende Aritmetica;
-– Método público somar() que retorna a soma entre $n1 e $n2;
+- Método público somar() que retorna a soma entre $n1 e $n2;
 - Classe Divisao que estende Aritmetica;
-– Método público dividir() que retorna a divisao de $n1 por $n2;
-– Método público mod() que retorna o mod de $n1 por $n2;
+- Método público dividir() que retorna a divisao de $n1 por $n2;
+- Método público mod() que retorna o mod de $n1 por $n2;
 - Usar as classes Soma e Divisao para obter somas, divisões e restos entre 2 números qualquer;
