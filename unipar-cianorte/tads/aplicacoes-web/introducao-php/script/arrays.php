@@ -305,3 +305,17 @@ Array
     [6] => F
 )
 */
+
+/*
+15.
+Variaveis
+*/
+$a = array(
+    'data' => '01/02',
+);
+$b = 'data';
+echo '15:', $a[$b];
+
+/*
+Saida: 01/02
+*/
