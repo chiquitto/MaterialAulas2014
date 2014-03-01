@@ -26,3 +26,10 @@ Tarefa 1 (entrega até 28/02):
 
 ==
 
+Tarefa 02:
+
+Para a continuidade das tarefas, todos os alunos deverão possuir uma conta no github;
+
+Esta tarefa não pode ser feita pelo mesmo usuário da tarefa 01, exceto se o grupo tiver apenas 1 integrante.
+
+. Alterar o arquivo "./alunos.txt", adicionando o nome de usuário de quem fez a alteração, e o link para o perfil da conta no github.
