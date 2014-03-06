@@ -1,0 +1,70 @@
+Conversão de tipos
+
+http://php.net/manual/pt_BR/language.types.type-juggling.php
+
+=====
+
+Conversão para booleano
+
+http://www.php.net/manual/pt_BR/language.types.boolean.php#language.types.boolean.casting
+
+Para converter explicitamente um valor para booleano, utilize-se dos modificadores (bool) ou (boolean).
+
+Ex: $x = (boolean) 3; // recebe true
+
+Ao converter para booleano, os seguintes valores são considerados FALSE:
+
+* o próprio booleano FALSE
+* o inteiro 0 (zero)
+* o ponto flutuante 0.0 (zero)
+* uma string vazia e a string "0"
+* um array sem elementos
+* um objeto sem elementos membros (somente PHP 4)
+* o tipo especial NULL (incluindo variáveis não definidas)
+* o objeto SimpleXML criado de tags vazias
+
+Qualquer outro valor é considerado TRUE (incluindo qualquer recurso).
+
+====
+
+Conversão para integer
+
+http://www.php.net/manual/pt_BR/language.types.integer.php#language.types.integer.casting
+
+Para converter explicitamente um valor para inteiro, utilize-se dos modificadores (int) ou (integer). Você também pode converter o valor de um inteiro com a função intval().
+
+Conversão:
+
+* De booleanos: FALSE será retornado como 0 (zero), e TRUE como 1 (um).
+* Quando convertendo de números de ponto flutuante para inteiros, o número será truncado.
+* String: http://www.php.net/manual/pt_BR/language.types.string.php#language.types.string.conversion
+
+====
+
+Conversão para string
+
+http://www.php.net/manual/pt_BR/language.types.string.php#language.types.string.casting
+
+Você pode converter um valor para string utilizando o modificador (string), ou a função strval()
+
+====
+
+Conversão para array
+
+http://www.php.net/manual/pt_BR/language.types.array.php#language.types.array.casting
+
+Para qualquer dos tipos: integer, float, string, boolean e resource, se você converte um valor para um array, você obtêm um array com um elemento (de índice 0) contendo o valor informado.
+
+====
+
+Conversão para null
+
+Convertendo uma variável para null removerá a variável e apagará seu valor.
+
+$var = NULL;
+
+====
+
+Tabela de comparação
+
+http://www.php.net/manual/pt_BR/types.comparisons.php
