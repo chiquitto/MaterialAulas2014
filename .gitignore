@@ -1,0 +1,11 @@
+# Latex
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.tex.backup
+*.toc
+
+# Arquivos gedit
+*~
