@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  
+  <body>
+  
+	<form name="form0" id="form0">
+		Nome: <input type="text" name="nomecompleto">
+	</form>
+  
+    <form name="form1">
+		Nome: <input type="text" name="nomecompleto" id="nomeusuario">
+	</form>
+    
+	<form name="form2"></form>
+    <form name="form3"></form>
+    
+	<script type="text/javascript">
+		//window.alert(window.document.forms[1].name);
+		
+		var nome = window.prompt('Qual seu nome?');
+		
+		//window.document.forms[0].elements[0].value = nome;
+		
+		//document.forms[0].nomecompleto.value = nome;
+		
+		document.getElementById('nomeusuario').value = 'Unipar';
+	</script>
+	
+  </body>
+</html>
+
+
+
+
+

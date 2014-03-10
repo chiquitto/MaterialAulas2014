@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Escopo</title>
+  </head>
+  <body>
+  
+<script type="text/javascript">
+var escopoGlobal = 1;
+
+function testarEscopo(  ) {
+	var escopoLocal = 1;
+	
+	escopoGlobal++;
+	escopoLocal++;
+}
+
+testarEscopo();
+testarEscopo();
+
+window.alert(escopoGlobal);
+window.alert(escopoLocal);
+</script>
+  
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>For IN</title>
+  </head>
+  <body>
+  
+<script type="text/javascript">
+var notas = new Array();
+notas["Carlos"] = 7;
+notas["Shirley"] = 2;
+notas["Maria"] = 8.5;
+
+for( indice in notas ) {
+	//window.alert ( indice );
+	var msg = 'A nota de ' + indice + ' é ' + notas[indice];
+	window.alert ( msg );
+}
+</script>
+  
+  </body>
+</html>

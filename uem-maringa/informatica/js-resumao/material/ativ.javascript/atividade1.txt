@@ -1,0 +1,8 @@
+1. Construir 1 arquivo HTML chamado checkbox.html
+Este arquivo deve conter um formulário com 3 checkeboxes.
+
+O primeiro deve ser um checkbox que muda a cor de fundo da página. Se estiver marcado, o fundo ficará verde, caso contrario vermelho.
+
+O segundo checkbox irá alterar a cor da fonte do label que esta o checkbox
+
+O terceiro irá alterar o tamanho da fonte do label que ele esta contido.

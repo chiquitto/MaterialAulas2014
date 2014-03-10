@@ -1,0 +1,12 @@
+Em um novo arquivo
+
+Criar um programa
+que vai criar um vetor
+e usar um laço for para criar os seguintes valores
+
+0=0
+1=2
+2=4
+3=6
+...
+10=20

@@ -1,0 +1,6 @@
+Construir um arquivo HTML
+com 1 div no centro da tela
+3 input para o usuário digitar numeros somente entre 0 e 255
+botao OK
+
+Quando o usuário clicar em OK, a cor de fundo da DIV será referente aos números digitados pelo usuário

@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Array</title>
+  </head>
+  <body>
+  
+<script type="text/javascript">
+	// Criar uma lista de frutas vazia
+	frutas = new Array();
+	frutas = [];
+	
+	/*
+	O script deve solicitar através de
+	window.prompt 3 frutas que o usuário gosta
+	*/
+	//frutas[0] = window.prompt('Digite uma fruta.');
+	//frutas[1] = window.prompt('Digite uma fruta.');
+	//frutas[2] = window.prompt('Digite uma fruta.');
+	
+	for ( i = 0; i <= 2; i++ ) {
+		frutas[i] = window.prompt('Digite uma fruta.');
+	}
+	
+	/**
+	Ao final exibir todos os valores da lista
+	com o auxilio de um laço for
+	*/
+	
+	for ( i = 0; i <= 2; i++ ) {
+		window.alert(frutas[i]);
+	}
+</script>
+  
+  </body>
+</html>

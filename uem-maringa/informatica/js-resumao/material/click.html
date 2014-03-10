@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>DOM</title>
+    
+    <script type="text/javascript">
+	  function clicado() {
+	    window.alert( 'você clicou no botão' );
+	  }
+	  function carregou() {
+	    window.alert( 'carregou' );
+	  }
+	  function descarregou() {
+	    window.alert( 'descarregou' );
+	  }
+	</script>
+    
+  </head>
+  <body onLoad="carregou();" onUnload="descarregou();">
+  
+  <form>
+    <input type="button" value="Clica" onClick="clicado();">
+  </form>
+  
+  </body>
+</html>

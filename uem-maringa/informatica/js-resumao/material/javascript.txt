@@ -1,0 +1,13 @@
+Tipagens
+
+A tipagem forte ocorre quando a linguagem não permite que uma variável tenha seu valor automaticamente alterado para outro tipo para possibilitar uma operação .
+
+A tipagem fraca ocorre quando a linguagem permite que uma variável tenha seu valor automaticamente alterado para outro tipo para possibilitar uma operação.
+
+A tipagem estática ocorre quando a linguagem obriga a prévia declaração de tipo de uma variável, sendo que uma vez definida, ela não pode mudar de tipo.
+
+A tipagem dinâmica ocorre quando a linguagem não obriga a prévia declaração de tipo de uma variável. O tipo é assumido na atribuição de valor à variável, que pode ser por presunção ou forçado com casting. Além disso, é possível modificar o tipo da variável atribuindo-lhe outro valor.
+
+>> O javascript é tipagem fraca e dinâmica. <<
+
+==
