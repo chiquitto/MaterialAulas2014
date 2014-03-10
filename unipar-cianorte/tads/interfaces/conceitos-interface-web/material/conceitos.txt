@@ -1,0 +1,256 @@
+=
+
+. Mostrar referencias à criatividade
+	Frases do Steve Jobs;
+	Reportagem do Fantástico;
+
+=
+. Mostrar a figura 2.1;
+
+=
+. Mostrar as perguntas da página 9 e 10;
+
+=
+. Começar a discussão de onde começar as alterações; (pag 11)
+
+1. Tente entender o que seus clientes pensam que querem do site que você irá desenhar;
+Esta lista geralmente é um bom ponto de partida e você acaba descobrindo que você não tinha feito descobertas suficientes. Use sua experiencia para fazer as perguntas certas e economizar tempo;
+
+2. Certifique-se de entender o proposito real do site, e ter uma ideia da audiencia pretendida (público alvo).
+Diferentes audiencias terão diferentes expectativas e interagirão diferentemente com os sites.
+Descubra a audiencia e os seus concorrentes;
+
+3. Depois que você tem uma lista dos requisitos (item 1) e conhece o público alvo do site (item 2), faça rascunhos enquanto processa toda esta informação.
+
+==
+. Mostrar a figura 2.2
+
+==
+. Convenções de arranjo
+
+. Os websites tendem a ter muitas coisas em comum.
+. A maioria tem um cabeçalho que exibe o nome ou logo do site;
+. Muitos tem uma área principal, que divide o conteúdo em colunas, e ao menos uma dessas colunas é frequentemente utilizada como área de notas laterais que podem conter elementos de navegação ou informações adicionais;
+. É provável que o site tenha uma barra de navegação, seja na parte superior, ou na lateral esquerda do site;
+. Por último, uma área de rodapé que contém informações de direitos autorais e links adicionais;
+
+Porque toda essa similariedade?
+Os designers e desenvolvedores imitam o que funcionam.
+Muitos jornais seguem o mesmo arranjo.
+
+Ao longo do tempo, os usuários tem passado a esperar esta similariedade.
+Para desenhar um site, você tem que se certificar que os usuários vão encontrar o que querem imediatamente, para isto seu site deverá ser de fácil navegação e seguir convenções.
+
+Procure desenvolver um arranjo que leve informação, mas que seja familiar à sua audiência;
+
+==
+. Atividade para os alunos
+
+Em uma folha almaço responder:
+
+Informações do cliente
+Nome completo: xx
+Endereço: xxx
+Cidade/UF: xxx
+
+Informações do negócio do cliente
+Nome: 
+Endereço: 
+Cidade/UF: 
+
+Tipo de produto: massas, comidas caseiras, brinquedos, bonecos de ação, fantasias, roupas, ferramentas, ...
+Faixa de preço dos produto: min ~ max
+Qualidade dos produtos
+
+Público alvo do negócio do cliente
+Classe: A, B, C, ...
+Região: Bairro, Cidade, Região...
+Faixa etária: x ~ y anos
+Formação: Ensino médio, Superior, ...
+
+Informações para o site
+O que pretende com o site? vendas, contato com o cliente, catalogo de produtos, institucional, ...
+Quais os sites concorrentes? 3 no minimo
+
+Observações do cliente: "Usar várias imagens", "quero a minha logo bem grande"
+
+==
+
+. Fazer 3 rascunhos para o cliente
+Oferecer um design simples e conservador, um complexo e outro meio termo;
+
+==
+
+. Mostrar que isto é um processo iterativo
+
+
+1. Entender o que o cliente pensa que quer do site;
+2. Certifique-se que entendeu o cliente quer;
+3. Fazer rascunhos;
+4. Mostrar os rascunhos para o cliente;
+
+==
+
+. Fundamentos de cores
+
+Em nosso mundo tridimensional de todo dia, os objetos absorvem alguns comprimentos de onda de luz e refletem outros, e nossos olhos percebem a luz refletida por eles como cores. Uma cor é descrita pelo seu nome, seu nível de saturação e seu brilho;
+
+. Pensar na sombra da cor, quantidade de cor, como a cor aparece com as outras, como a cor pode ser interpretada pela audiência;
+
+==
+
+. Matiz, saturação e brilho
+
+. Quando as pessoas falam da cor de um objeto, elas estão falando da Matiz;
+
+. Saturação é a quantidade de cor na imagem. Uma cor saturada é vibrante, enquanto uma não saturada é palida/desbotada;
+
+. Alterar o brilho de uma cor pode tornar a aparência geral das cores mais escura ou clara;
+
+==
+
+. Mistura aditiva e subtrativa de cores
+
+. Na tela do seu computador as cores são aditivas, e em uma folha impressa, as cores são subtrativas;
+
+. Cores subtrativas
+.. Cores primárias: amarelo, azul e vermelho (CMYK);
+.. As cores subtrativas são geradas através da reflexão da luz;
+.. Amarelo + Azul = Verde
+
+. Cores aditivas
+.. Cores primárias: vermelho, verde e azul (RGB);
+.. As cores aditivas são geradas através da geração de luz;
+
+==
+
+. Contexo de cor
+
+. Imagem da página 26
+
+. O contexto de uma cor pode influenciar enormemente em como ela aparece em sua aplicação. Mesmo que você tecnicamente selecione as cores corretas, você pode ter que fazer ajustes para fazê-las parecerem as corretas;
+
+==
+
+. Emoções com cores
+
+. Desde pequenos, nós aprendemos a associar cores a emoções, disposições e sentimentos. Quando escolher uma cor para sua aplicação, pense nas várias respostas que as suas escolhas podem acianar.
+
+. Usar uma cor inapropriadamente pode acionar uma resposta indesejada ou até criar confusão;
+
+. A escolha das cores influencia as perspectivas de seus usuários, e a simples aplicação de um esquema de cores diferente a um website muda completamente a experiência do usuário;
+
+==
+
+. Listar as cores da pág 28 ~ 30
+
+==
+
+. Comentar que as cores tem inclinações particulares (pag 31)
+
+==
+
+. Esquema de cores
+
+. Algumas cores não ficam bem ao lado de outras, e algumas ficam.
+. Esquema de cores são grupos de cores que se combinam juntas para criar um resultado visualmente atraente;
+
+==
+
+. Roda de cores
+
+. Antes de analisar os esquemas de cores, vamos examinar a roda de cores;
+. Uma roda de cores ajuda a mostrar o relacionamento entre as cores;
+. Mostrar a roda de cores RYB Simples (pag 31), que usa as cores vermelho, amarelo e azul como primarias;
+
+==
+
+. Esquema monocromático (pag 32)
+
+. O esquema de cores monocromático é composto de apenas uma matiz;
+. O esquema é criado alterando o brilho e a saturação do matiz;
+
+. Este esquema adiciona forma e profundidade a um design;
+. Quando utilizado, os outros elementos como fotos e icones se destacam;
+. Funciona melhor quando o conteúdo é o elemento mais importante;
+
+==
+
+. Esquema análogo (pag 33)
+
+. As duas cores de cada lado de uma cor, na roda de cores, são chamadas de cores análogas;
+. Pegue a cor base, e as suas duas vizinhas para formar o esquema;
+. Este esquema tão fácil de utilizar quanto o monocromático, mas os resultados são mais ricos, porque usa cores diferentes, em vez de apenas tons diferentes da mesma cor;
+
+. As cores adicionais ajudam a acentuar a cor principal, levando os olhos dos usuários em direção ao o que é importante;
+. O maior problema que você pode encontrar usando este esquema, é que não oferece um contraste real de cor, então você não consegue obter um contraste que você obteria com o Esquema Complementar;
+
+==
+
+. Esquema Complementar (pag 35)
+
+
+. Este esquema utiliza duas cores que aparecem em lados opostos da roda de cores;
+. Diz-se que estas cores complementam diretamente, uma à outra;
+. Esquemas de Cores Complementar são normalmente difíceis de se balancear, pois você pode precisar fazer muitos ajustes para moderar as coisas;
+. Um bom resultado pode ser encontrado dessaturando as cores frias, e saturando as cores quentes;
+. Tomar cuidado para colocar o texto, pois a cor complemento utilizada como cor de fundo pode tornar a leitura difícil;
+
+==
+
+. Esquema Complementar Dividido (pag 36)
+
+. Este esquema envolve a seleção de uma cor, na roda de cores, e depois selecionar duas cores adjacentes à cor complementar da primeira cor, em vez de seu complemento direto;
+
+. Pouco mais difícil de usar do que o Esquema Complementar;
+. Pode ser muito atraente se fizer os ajustes adequados de saturação e brilho;
+
+==
+
+Rodas de cores RYB e RGB
+
+. As rodas de cores RYB são utilizadas por pintores;
+. As rodas de cores RGB é montada com cores aditivas;
+
+. Há muita discussão em qual roda utilizar;
+
+==
+
+. Selecionar cores usando o método técnico
+
+. Primeiro você seleciona uma cor base
+. Depois combina com um dos esquemas de cores vistos anteriormente;
+. Por último ajuste brilho, saturação e contraste para criar uma mistura adequada;
+
+==
+
+. Ferramentas para montar roda de cores
+
+. ColorSchemeDesigner (colorschemedesigner.com)
+. AdobeKuler
+
+==
+
+. Selecionar cores usando o método natural
+
+. Os esquemas para seleção de cores é ótima, mas as vezes o resultado não é o esperado pelo cliente;
+. No Método Natural de Seleção de Cores, você cria um esquema a partir de um material de referencia, geralmente uma foto;
+. Importante ter conhecimento na teoria das cores;
+. Vantagem do método natural é que você trabalha com cores da natureza, porque a mente das pessoas não tem dificuldade em interpretar as cores da natureza;
+
+==
+
+. Procurar uma imagem no site
+www.morguefile.com
+
+E montar um esquema de cores
+
+==
+
+. Selecionando o esquema
+
+. Cores de frente e de fundo - As cores de frente e de fundo devem constrastar umas com as outras.
+
+
+
+
