@@ -1,0 +1,14 @@
+
+input, p {
+	font-family: Arial;
+}
+.vermelho { color: red; }
+p.vermelho
+{
+	font-size: 14px;
+}
+input.vermelho
+{
+	font-size: 12px;
+}
+

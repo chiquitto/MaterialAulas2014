@@ -1,0 +1,27 @@
+
+/* Cor vermelha */
+#corNome { color:red; }
+
+/* Cor verde */
+#corHexadecimal {
+	color: #00FF00;
+}
+
+/*
+Cor azul
+Fundo vermelho 50% transparente
+*/
+#corRGB {
+	color: rgb(0,0,255);
+	background: rgba(255,0,0,0.5);
+}
+
+/*
+Cor verde forte claro
+Fundo azul forte claro 50% transparente
+*/
+#corHSL {
+	color: hsl(120,100%,50%);
+	background: hsla(240,100%,50%,0.5);
+}
+
