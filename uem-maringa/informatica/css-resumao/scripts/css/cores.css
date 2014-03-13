@@ -1,3 +1,7 @@
+body {
+	background: green;
+}
+
 
 /* Cor vermelha */
 #corNome { color:red; }
@@ -13,7 +17,7 @@ Fundo vermelho 50% transparente
 */
 #corRGB {
 	color: rgb(0,0,255);
-	background: rgba(255,0,0,0.5);
+	background: rgba(255,0,0,1);
 }
 
 /*

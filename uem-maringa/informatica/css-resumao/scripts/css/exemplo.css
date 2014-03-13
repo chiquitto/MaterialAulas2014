@@ -1,0 +1,28 @@
+body {
+	background: #FFFFFF;
+	margin: 0;
+	padding: 0;
+}
+
+input {
+	font-family: Verdana, Ubuntu, Arial;
+	color: rgb(0,0,255);
+	background: rgb(255, 255, 0);
+	border-style: solid;
+	border-color: rgb(0,0,0);
+	padding-left: 0.4em;
+	font-size: 14px;
+}
+
+input[type=email] {
+	background: red;
+}
+
+p {
+	border-style: dotted;
+	border-color: red;
+	border-width: 1px;
+	width: 45%;
+	float: left;
+	margin: 0;
+}
