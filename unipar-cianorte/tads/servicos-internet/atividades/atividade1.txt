@@ -33,3 +33,11 @@ Para a continuidade das tarefas, todos os alunos deverão possuir uma conta no g
 Esta tarefa não pode ser feita pelo mesmo usuário da tarefa 01, exceto se o grupo tiver apenas 1 integrante.
 
 . Alterar o arquivo "./alunos.txt", adicionando o nome de usuário de quem fez a alteração, e o link para o perfil da conta no github.
+
+==
+
+Tarefa 03 (entrega até 20/03):
+
+Em um diretorio /carro/lib:
+. Criar um arquivo chamado "Veiculo.php" contendo: uma classe Veiculo com 3 atributos: velocidade, marcha, rpm;
+. Criar um arquivo chamado "Carro.php" contendo: uma classe Carro que estende Veiculo, e implementar os métodos públicos acelerar e trocarMarcha, e o privado atualizarVelocidade;
