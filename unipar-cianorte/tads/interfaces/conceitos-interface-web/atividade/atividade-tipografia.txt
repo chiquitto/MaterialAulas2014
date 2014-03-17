@@ -1,0 +1,5 @@
+1. Pesquisar as fontes default dos principais SO do mercado. Windows, Linux Ubuntu, Linux Mint, Linux Fedora, Linux Hed Hat, OS X
+
+2. Pegar um texto qualquer, e no Fireworks, criar páginas com este texto.
+
+3. Criar uma página com fotos e texto. Procure usar a grade de linha base;
