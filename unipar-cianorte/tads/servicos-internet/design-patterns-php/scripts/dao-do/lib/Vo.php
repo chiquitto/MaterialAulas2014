@@ -67,7 +67,7 @@ abstract class Vo {
     }
     
     public function setAll($dados) {
-        //
+        $this->dados = $dados;
     }
     
     public function setFromBd($dados) {
