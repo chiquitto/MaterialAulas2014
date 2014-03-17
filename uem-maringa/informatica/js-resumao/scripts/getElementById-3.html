@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Estrutura return</title>
+  <meta charset="utf-8">
+
+  <script>
+
+  window.onload = function() {
+  	document.getElementById('frm1')
+  		.onsubmit = validarForm;
+  }
+
+  function validarForm() {
+  	alert('Submit');
+  	return false;
+  }
+
+  </script>
+
+</head>
+<body>
+
+	<form action="http://g1.com.br" id="frm1">
+		<input type="text">
+		<input type="submit" value="OK">
+	</form>
+  
+</body>
+</html>
+

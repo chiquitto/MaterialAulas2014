@@ -6,15 +6,19 @@
 
   <script>
 
-window.onload = function() {
+var fclick = function() {
   var i = document.getElementById('input');
-  i.value = 'Teste Javascript';
-}
+  i.value = 'Teste Javascript HTML';
+};
+
+//window.document.onclick = fclick;
     
   </script>  
 
 </head>
 <body>
+
+	<input type="text" id="input" onclick="fclick();">
   
 </body>
 </html>
