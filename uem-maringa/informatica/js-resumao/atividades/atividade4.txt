@@ -1,0 +1,14 @@
+. Criar um formulário com 3 campos;
+
+  . Um campo (1) Valor do Dolar em Reais
+
+  . Um campo (2) R$
+  . Um campo (3) US$
+
+O usuário deve preencher o campo 1 com o valor do Dolar em Reais (Ex.: Se o usuário preencher com 2.5, então ele quis informar que US$1.00 = R$2.50)
+
+Enquanto o usuário preenche o campo 2, o campo 3 vai sendo preenchido com o valor correspondente em US$;
+
+Enquanto o usuário preenche o campo 3, o campo 2 vai sendo preenchido com o valor correspondente em R$;
+
+Obs.: Todos os valores dos campos de um formulário, quando capturados pelo Javascript são Strings. É necessário a conversão para Number.

@@ -1,0 +1,24 @@
+Cálculo de IMC
+
+O Índice de Massa Corporal (IMC) é uma medida do grau de obesidade uma pessoa. Através do cálculo de IMC é possível saber se alguém está acima ou abaixo dos parâmetros ideais de peso para sua estatura.
+
+Como Calcular IMC
+
+http://como-emagrecer.com/calculo-imc.html
+
+A tabela do IMC é:
+
+Abaixo de 18,5	Você está abaixo do peso ideal
+Entre 18,5 e 24,9	Parabéns — você está em seu peso normal!
+Entre 25,0 e 29,9	Você está acima de seu peso (sobrepeso)
+Entre 30,0 e 34,9	Obesidade grau I
+Entre 35,0 e 39,9	Obesidade grau II
+40,0 e acima	Obesidade grau III
+
+Exercício:
+
+. Criar uma calculadora de IMC.
+
+. O usuário deverá ser capaz de adicionar a sua altura e o seu peso.
+
+. Se o IMC do usuário estiver acima de 24,9, então a calculadora deve informar quantos quilos ele deve perder para alcançar o IMC=24,9

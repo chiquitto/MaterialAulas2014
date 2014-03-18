@@ -1,0 +1,9 @@
+. Construir um formulário onde seja possível o usuário informar: nome, email e cpf;
+
+. Ao submeter o formulário, uma função deverá fazer a validação das informações contidas no formulário;
+  . Todos os campos são obrigatórios;
+  . Validar CPF de acordo com o dígito verificador;
+
+Referencias:
+
+http://www.html5rocks.com/en/tutorials/forms/constraintvalidation/?redirect_from_locale=pt

@@ -1,0 +1,6 @@
+. Criar um formulário para que o usuário utilize para se cadastrar em um site;
+. O formulário deve conter os campos: email, senha e repita a senha;
+. Todos os campos são obrigatórios;
+. Senha e repita a senha devem ser iguais;
+
+. Os campos inválidos deverão ser marcados em vermelho.

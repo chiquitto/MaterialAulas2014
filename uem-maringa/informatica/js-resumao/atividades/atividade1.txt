@@ -1,0 +1,9 @@
+. Criar dois comboboxes: UF e Cidade;
+. Adicionar via HTML, algumas opções ao combobox UF;
+. O combobox Cidade deverá ficar desabilitado;
+
+. Quando o usuário selecionar um UF:
+  . Listar no combobox Cidade as respectivas cidades daquele UF;
+  . Habilitar o combobox Cidade;
+  . Por padrão, deve ficar selecionado a cidade capital do UF;
+
