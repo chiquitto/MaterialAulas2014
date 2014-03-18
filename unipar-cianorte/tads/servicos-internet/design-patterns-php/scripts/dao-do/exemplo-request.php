@@ -7,6 +7,8 @@ require 'lib/Dao.php';
 require 'lib/Dao/Usuario.php';
 
 $dao = new Dao_Usuario();
-$usuarios = $dao->request();
+$usuarios = $dao->request('id = 1');
 
 print_r($usuarios);
+
+//echo $usuarios[0]->getId();

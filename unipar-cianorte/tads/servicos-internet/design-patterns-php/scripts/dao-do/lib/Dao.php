@@ -42,18 +42,21 @@ abstract class Dao {
     }
     
     public function request($where = NULL) {
-        $sql = "Select * From " . $this->tabela;
+        $sql = 'Select * From '
+                . $this->tabela;
+        
+        if ($where !== NULL) {
+            $sql .= ' Where ' . $where;
+        }
         
         $con = Conexao::getInstance();
-        
         $linhas = $con->query($sql);
         
         $retorno = array();
         $voClasse = $this->vo;
-        while($linha = $linhas->fetch(PDO::FETCH_ASSOC)) {
+        while ($linha = $linhas->fetch(PDO::FETCH_ASSOC)) {
             $vo = new $voClasse();
             $vo->setAll($linha);
-            
             $retorno[] = $vo;
         }
         
