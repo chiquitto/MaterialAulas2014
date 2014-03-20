@@ -1,0 +1,29 @@
+MVC - Model View Controller
+http://mvc-utad.comyr.com/2.html
+
+MODEL
+
+O modelo é uma representação de um pedaço de dados armazenados, mais comum num banco de dados. No modelo que especifica todos os requisitos e cálculos necessários para interagir com esses dados, normalmente requisitos de validação, dados relacionados, criação de métodos, actualização de métodos, métodos a destruir, procurar métodos, e assim por diante.
+Pode-se a qualquer hora escrever um código que interage diretamente com este objeto de dados, o código deve ir no modelo. Pode muitas vezes ser confuso determinar se o código pertence a um modelo ou a um controlador.
+A representação "domínio" específica a informação em que a aplicação opera. Por exemplo, aluno, professor e turma fazem parte do domínio de um sistema acadêmico. É comum haver confusão pensando que Modelo é um outro nome para a camada de domínio. Lógica de domínio adiciona sentido a dados crus (por exemplo, calcular se hoje é o aniversário do utilizador, ou calcular o total de taxas sobre um determinado carrinho de compras). Muitas aplicações usam um mecanismo de armazenamento persistente (como banco de dados) para armazenar dados. O MVC não necessita especificamente da camada para acesso aos dados, porque subentende-se que estes métodos estariam encapsulados pelo Modelo.
+
+VIEW
+
+"Renderiza" o modelo numa forma específica para a interacção, geralmente a interface de utilizador. A visão é onde os dados, que foram processados pelo controlador, obtém resultados no formato solicitado pelo utilizador. Normalmente esta será html, mas poderia ser xml ou qualquer outra. A separação entre o controlador e o ponto de vista é muito mais claro que o controlador e o modelo. Não deve haver saída de dados no controlador, e não deve haver tratamento de dados na vista.
+
+CONTROLLER
+
+Processa e responde a eventos, geralmente ações do usuário, e pode invocar alterações no Modelo. É lá que é feita a validação dos dados e também é onde os valores postos pelos utilizador são filtrados. O controlador é a lógica entre o modelo e a vista. Controladores contêm métodos que se relacionam directamente com as acções realizadas pelo utilizador. O controlador é utilizado para responder à acção solicitada pelo utilizador, pode tomar quaisquer parâmetros que o utilizador tenha estabelecido, processar os dados, interagir com o modelo e, em seguida, passar os dados solicitados, de forma definitiva, para fora da vista. Os métodos que são indexados no controlador são geralmente curtos, pequenos pedaços de código que realizam tarefas muito especificas. Se os códigos forem demasiado extensos, o que não deveriam ser, serão anexados como controlador caso contrário (poucas linhas de codigo), podem ser implementados como modelo.
+
+                                                                                                                                                                                                                                 
+VANTAGENS MVC
+     
+Separação clara entre persistência e interface
+Manutenção facilitada
+Reaproveitamento de código
+Melhor visibilidade da camada de negócios do sistema
+
+DESVANTAGENS MVC
+    
+Em sistemas pouco complexos, o uso de MVC pode criar uma complexidade desnecessária
+Exige disciplina do programador
