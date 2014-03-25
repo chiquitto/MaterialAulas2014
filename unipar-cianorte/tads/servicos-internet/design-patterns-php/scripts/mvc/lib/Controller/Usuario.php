@@ -14,9 +14,13 @@ class Controller_Usuario extends Controller {
     }
 
     public function listar() {
+        $dao = new Dao_Usuario();
+        $usuarios = $dao->request();
+        
         $view = new View();
         
         $view->add('nomeUsuario', 'Alisson Chiquitto');
+        $view->add('usuarios', $usuarios);
         
         $view->desenhar('usuario/listar');
     }

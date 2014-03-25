@@ -1,3 +1,9 @@
+Ola <?php echo $this->dados['nomeUsuario']; ?>
+
 <?php
 
-echo $this->dados['nomeUsuario'];
+// $this->dados['usuarios']
+
+foreach($this->dados['usuarios'] as $usuario) {
+    echo $usuario->getNome();
+}
