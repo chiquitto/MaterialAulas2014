@@ -8,7 +8,7 @@ class View {
     }
     
     public function desenhar($tela) {
-        $tela = DIRETORIO . 'telas/' . $tela . '.php';
+        $tela = DIRETORIO . '/telas/' . $tela . '.php';
         include $tela;
     }
 }

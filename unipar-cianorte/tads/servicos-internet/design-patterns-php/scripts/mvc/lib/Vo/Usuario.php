@@ -1,4 +1,6 @@
 <?php
 
 class Vo_Usuario
-extends Vo {}
+extends Vo {
+    protected $atributos = array('id', 'nome', 'email', 'login', 'senha');
+}

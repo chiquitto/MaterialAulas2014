@@ -11,6 +11,28 @@ class Controller_Usuario extends Controller {
 
     public function cadastrar() {
         
+        $view = new View();
+        
+        if ($_POST) {
+            $vo = new Vo_Usuario();
+            $vo->setNome($_POST['nome']);
+            $vo->setEmail($_POST['email']);
+            $vo->setLogin($_POST['login']);
+            $vo->setSenha($_POST['senha']);
+            
+            $model = new Model_Usuario();
+            try {
+                $model->cadastrar($vo);
+            } catch (Exception $exc) {
+                $view->add('erro', $exc->getMessage());
+            }
+
+            
+        }
+        
+        
+        
+        $view->desenhar('usuario/cadastrar');
     }
 
     public function listar() {

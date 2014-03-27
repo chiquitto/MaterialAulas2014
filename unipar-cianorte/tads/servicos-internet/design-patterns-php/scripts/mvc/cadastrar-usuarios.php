@@ -3,4 +3,4 @@
 include 'config.php';
 
 $controller = new Controller_Usuario();
-$controller->listar();
+$controller->cadastrar();
