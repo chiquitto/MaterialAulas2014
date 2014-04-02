@@ -22,15 +22,12 @@ class Controller_Usuario extends Controller {
             
             $model = new Model_Usuario();
             try {
-                $model->cadastrar($vo);
-            } catch (Exception $exc) {
+                $pk = $model->cadastrar($vo);
+            }
+            catch (Exception $exc) {
                 $view->add('erro', $exc->getMessage());
             }
-
-            
         }
-        
-        
         
         $view->desenhar('usuario/cadastrar');
     }
