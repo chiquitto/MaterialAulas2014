@@ -2,6 +2,3 @@ http://api.wikia.com/wiki/LyricWiki_API
 
 Encontrar musicas de um artista
 http://lyrics.wikia.com/api.php?func=getSong&artist=Linkin_Park&fmt=xml
-
-Leia mais:
-http://www.programmableweb.com/apis/directory/1?protocol=SOAP

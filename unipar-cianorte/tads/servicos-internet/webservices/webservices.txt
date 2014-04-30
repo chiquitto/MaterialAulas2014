@@ -1,0 +1,37 @@
+O que é uma API?
+
+API, de Application Programming Interface (ou Interface de Programação de Aplicativos) é um conjunto de rotinas e padrões estabelecidos por um software para a utilização das suas funcionalidades por aplicativos que não pretendem envolver-se em detalhes da implementação do software, mas apenas usar seus serviços.1
+
+De modo geral, a API é composta por uma série de funções acessíveis somente por programação, e que permitem utilizar características do software menos evidentes ao utilizador tradicional.
+
+É considerado sinônimo de Web Service.
+
+http://www.tecmundo.com.br/programacao/1807-o-que-e-api-.htm#ixzz2Ol1zcuRU
+
+Pra que usar APIs?
+
+. Redução de complexidade do sistema
+. Redução da carga do processamento
+. Compartilhamento de conhecimento
+. Compartilhamento de conteúdo
+
+Exemplos de API
+https://dev.twitter.com/docs/api
+
+https://developers.google.com/apis-explorer/#p/
+https://developers.google.com/+/api/
+https://developers.google.com/maps/
+https://developers.google.com/youtube/
+https://developers.google.com/+/hangouts/api/
+
+https://developers.facebook.com/docs/graph-api
+http://instagram.com/developer/
+https://www.dropbox.com/developers
+https://developer.paypal.com/
+https://pagseguro.uol.com.br/v2/guia-de-integracao/api-de-pagamentos.html#!rmcl
+http://developer.buscape.com.br/pt/product/buscape/manual-api.html
+
+https://www.iconfinder.com/about/api
+
+Diretorio de APIS
+http://www.programmableweb.com/apis/directory
