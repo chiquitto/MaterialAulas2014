@@ -1,0 +1,4 @@
+RA 00000000 - Aluno T - Gerente
+RA 11111111 - Aluno X - Responsável pelo Controller
+RA 22222222 - Aluno Y - Responsável pelo Model
+RA 33333333 - Aluno Z - Responsável pela View

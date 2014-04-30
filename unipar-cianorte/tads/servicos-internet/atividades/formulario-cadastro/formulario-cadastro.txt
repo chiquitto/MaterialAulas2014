@@ -1,0 +1,24 @@
+O objetivo da atividade é digitalizar o formulário de cadastro que esta no .doc que esta em anexo, com:
+	. listar/visualizar registros cadastrados no banco de dados;
+	. cadastro de informações;
+	. exclusão de informações.
+
+Cada equipe deverá ser formada por 4 pessoas (equipes com quantidades diferentes de participantes só poderá existir com a minha aprovação).
+
+O projeto deverá ser feito seguindo o modelo MVC criado em sala de aula.
+https://github.com/chiquitto/MaterialAulas2014/tree/master/unipar-cianorte/tads/servicos-internet/design-patterns-php/scripts/mvc
+
+Como cada equipe irá ter 4 pessoas, cada pessoa será responsável por uma parte do trabalho.
+No início, a equipe será dividida em: 1 gerente e 3 desenvolvedores do sistema em MVC (1 pessoa para cada camada do MVC).
+No final do projeto, conforme necessidade, o gerente pode realocar desenvolvedores conforme a necessidade.
+
+Papel do gerente:
+. Criar imediatamente o repositório do projeto no github.
+. No repositório criar um diretório chamado docs e:
+	. Adicionar um arquivo chamado nomes.txt ao repositório. Este arquivo deve conter o nome e RA de todos os integrantes do sistema, além do papel de cada integrante da equipe. Ex.: veja o arquivo nomes.txt em anexo
+	. Adicionar um cronograma de trabalho. O cronograma deve conter tarefas semanais para cada integrante, incluindo tarefas do próprio gerente. O cronograma deve ter prazo exato de 4 semanas (28 dias). O cronograma deverá ser seguido por todos da equipe.
+	. Adicionar um documento contendo as tecnologias (e uma breve descrição) que serão utilizadas, como por exemplo: PHP, Netbeans, CSS, HTML, Twitter Bootstrap, alguma biblioteca específica, etc.
+	. Ao final de toda semana, deverá ser adicionado ao repositório um relatório com as dificuldades encontradas, tarefas concluídas e tarefas previstas para a semana e não foram concluídas;
+
+Valor da atividade: 1,5 ~ 2,0 pontos
+A avaliação da atividade será pela avaliação do que esta no cronograma e o que foi entregue.

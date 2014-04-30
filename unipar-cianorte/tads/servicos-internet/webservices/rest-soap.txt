@@ -1,0 +1,27 @@
+Rest ou SOAP ?
+
+REST – Representational State Transfer é um estilo arquitetural usado no projeto de aplicações da Web que contam com recursos nomeados (URL,URI,URN) e engenhosamente utiliza mais profundamente o protocolo HTTP, seu cabeçalho , seus métodos (GET, POST, PUT, DELETE, HEAD) e toda a infraestrutura web já bem estabelecida, reconhecida e utilizada por todos.
+
+SOAP – Simple Object Access Protocol é um protocolo para troca de informações estruturadas geralmente em uma plataforma descentralizada e distribuída. Ele se baseia em XML para seu formato de mensagem, ou seja, uma mensagem SOAP encapsula o conteúdo e pode ser trafegada via HTTP, JMS ou outro protocolo.
+
+Rest
+
+. É mais elegante, pois utiliza ao máximo o protocolo HTTP, evitando a construção de protocolos adicionais
+. Tem o potencial de ser bem mais simples que uma implementação com WSDL/SOAP
+. Tende a ser mais performático
+. ~ 80% das integrações utilizam o protocolo HTTP.
+. A possibilidade de ter difersças representações de um mesmo recurso, por exemplo, uma dada entidade pode ser representada em diferentes formatos como Json, xml, html e text/plain, dependendo da requisição feita pelo cliente(Content-Negotiation)
+. Possibilidade de navegar entre relacionamentos (Links web) de vários recursos de forma dinamica. seguindo a usabilidade de qualquer sistema web. HATEOAS (Hypermedia as the Engine of Application State).
+
+SOAP
+
+. É um padrão que combinado a as especificações WS-* podem garantir questões de QoS(Quality of Service), Segurança, transação e outras questões presentes em integrações mais complexas.
+. Uma mensagem SOAP pode ser propagada por diferentes protocolos, o que flexibiliza bastante várias integrações.
+. É um padrão que está muito maduro no mercado, qualquer ferramenta de integração e Framework tem várias funcionalidades para manipular as mensagens que seguem este padrão.
+
+Fonte:
+http://thoughtsasaservice.wordpress.com/2011/03/17/qual-a-diferenca-entre-rest-e-soap/
+
+Veja mais:
+http://blog.smartbear.com/apis/understanding-soap-and-rest-basics/
+http://java.dzone.com/articles/j2ee-compare-restful-vs-soap
