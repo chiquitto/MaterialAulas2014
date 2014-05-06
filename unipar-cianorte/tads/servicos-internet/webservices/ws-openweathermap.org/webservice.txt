@@ -1,0 +1,15 @@
+Open Weather Map API
+
+http://openweathermap.org/API
+
+==
+
+Weather Condition Codes
+
+http://bugs.openweathermap.org/projects/api/wiki/Weather_Condition_Codes
+
+==
+
+Weather Data Description Parameters
+
+http://bugs.openweathermap.org/projects/api/wiki/Weather_Data
