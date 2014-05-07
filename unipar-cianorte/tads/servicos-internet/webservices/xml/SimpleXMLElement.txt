@@ -1,0 +1,68 @@
+Classe SimpleXMLElement
+http://php.net/SimpleXMLElement
+
+==
+
+Instanciar a classe SimpleXMLElement
+
+$sxe = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><clientes></clientes>');
+
+==
+
+Adicionar um atributo ao elemento SimpleXML
+
+public void addAttribute ( string $name [, string $value ] )
+$sxe->addAttribute('nome', 'Cliente 2');
+
+==
+
+Adicionar um elemento ao elemento SimpleXML
+
+public SimpleXMLElement addChild ( string $name [, string $value ] )
+$cliente = $sxe->addChild('cliente');
+
+==
+
+Pegar atributos de um elemento SimpleXML
+
+public SimpleXMLElement attributes ()
+$attr = $sxe->attributes();
+
+==
+
+Converter elemento SimpleXML para string
+public string __toString ( void )
+echo $sxe;
+
+==
+
+Para o XML
+
+<clientes>
+  <cliente>Cliente 1</cliente>
+  <cliente>Cliente 2</cliente>
+</clientes>
+
+escrever o nome de todos os clientes
+
+foreach($sxe->cliente as $cliente) {
+	echo $cliente;
+}
+
+==
+
+Para o XML
+
+<clientes>
+  <cliente nome="Cliente 1"/>
+  <cliente nome="Cliente 2"/>
+</clientes>
+
+escrever o nome de todos os clientes
+
+foreach($sxe->cliente as $cliente) {
+    $clienteAttr = $cliente->attributes();
+    echo $clienteAttr->nome;
+}
+
+==
