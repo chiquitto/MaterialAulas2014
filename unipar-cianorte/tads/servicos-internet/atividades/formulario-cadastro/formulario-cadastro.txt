@@ -20,5 +20,12 @@ Papel do gerente:
 	. Adicionar um documento contendo as tecnologias (e uma breve descrição) que serão utilizadas, como por exemplo: PHP, Netbeans, CSS, HTML, Twitter Bootstrap, alguma biblioteca específica, etc.
 	. Ao final de toda semana, deverá ser adicionado ao repositório um relatório com as dificuldades encontradas, tarefas concluídas e tarefas previstas para a semana e não foram concluídas;
 
+Dias das semanas:
+Semana 0: 29/04 ~ 05/05 (Preparação)
+Semana 1: 06/05 ~ 12/05
+Semana 2: 13/05 ~ 19/05
+Semana 3: 20/05 ~ 26/05
+Semana 4: 27/05 ~ 02/06
+
 Valor da atividade: 1,5 ~ 2,0 pontos
 A avaliação da atividade será pela avaliação do que esta no cronograma e o que foi entregue.
