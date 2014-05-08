@@ -12,19 +12,34 @@
 
   	<input name="datahoje" value="30/04" type="hidden">
 
-  	Nome: <input name="nome" value="" type="text">
+    <fieldset>
+      <legend>Dados pessoais</legend>
 
-  	<br>
+    Nome: <input name="nome" value="" type="text" required pattern="[A-Z]{2}" placeholder="Nome completo">
+
+    <br>
+
+    Email: <input name="email" value="" type="email" required>
+
+    <br>
+
+    Senha: <input name="senha" value="" type="password" required>
+
+    </fieldset>
+
+    Dias no ano: <input name="dias" type="number" required min="0" max="360" step="30">
+
+    <br>
 
   	Idade:
 
-  	  <input name="idade" value="1" type="radio">
-  	  1 a 5 anos
+  	  <input name="idade" value="1" type="radio" id="idade1">
+  	  <label for="idade1">1 a 5 anos</label>
 
   	  <input name="idade" value="2" type="radio">
   	  5 a 18 anos
 
-  	  <input name="idade" value="3" type="radio">
+  	  <input name="idade" value="3" type="radio" checked>
   	  Maior de 18 anos
 
   	<br>
@@ -33,6 +48,36 @@
   	<input name="foto" type="file">
 
   	<br>
+
+    Esfiha:
+    <select name="esfiha" multiple>
+      <option value="">Escolha uma opção</option>
+      <optgroup label="Carnes">
+        <option value="1">Carne</option>
+        <option value="3" selected>Bacon</option>
+      </optgroup>
+      <optgroup label="Queijos">
+        <option value="2">Queijo</option>
+        <option value="4">Parmesão</option>
+      </optgroup>
+    </select>
+
+    <br>
+
+    Esfiha:
+    <input name="esfiha2" type="text" list="sabor">
+    <datalist id="sabor">
+      <option value="Carne">
+      <option value="Frango">
+      <option value="Pizza">
+    </datalist>
+
+    <br>
+
+    <textarea name="mensagem">Valor padrão
+Valor padrão 2</textarea>
+
+    <br>
 
   	<input name="botao" value="Salvar" type="submit">
 
