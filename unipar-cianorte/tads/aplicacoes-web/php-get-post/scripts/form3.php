@@ -1,4 +1,5 @@
 <?php
+
 $msg = '';
 $email = '';
 $logado = false;
@@ -12,10 +13,10 @@ if ($_POST) {
 	}
 
 	if ($email == '') {
-		$msg .= 'Informe um email.';
+		$msg .= 'Informe o seu email. ';
 	}
 	if ($senha == '') {
-		$msg .= 'Informe uma senha.';
+		$msg .= 'Informe a sua senha. ';
 	}
 }
 ?>
@@ -29,7 +30,7 @@ if ($_POST) {
 
 	<h1>Tela de login</h1>
 
-	<?php if ($msg != '') { ?>
+	<?php if ($msg != ''){ ?>
 	<p><?php echo $msg; ?></p>
 	<?php } ?>
 
@@ -46,7 +47,7 @@ if ($_POST) {
 			</p>
 			<p>
 				Manter-se logado:
-				<input type="checkbox" name="logado" value="1"<?php if($logado){ ?> checked<?php } ?>>
+<input type="checkbox" name="logado" value="1"<?php if($logado){ ?> checked<?php } ?>>
 			</p>
 			<p>
 				<input type="submit" name="entrar" value="Entrar">
