@@ -1,0 +1,15 @@
+* {
+	color: rgb(255,0,0);
+}
+
+h1 {
+	background: rgba(0,0,0,0.5);
+}
+
+.tit1 {
+	color: blue;
+}
+
+#h2verde {
+	color: green;
+}
