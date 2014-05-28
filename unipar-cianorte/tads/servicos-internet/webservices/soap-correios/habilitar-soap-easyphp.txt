@@ -1,0 +1,6 @@
+easyphp
+conf_files
+php.ini
+
+;extension=php_soap.dll
+extension=php_soap.dll
