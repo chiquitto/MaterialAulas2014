@@ -1,0 +1,5 @@
+http://www.webservicex.net/ws/WSDetails.aspx?CATID=2&WSID=10
+
+http://www.webservicex.net/CurrencyConvertor.asmx
+
+URI=http://www.webservicex.net/CurrencyConvertor.asmx?WSDL
