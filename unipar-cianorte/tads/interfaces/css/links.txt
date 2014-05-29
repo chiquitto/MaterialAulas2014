@@ -1,0 +1,11 @@
+Referencia CSS W3Schools
+http://www.w3schools.com/css/DEFAULT.asp
+
+Referencia CSS W3C
+http://www.w3.org/Style/CSS/
+
+==
+
+CSS Text
+http://www.w3schools.com/css/css_text.asp
+http://www.w3schools.com/css/css_font.asp
