@@ -43,10 +43,10 @@ if ($_POST) {
 
   // Validar informacoes
   if ($nome == '') {
-    $msg[] = 'Informe um nome';
+    $msg[] = 'Informe o nome completo';
   }
   if ($email == '') {
-    $msg[] = 'Informe um email';
+    $msg[] = 'Informe um endereço de email';
   }
 
   if (!$msg) {
@@ -92,9 +92,7 @@ if ($_POST) {
   <h1>Cadastrar clientes</h1>
 </div>
 
-<?php if ($msg) { ?>
-<?php echo join('<br>', $msg); ?>
-<?php } ?>
+<?php if ($msg) { msgHtml($msg); } ?>
 
 <form role="form" method="post" action="clientes-editar.php">
 
