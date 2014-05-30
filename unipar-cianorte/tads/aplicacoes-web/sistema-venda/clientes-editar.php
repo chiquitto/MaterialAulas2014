@@ -5,9 +5,30 @@ require './lib/conexao.php';
 
 $msg = array();
 
-$nome = '';
-$email = '';
-$ativo = CLIENTE_ATIVO;
+// clientes-editar.php?idcliente=1
+
+if ($_POST) {
+  $idcliente = (int) $_POST['idcliente'];
+}
+else {
+  $idcliente = (int) $_GET['idcliente'];
+}
+
+$sql = "Select * From cliente
+Where (idcliente = $idcliente)";
+
+$r = mysqli_query($con, $sql);
+
+if ($r->num_rows == 0) {
+  echo 'Registro inexistente';
+  exit;
+}
+
+$cliente = mysqli_fetch_assoc($r);
+
+$nome = $cliente['nome'];
+$email = $cliente['email'];
+$ativo = $cliente['ativo'];
 
 if ($_POST) {
   $nome = $_POST['nome'];
@@ -15,6 +36,9 @@ if ($_POST) {
 
   if (!isset($_POST['ativo'])) {
     $ativo = CLIENTE_INATIVO;
+  }
+  else {
+    $ativo = CLIENTE_ATIVO;
   }
 
   // Validar informacoes
@@ -27,9 +51,11 @@ if ($_POST) {
 
   if (!$msg) {
     // Salvar informacoes
-    $sql = "Insert into cliente
-    (nome, email, ativo) Values
-    ('$nome', '$email', '$ativo')";
+    $sql = "Update cliente Set
+    nome = '$nome',
+    email = '$email',
+    ativo = '$ativo'
+    Where (idcliente = $idcliente)";
 
     $r = mysqli_query($con, $sql);
 
@@ -70,7 +96,10 @@ if ($_POST) {
 <?php echo join('<br>', $msg); ?>
 <?php } ?>
 
-<form role="form" method="post" action="clientes-cadastrar.php">
+<form role="form" method="post" action="clientes-editar.php">
+
+  <input name="idcliente" value="<?php echo $idcliente; ?>" type="hidden">
+
   <div class="form-group">
     <label for="fnome">Nome</label>
     <input type="text" class="form-control" id="fnome" name="nome" placeholder="Nome completo" value="<?php echo $nome; ?>">
