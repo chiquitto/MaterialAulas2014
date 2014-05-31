@@ -20,9 +20,10 @@ Where (idcliente = $idcliente)";
 
 $r = mysqli_query($con, $sql);
 
-if ($r->num_rows == 0) {
-  echo 'Registro inexistente';
-  exit;
+if ($r->num_rows == 0) {  
+    $url = 'clientes.php';
+    $msg = "Registro inexistente.";
+    javascriptAlertFim($msg, $url);
 }
 
 $cliente = mysqli_fetch_assoc($r);
@@ -65,8 +66,10 @@ if ($_POST) {
       $msg[] = mysqli_error($con);
     }
     else {
-      echo "Cadastrou";
-      exit;
+      $url = 'clientes-editar.php?idcliente=' . $idcliente;
+      $msg = "Cliente $idcliente alterado.";
+
+      javascriptAlertFim($msg, $url);
     }
   }
 }
