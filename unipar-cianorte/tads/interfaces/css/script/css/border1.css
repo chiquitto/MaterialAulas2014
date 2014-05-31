@@ -1,0 +1,14 @@
+h2 {
+	/* none|solid|dotted|dashed */
+	border: 4px dashed #009900;
+
+	/*border-top: 4px dotted #009999;
+	border-right: 4px dotted #990099;*/
+
+	border-bottom-color: red;
+}
+
+textarea {
+	border-color: #FF0000;
+	border-radius: 50% 50% 50% 50%;
+}

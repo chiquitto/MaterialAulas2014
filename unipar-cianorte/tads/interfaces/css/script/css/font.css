@@ -1,0 +1,43 @@
+body {
+	font-family: Verdana, Arial;
+}
+
+h1 {
+	font-size: 20px;
+	font-style: italic;
+	font-variant: small-caps;
+	font-weight: normal;
+
+	font: italic small-caps normal 20px/30px Verdana,Arial;
+}
+
+h2 {
+	font-size: 18px;
+}
+
+p {
+	letter-spacing: 3px;
+	text-align: justify;
+	text-decoration: none;
+	text-indent: 15%;
+	text-transform: capitalize;
+	vertical-align: top;
+	word-spacing: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+h1 {
+	/*background-color: red;*/
+
+	/*border: 5px solid rgba(255, 0, 0, 0.5);*/
+	border-width: 5px;
+	border-style: solid;
+	border-color: red;
+
+	border-bottom: 5px solid orange;
+
+	border-radius: 50% 50% 50% 50%;
+
+	text-align: center;
+}
+
+li {
+	background-color: red;
+}

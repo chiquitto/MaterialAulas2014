@@ -1,0 +1,15 @@
+body {
+	background-color: red;
+	background-image: url(../img/google.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+	/* left center right - top center bottom */
+	background-position: 20% 100%;
+
+	background: blue url(../img/google.png) repeat-x 100px 10px fixed;
+}
+
+strong {
+	background-color: yellow;
+}

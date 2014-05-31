@@ -1,0 +1,30 @@
+body {
+	background-color: black;
+	background-image: url(../img/google.png);
+
+	/* repeat|repeat-x|repeat-y|no-repeat */
+	background-repeat: no-repeat;
+
+	background-attachment: fixed;
+
+	/* top|center|bottom left|center|right */
+	background-position: 50px 60%;
+
+	background: black url(../img/google.png) repeat center center fixed;
+
+	background-size: 100%;
+
+	color: white;
+}
+
+h1 {
+	background-color: red
+}
+
+strong {
+	background-color: yellow;
+}
+
+input {
+	background-color: blue;
+}

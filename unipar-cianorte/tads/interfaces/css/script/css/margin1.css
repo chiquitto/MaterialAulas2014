@@ -1,0 +1,18 @@
+h2 {
+	background-color: red;
+
+	margin: 0 0 0 0;
+}
+
+p {
+	background-color: blue;
+
+	margin: 0 0 0 0;
+}
+
+table {
+	border: 3px solid #000000;
+
+	margin-left: auto;
+	margin-right: auto;
+}

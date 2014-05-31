@@ -1,0 +1,107 @@
+Referencia: http://www.w3schools.com/css/default.asp
+
+==
+
+Background
+
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+background-size
+background: color image repeat position attachment;
+
+==
+
+Border: A fronteira esta em torno do preenchimento e conteúdo. A cor da borda é herdado da propriedade color do elemento.
+
+border
+border-color
+border-style
+border-width
+border-radius
+
+border-bottom
+border-left
+border-right
+border-top
+
+border-bottom-color
+border-bottom-style
+border-bottom-width
+
+border-left-color
+border-left-style
+border-left-width
+
+border-right-color
+border-right-style
+border-right-width
+
+border-top-color
+border-top-style
+border-top-width
+
+==
+
+Margin: Limpa uma área ao redor da borda. A margem não tem uma cor de fundo, que é completamente transparente;
+
+margin
+
+margin-top
+margin-right
+margin-bottom
+margin-left
+
+==
+
+Padding: Limpa uma área em torno do conteúdo. O preenchimento é afetado pela fundo da caixa.
+
+padding
+
+padding-left
+padding-top
+padding-right
+padding-bottom
+
+==
+
+CSS Box Model
+
+Todos os elementos do HTML podem ser considerados como caixas.
+O CSS Box Model é essencialmente uma caixa ao redor dos elementos HTML, e consiste de: margins, borders, padding e o conteúdo atual.
+
+==
+
+Posicionamento
+
+position: static|fixed|relative|absolute
+left
+top
+right
+bottom
+z-index
+
+==
+
+Display
+
+A propriedade display especifica se/como um elemento é exibido.
+
+display:block
+Um elemento de bloco é um elemento que ocupa toda a largura disponível, e tem uma quebra de linha antes e depois dele.
+
+display:inline
+Um elemento inline ocupa apenas o máximo de largura, se necessário, e não força as quebras de linha.
+
+display:none
+Remove o elemento do HTML.
+
+==
+
+Visibility
+
+A propriedade visibility especifica se um elemento deve ser visivel/escondido
+
+visibility:visible|hidden;
