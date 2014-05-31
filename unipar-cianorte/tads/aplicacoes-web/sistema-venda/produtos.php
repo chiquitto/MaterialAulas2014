@@ -11,7 +11,7 @@ require './lib/conexao.php';
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Clientes</title>
+    <title>Produtos</title>
 
     <?php headCss(); ?>
   </head>
@@ -22,7 +22,7 @@ require './lib/conexao.php';
 <div class="container">
 
 <div class="page-header">
-  <h1><i class="fa fa-heart"></i> Clientes</h1>
+  <h1><i class="fa fa-headphones"></i> Produtos</h1>
 </div>
 
 <table class="table table-striped">

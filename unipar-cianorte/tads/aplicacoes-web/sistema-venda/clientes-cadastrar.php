@@ -1,6 +1,7 @@
 <?php
 
 require './config.php';
+require './lib/funcoes.php';
 require './lib/conexao.php';
 
 $msg = array();
@@ -38,8 +39,12 @@ if ($_POST) {
       $msg[] = mysqli_error($con);
     }
     else {
-      echo "Cadastrou";
-      exit;
+      $idcliente = mysqli_insert_id($con);
+
+      $url = 'clientes-editar.php?idcliente=' . $idcliente;
+      $msg = "Cliente $idcliente criado.";
+
+      javascriptAlertFim($msg, $url);
     }
   }
 }
@@ -53,8 +58,7 @@ if ($_POST) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cadastrar clientes</title>
 
-    <link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./lib/estilos.css" rel="stylesheet">
+    <?php headCss(); ?>
   </head>
   <body>
 
@@ -63,7 +67,7 @@ if ($_POST) {
 <div class="container">
 
 <div class="page-header">
-  <h1>Cadastrar clientes</h1>
+  <h1><i class="fa fa-heart"></i> Cadastrar clientes</h1>
 </div>
 
 <?php if ($msg) { msgHtml($msg); } ?>
