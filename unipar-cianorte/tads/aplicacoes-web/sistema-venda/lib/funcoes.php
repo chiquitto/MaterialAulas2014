@@ -61,12 +61,13 @@ function javascriptAlertFim($msg, $url = null) {
 */
 function msgHtml($msg, $boxType = 'danger') {
 ?>
-<div class="alert alert-<?php echo $boxType; ?>">
-  <ul>
-    <?php foreach($msg as $m) { ?>
-    <li><?php echo $m; ?>;</li>
-    <?php } ?>
-  </ul>
+<div class="alert alert-<?php echo $boxType; ?> alert-dismissable">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	<ul>
+		<?php foreach($msg as $m) { ?>
+		<li><?php echo $m; ?>;</li>
+		<?php } ?>
+	</ul>
 </div>
 <?
 }
