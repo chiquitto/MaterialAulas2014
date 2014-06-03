@@ -26,4 +26,6 @@ function carregarFail() {
 	document.getElementById('fnome').value = '';
 	document.getElementById('femail').value = '';
 	document.getElementById('fstatus').value = '';
+
+	alert('Cliente inexistente');
 }
