@@ -10,7 +10,7 @@ require './lib/conexao.php';
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TecInfo Vendas Unipar</title>
+    <title>TecInfo Unipar</title>
 
     <?php headCss(); ?>
   </head>
@@ -22,7 +22,7 @@ require './lib/conexao.php';
 
 <div class="jumbotron">
   <div class="container">
-    <h1>TecInfo Vendas Unipar</h1>
+    <h1>TecInfo Unipar</h1>
     <p>Bem vindo Alisson Chiquitto</p>
     <p>
       <div class="btn-group">

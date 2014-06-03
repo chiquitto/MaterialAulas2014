@@ -1,7 +1,13 @@
 <?php
 
+/**
+* Lista de CSS das paginas
+* Encontre mais templates de Bootstrap em
+* http://www.bootstrapcdn.com/#bootswatch_tab
+*/
 function headCss() {
-?><link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+?>
+<link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="./lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 <link href="./lib/estilos.css" rel="stylesheet"><?php
 }
