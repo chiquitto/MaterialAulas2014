@@ -24,7 +24,7 @@ function carregarDone(dados) {
 		+ '<td>' + dados[i].nome + '</td>'
 		+ '<td>' + dados[i].email + '</td>'
 		+ '<td>' + (dados[i].status == '1' ? 'Ativo' : 'Inativo') + '</td>'
-		+ '<tr>';
+		+ '</tr>';
 	}
 	//console.log(html);
 
