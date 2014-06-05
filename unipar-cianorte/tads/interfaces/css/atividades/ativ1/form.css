@@ -1,0 +1,42 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 15px;
+	font-family: Arial;
+}
+
+input, button {
+	padding: 7px 6px 7px 6px;
+	font-family: Arial;
+	font-size: 15px;
+	color: #555555;
+	background: #ffffff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	width: 398px;
+	margin-top: 10px;
+}
+
+button {
+	width: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#flogado {
+	width: auto;
+}
+
+fieldset {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	width: 400px;
+	padding: 5px 10px;
+	margin: 0 auto 0 auto;
+}
+
+label {
+	font-weight: bold;
+	font-size: 15px;
+	color: #333333;
+}
