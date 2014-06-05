@@ -19,7 +19,10 @@ require '../lib/Conexao.php';
 
 $cd = (int) $_GET['cd'];
 
-$sql = "Select * From cliente Where idcliente=$cd";
+$sql = "Select
+  idcliente, nome, email, ativo status
+From cliente
+Where (idcliente = $cd)";
 
 $con = Conexao::getInstance();
 $resultado = $con->query($sql);
@@ -31,9 +34,8 @@ if (!$cliente) {
 	exit;
 }
 
-$cliente['idcliente'] = (int) $cliente['idcliente'];
-$cliente['status'] = $cliente['ativo'];
-unset($cliente['ativo']);
+// $cliente['status'] = $cliente['ativo'];
+// unset($cliente['ativo']);
 
 $saida = json_encode($cliente);
 
@@ -42,4 +44,4 @@ header('Content-Type: application/json;charset=utf-8');
 
 echo $saida;
 
-sleep(3);
+//sleep(3);

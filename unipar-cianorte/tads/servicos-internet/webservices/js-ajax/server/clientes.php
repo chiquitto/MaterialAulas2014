@@ -16,26 +16,27 @@ $clientes = array(
 */
 
 require '../lib/Conexao.php';
-
-$sql = "Select * From cliente";
-
 $con = Conexao::getInstance();
+
+$sql = "Select
+idcliente, nome, email, ativo status
+From cliente";
+
 $resultado = $con->query($sql);
 
+//print_r($clientes);exit;
+
 $clientes = array();
-while ($cliente = $resultado->fetch(PDO::FETCH_ASSOC)) {
+while($cliente = $resultado->fetch(PDO::FETCH_ASSOC)) {
   $cliente['idcliente'] = (int) $cliente['idcliente'];
-  $cliente['status'] = $cliente['ativo'];
-  unset($cliente['ativo']);
   $clientes[] = $cliente;
 }
-
-//print_r($clientes);exit;
 
 header('HTTP/1.0 200 OK');
 header('Content-Type: application/json;charset=utf-8');
 
 $saida = json_encode($clientes);
+
 echo $saida;
 
 sleep(3);
