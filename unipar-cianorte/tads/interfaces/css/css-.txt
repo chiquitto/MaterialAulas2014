@@ -77,11 +77,137 @@ O CSS Box Model é essencialmente uma caixa ao redor dos elementos HTML, e consi
 Posicionamento
 
 position: static|fixed|relative|absolute
+
 left
 top
 right
-bottom
+bottom: Define o valor  a borda margem inferior de uma caixa posicionada
 z-index
+
+==
+
+position: static
+
+Elementos HTML são position:static por padrão. Um elemento com o posicionamento estático está sempre posicionado de acordo com o fluxo normal de uma página HTML.
+
+Elementos posicionados estaticamento não são afetados pelas propriedades top, bottom, left e right.
+
+==
+
+position: fixed
+
+Um elemento com position:fixed é posicionado relativamente à janela do navegador.
+Este tipo de posicionamento não permite a mudança de local do elemento se a janela é rolada. 
+
+Elementos fixados são removidos do fluxo normal. O documento e outros elementos comportam-se como se elemento com position:fixed não existisse. 
+
+Elementos fixados podem se sobrepor a outros elementos.
+
+p {
+    position: fixed;
+    top: 30px;
+    right: 5px;
+}
+
+==
+
+position: relative
+
+Um elemento com position:relative está posicionado em relação à sua posição original. 
+
+O conteúdo de elementos posicionados relativamente podem ser movidos e sobrepor outros elementos, mas o espaço reservado para o elemento ainda está preservada no fluxo normal. 
+
+Elementos posicionados relativamente são freqüentemente usados como blocos de contêineres para elementos posicionados absolutamente.
+
+h2 {
+    position: relative;
+    left: -20px;
+}
+
+==
+
+position: absolute
+
+Um elemento de posição absoluta é posicionado em relação ao primeiro elemento pai, que tem uma posição diferente de position:static. Se nenhum elemento for encontrado, o elemento eleito será o <html>. 
+
+Os elementos de posicionamento absoluto são removidas do fluxo normal. O documento e outros elementos se comportam como o elemento posicionado de forma absoluta não existisse. 
+
+Elementos posicionados absolutamente podem se sobrepor a outros elementos.
+
+h2 {
+    position: absolute;
+    left: 100px;
+    top: 150px;
+}
+
+==
+
+Propriedade z-index
+Elementos Sobrepostos
+
+Quando os elementos são colocados fora do fluxo normal, eles podem sobrepor-se a outros elementos. 
+
+A propriedade z-index especifica a ordem de pilha de um elemento (que elemento deve ser colocado a frente, ou para trás dos outros elementos). 
+
+Um elemento pode ter um z-index positivo ou negativo. 
+
+Um elemento com um maior valor z-index sempre será exibido a frente de outro elemento.
+
+img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+==
+
+Propriedade clip
+
+Aplica um clip a um elemento posicionado absolutamente;
+
+img  {
+    position: absolute;
+    clip: rect(0px,60px,200px,0px);
+}
+
+==
+
+Propriedade cursor
+
+Especifica o tipo de cursor que será exibido no elemento
+
+Valores possíveis:
+url
+auto
+crosshair
+default
+pointer
+move
+e-resize
+ne-resize
+nw-resize
+n-resize
+se-resize
+sw-resize
+s-resize
+w-resize
+text
+wait
+help
+
+==
+
+Propriedade overflow
+
+Especifica o que acontece se o conteúdo "transbordar"
+
+Valores possíveis:
+auto
+hidden
+scroll
+visible
+inherit
 
 ==
 
@@ -105,3 +231,4 @@ Visibility
 A propriedade visibility especifica se um elemento deve ser visivel/escondido
 
 visibility:visible|hidden;
+
