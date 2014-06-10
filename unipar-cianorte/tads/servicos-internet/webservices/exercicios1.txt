@@ -1,0 +1,33 @@
+JSON
+1. A URL (https://api.github.com/users/{user}/repos) entrega uma lista
+de repositórios do usuário {user}. Criar um script PHP que mostre
+nome, id e URL para clone de todos os repositórios do usuário {user}.
+
+GitHub API:
+https://developer.github.com/v3/
+https://api.github.com/
+
+XML
+2. Extrair e consumir informações em XML da API
+http://www.geonames.org/export/web-services.html. Refaça o exercício
+usando JSON. Pra esta atividade usar o usuário chiquitto, ou façam o
+cadastro com seu usuário.
+
+SOAP
+3. Consumir informações usando via SOAP do webservice
+http://www.chartlyrics.com/api.aspx
+http://api.chartlyrics.com/apiv1.asmx?WSDL
+
+==
+
+Para praticar mais ainda, vocês podem pesquisar APIs (tanto SOAP
+quanto JSON/XML) na página
+http://www.programmableweb.com/category/all/apis?order=field_popularity
+
+==
+
+Ferramentas
+
+Para JSON/XML: https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm
+
+e para SOAP: https://chrome.google.com/webstore/detail/wizdler/oebpmncolmhiapingjaagmapififiakb
