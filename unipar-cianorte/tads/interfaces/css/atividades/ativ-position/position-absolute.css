@@ -1,0 +1,48 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#d1 {
+	border: 2px solid #FF0000;
+	height: 300px;
+	margin: 10% auto 0 auto;
+	position: relative;
+	width: 50%;
+}
+
+#d2 {
+	background: #000000;
+	height: 35%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 35%;
+}
+
+#d3 {
+	background: #000000;
+	height: 35%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 35%;
+}
+
+#d4 {
+	background: #000000;
+	bottom: 0;
+	height: 35%;
+	left: 0;
+	position: absolute;
+	width: 35%;
+}
+
+#d5 {
+	background: #000000;
+	bottom: 0;
+	height: 35%;
+	position: absolute;
+	right: 0;
+	width: 35%;
+}

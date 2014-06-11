@@ -1,0 +1,38 @@
+* {
+	font-family: Arial;
+	margin: 0;
+	padding: 0;
+}
+
+div {
+	height: 100px;
+	margin: 0 auto 0 auto;
+	position: relative;
+	width: 60%;
+}
+
+#d1 {
+	background: #ff0000;
+	left: 50px;
+	top: 10px;
+}
+
+#d2 {
+	background: #00ff00;
+	left: 40px;
+}
+
+#d3 {
+	background: #0000ff;
+	left: 30px;
+}
+
+#d4 {
+	background: #ff00ff;
+	left: 20px;
+}
+
+#d5 {
+	background: #ffff00;
+	left: 10px;
+}

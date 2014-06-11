@@ -1,0 +1,40 @@
+* {
+	font-family: Arial;
+	margin: 0;
+	padding: 0;
+}
+
+#topo {
+	background: #FF0000;
+	border-bottom: 10px solid #FFF;
+	height: 50px;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+#conteudo {
+	background: #00FF00;
+	margin: 60px 10px 60px 10px;
+	padding: 10px;
+	z-index: 1;
+}
+
+p {
+	margin: 10px 0 5px 0;
+	text-align: justify;
+	text-indent: 25px;
+}
+
+#rodape {
+	background: #0000FF;
+	border-top: 10px solid #FFF;
+	bottom: 0;
+	height: 50px;
+	left: 0;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+}
