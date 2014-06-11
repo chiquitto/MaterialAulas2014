@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clientes>
+  <cliente></cliente>
+
+  <cliente>
+    <nome>Unipar</nome>
+  </cliente>
+</clientes>
+
+$sxe = new SimpleXMLElement($xml);
+
+(string) $sxe->cliente[1]->nome == 'Unipar'
+
+$sxe->cliente[1]->nome = 'Univ. Paranaense'
