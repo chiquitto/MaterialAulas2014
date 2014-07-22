@@ -81,7 +81,7 @@ position: static|fixed|relative|absolute
 left
 top
 right
-bottom: Define o valor  a borda margem inferior de uma caixa posicionada
+bottom
 z-index
 
 ==
