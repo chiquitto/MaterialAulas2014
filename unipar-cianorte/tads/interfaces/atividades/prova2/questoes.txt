@@ -1,0 +1,78 @@
+1) (1,0) Citar 3 maneiras distintas para declarar uma cor verde no CSS.
+
+green
+#00FF00
+#0F0
+rgb(0,255,0)
+rgba(0,255,0,1)
+rgb(0%,100%,0%)
+rgba(0%,100%,0%,1)
+
+2) (1,5) No HTML, a tag <em> marca um pedaço de texto como importante, e ao utiliza-la, o texto marcado fica com um estilo itálico. Criar uma regra CSS para que todos os textos desta tag fiquem com: cor branca, sublinhado, negrito, sem itálico e fundo na cor preta.
+
+em {
+	color: #FFFFFF;
+	text-decoration: underline;
+	font-weight: bold;
+	font-style: normal;
+	
+	background: #000000;
+	background-color: #000000;
+}
+
+3) (2,5) Criar uma regra CSS que aplique as seguintes características para os elementos que tenham o atributo class=”box”.
+a) O elemento deve ocupar exatamente 800px de largura e 600px de altura;
+b) Preenchimento 20px em todas as direções;
+c) Margin de 20px em todas as direções;
+d) Borda verde com espessura de 2px em todos os lados;
+e) Texto justificado;
+f) Família da fonte: Verdana;
+g) Tamanho da fonte: 12px;
+
+.box {
+	padding: 20px 20px 20px 20px;
+	margin: 20px 20px 20px 20px;
+	border: 2px solid #00FF00;
+	text-align: justified;
+	font-family: verdana;
+	font-size: 12px;
+
+	width: 756px;
+	height: 556px;
+}
+
+4) Criar uma regra CSS para: 
+a) (1,0) Para os hiperlinks, retirar o sublinhado e alterar a cor do texto para vermelho;
+
+a {
+	color: #FF0000;
+	text-decoration: none;
+}
+
+b) (1,0) Alterar a cor do texto para verde e negrito de todos os itens de listas ordenadas e não ordenadas;
+
+li {
+	color: #00FF00;
+	font-weight: bold;
+}
+
+5) (3,0) Criar um formulário HTML que contenha elementos para que o usuário consiga informar: nome completo, idade, sexo, e-mail, senha e um botão “Entrar”. Para cada entrada de dados, utilizar o tipo correto para o elemento <input>. Os campos nome completo, e-mail e senha devem ser de preenchimento obrigatório.
+
+<form name="" method="get" action="">
+
+Nome completo: <input type="text" name="nome" required>
+
+Idade: <input type="number" name="idade">
+
+Genero:
+Masculino <input type="radio" name="genero" value="M">
+Feminino  <input type="radio" name="genero" value="F">
+
+Email: <input type="email" name="email" required>
+
+Senha: <input type="password" name="senha" required>
+
+<input type="submit" name="botao" value="Entrar">
+<button type="submit" name="botao">Entrar</button>
+
+</form>
