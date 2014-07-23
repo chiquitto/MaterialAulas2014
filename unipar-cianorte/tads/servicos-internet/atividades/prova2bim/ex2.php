@@ -6,4 +6,9 @@ Criar um array no PHP com os mesmos dados do XML do exercício anterior. Por fim
 
 $carros = array('Corsa', 'Palio', '206');
 
+/* $carros = array();
+$carros[] = 'Corsa';
+$carros[] = 'Palio';
+$carros[] = '206'; */
+
 echo json_encode($carros);

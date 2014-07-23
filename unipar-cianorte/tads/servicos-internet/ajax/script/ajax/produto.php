@@ -1,5 +1,7 @@
 <?php
 
+// sleep(3);
+
 require '../config.php';
 
 $con = Conexao::getInstance();
