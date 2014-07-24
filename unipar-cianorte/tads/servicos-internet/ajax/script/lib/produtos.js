@@ -1,70 +1,36 @@
-var iniciar = function() {
-    prepararEventos();
+// window.onload = paginaCarregada;
+$(document).ready(paginaCarregada);
+
+function paginaCarregada() {
+    $('#produtosSelecao').change(produtoSelecionado);
 }
 
-function prepararEventos() {
-    $('#produtosSelecao').change(onTrocaProduto);
+function paginaFechada() {
+    
 }
 
-function onTrocaProduto() {
+function produtoSelecionado() {
     var id = $(this).val();
-    produtoCarregar(id);
-}
-
-function produtoCarregar(id) {
+    
     $.ajax({
-        type: "GET",
-        url: "./ajax/produto.php",
         data: {id: id},
-        dataType: "json"
+        type: 'get',
+        dataType: 'json',
+        url: 'ajax/produto.php'
     })
             .done(produtoCarregado)
-            .fail(produtoFalha)
-            .always(produtoAlways)
+            .fail(produtoNaoEncontrado)
     ;
 }
 
-function produtoCarregado(produto) {
-    $('#fInfoProduto').val(produto.produto);
-    $('#fInfoPreco').val('R$ ' + produto.preco);
-    $('#fInfoEstoque').val(produto.saldo);
+function produtoAdicionar() {
+    
 }
 
-function produtoFalha() {
-    window.alert('falha');
+function produtoCarregado() {
+    alert('Produto foi carregado');
 }
 
-function produtoAlways() {
-    window.alert('sempre');
+function produtoNaoEncontrado() {
+    alert('Produto não foi carregado');
 }
-
-// window.onload = iniciar;
-$(document).ready(iniciar);
-
-/* 
-
-function produtosIniciar() {
-    prepararEventos();
-}
-
-function prepararEventos() {
-    $('#produtosSelecao').change(function() {
-        var id = $(this).val();
-        produtoCarregar(id);
-    });
-}
-
-function produtoCarregar(id) {
-    $.ajax({
-        type: "GET",
-        url: "./ajax/produto.php",
-        data: {id: id},
-        dataType: "json"
-    })
-            .done(produtoCarregado)
-            .fail(produtoFalha)
-            .always(produtoAlways)
-    ;
-}
-
-*/
