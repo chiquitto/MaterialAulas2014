@@ -1,0 +1,19 @@
+* {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+#um {
+  background: red;
+}
+#dois {
+  background: green;
+}
+#tres {
+  background: blue;
+}
+
+p {
+  height: 300px;
+  width: 300px;
+}

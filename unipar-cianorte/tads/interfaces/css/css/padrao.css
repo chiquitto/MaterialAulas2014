@@ -1,0 +1,52 @@
+* {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+div {
+  background: yellow;
+  margin: 0 0 15px 0;
+}
+
+#um {
+  background: red;
+}
+#dois {
+  background: green;
+}
+#tres {
+  background: blue;
+}
+
+p {
+
+}
+
+strong {
+	background: black;
+	color: white;
+	display: block;
+}
+
+table {
+
+}
+
+div {
+	height: 300px;
+	overflow: hidden;
+	width: 300px;
+}
+
+#img2 {
+	position: relative;
+    /*clip: rect(0px,60px,200px,0px);*/
+    cursor: pointer;
+}
+
+#d2 {
+	background: red;
+	height: 300px;
+	overflow: scroll;
+	width: 300px;
+}

@@ -1,0 +1,16 @@
+p {
+  position: relative;
+}
+
+#um {
+  left: 20px;
+  top: 20px;
+  z-index: -200;
+}
+#dois {
+  left: 40px;
+  z-index: -100;
+}
+#tres {
+  left: 60px;
+}

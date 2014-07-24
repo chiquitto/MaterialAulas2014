@@ -1,0 +1,15 @@
+p {
+  position: fixed;
+
+  right: 10px;
+}
+
+#um {
+  top: 0;
+}
+#dois {
+  top: 300px;
+}
+#tres {
+  bottom: 0;
+}
