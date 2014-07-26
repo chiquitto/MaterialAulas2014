@@ -75,5 +75,5 @@ function msgHtml($msg, $boxType = 'danger') {
 		<?php } ?>
 	</ul>
 </div>
-<?
+<?php
 }
