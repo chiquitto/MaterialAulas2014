@@ -1,0 +1,58 @@
+1) (1,0) Criar um bloco de código PHP capaz de se abrir uma conexão com um banco de dados MySql;
+
+R.: Linha 3 do arquivo https://github.com/chiquitto/MaterialAulas2014/blob/master/unipar-cianorte/tads/aplicacoes-web/mysqli/scripts/conexao.php
+
+==
+
+2) (1,0) Criar um script PHP que exiba a quantidade de produtos não bloqueados;
+
+R.: Esta questão tem 2 maneiras de resolver:
+
+1. Um select count no bd e exibir para o usuário;
+2. Um select em todos os registros, contar a quantidade de registros e exibir o total para o usuário;
+
+==
+
+3) (2,0) Bill Clinton tem um formulário HTML para cadastro de produtos. Ele deseja que assim que o usuário clicar em salvar, os dados contidos no formulário sejam enviados para um script PHP capaz de receber estes dados e inserir no SGBD. Escrever o código PHP que resolva o problema descrito.
+
+R.: Criar uma instrução SQL do tipo Insert e envia-la para o BD
+
+$sql = "Insert into cliente
+    (campos) Values (valores)";
+$r = mysqli_query($con, $sql);
+
+Um exemplo mais completo (com validações, mensagens para o usuário, etc) pode ser encontrado em https://github.com/chiquitto/MaterialAulas2014/blob/master/unipar-cianorte/tads/aplicacoes-web/sistema-venda/clientes-cadastrar.php
+
+==
+
+4) (3,0) Um arquivo chamado produto-estado.php pode ser acessado para bloquear/desbloquear um produto no sistema. Criar o código PHP que faça o que esta descrito nos exemplos a seguir: (1) Quando o usuário acessa o link ”produto-estado.php?id=1&bloqueado=1”, o sistema bloqueia o produto 1, e (2) quando o usuário acessa o link ”produto-estado.php?id=2&bloqueado=0”, o sistema desbloqueia o produto 2. Obrigatoriamente o script deve verificar:
+a) se o produto informado existe no banco de dados. Caso não existir exibir uma mensagem para o usuário e interromper a execução do script;
+b) se o valor do atributo bloqueado é igual a 0 ou 1. Caso contrário, exibir um aviso e interromper a execução do script;
+
+R.:
+
+https://github.com/chiquitto/MaterialAulas2014/tree/master/unipar-cianorte/tads/aplicacoes-web/php-get-post
+https://github.com/chiquitto/MaterialAulas2014/blob/master/unipar-cianorte/tads/aplicacoes-web/sistema-venda/clientes-editar.php
+
+<?php
+
+$id = $_GET['id'];
+$bloqueado = $_GET['bloqueado'];
+
+if (($bloqueado != '0') and ($bloqueado != '1')) {
+	echo 'Valor inválido para bloqueado';
+	exit;
+}
+
+$sql = "select id from produto where id = $id";
+$r = mysqli_query($con, $sql);
+
+$produto = mysqli_fetch_assoc($r);
+
+if (!$produto) {
+	echo 'Produto inexistente';
+	exit;
+}
+
+$sql = "update produto set bloqueado = $bloqueado where id=$id";
+$r = mysqli_query($con, $sql);
