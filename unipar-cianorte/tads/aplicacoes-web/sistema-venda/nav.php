@@ -25,6 +25,9 @@
           <ul class="dropdown-menu">
             <li><a href="produtos-cadastrar.php">Cadastrar</a></li>
             <li><a href="produtos.php">Pesquisar</a></li>
+            <li class="divider"></li>
+            <li><a href="categorias-cadastrar.php">Cadastrar Categorias</a></li>
+            <li><a href="categorias.php">Categorias</a></li>
           </ul>
         </li>
         <li class="dropdown">

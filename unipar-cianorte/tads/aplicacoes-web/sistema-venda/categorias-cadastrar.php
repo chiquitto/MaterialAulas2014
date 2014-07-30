@@ -6,47 +6,8 @@ require './lib/conexao.php';
 
 $msg = array();
 
-$nome = '';
-$email = '';
-$ativo = CLIENTE_ATIVO;
-
 if ($_POST) {
-  $nome = $_POST['nome'];
-  $email = $_POST['email'];
-
-  if (!isset($_POST['ativo'])) {
-    $ativo = CLIENTE_INATIVO;
-  }
-
-  // Validar informacoes
-  if ($nome == '') {
-    $msg[] = 'Informe o nome completo';
-  }
-  if ($email == '') {
-    $msg[] = 'Informe um endereço de email';
-  }
-
-  if (!$msg) {
-    // Salvar informacoes
-    $sql = "Insert into cliente
-    (nome, email, ativo) Values
-    ('$nome', '$email', '$ativo')";
-
-    $r = mysqli_query($con, $sql);
-
-    if (!$r) {
-      $msg[] = 'Erro para inserir o registro';
-      $msg[] = mysqli_error($con);
-    }
-    else {
-      $idcliente = mysqli_insert_id($con);
-
-      $url = 'clientes-editar.php?idcliente=' . $idcliente;
-      $msg = "Cliente $idcliente criado.";
-
-      javascriptAlertFim($msg, $url);
-    }
-  }
+  
 }
 
 ?>
@@ -66,30 +27,24 @@ if ($_POST) {
 <div class="container">
 
 <div class="page-header">
-  <h1><i class="fa fa-heart"></i> Cadastrar clientes</h1>
+  <h1><i class="fa fa-cubes"></i> Cadastrar categorias</h1>
 </div>
 
 <?php if ($msg) { msgHtml($msg); } ?>
 
-<form role="form" method="post" action="clientes-cadastrar.php">
+<form role="form" method="post" action="categorias-cadastrar.php">
+    
   <div class="form-group">
-    <label for="fnome">Nome</label>
-    <input type="text" class="form-control" id="fnome" name="nome" placeholder="Nome completo" value="<?php echo $nome; ?>">
+    <label for="fcategoria">Categoria</label>
+    <input type="text" class="form-control" id="fcategoria" name="categoria" placeholder="Nome da categoria">
   </div>
-  <div class="form-group">
-    <label for="femail">Email</label>
-    <input type="email" class="form-control" id="femail" name="email" placeholder="email@email.com" value="<?php echo $email; ?>">
-  </div>
-  <div class="form-group">
-    <label for="ffoto">Foto do cliente</label>
-    <input type="file" id="ffoto" name="foto">
-    <p class="help-block">Somente foto em JPG.</p>
-  </div>
+
   <div class="checkbox">
     <label for="fativo">
-      <input type="checkbox" name="ativo" id="fativo"<?php if ($ativo == CLIENTE_ATIVO) { ?> checked<?php } ?>> Cliente ativo
+      <input type="checkbox" name="ativo" id="fativo"> Categoria ativa
     </label>
   </div>
+    
   <button type="submit" class="btn btn-primary">Cadastrar</button>
   <button type="reset" class="btn btn-danger">Cancelar</button>
 </form>
