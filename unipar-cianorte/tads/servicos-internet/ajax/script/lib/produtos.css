@@ -5,3 +5,7 @@
 #fInfo label {
     display: block;
 }
+
+#produtosSelecao {
+    display: none;
+}

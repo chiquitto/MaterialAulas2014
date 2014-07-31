@@ -124,7 +124,7 @@ INSERT INTO `usuario` (`idusuario`, `nome`, `email`, `senha`, `status`) VALUES (
 
 INSERT INTO `cliente` (`idcliente`, `nome`, `email`, `ativo`) VALUES (NULL, 'Homer Simpsom', 'homer@gmail.com', '1');
 INSERT INTO `cliente` (`idcliente`, `nome`, `email`, `ativo`) VALUES (NULL, 'Super Homem', 'super@homem.com', '1');
-INSERT INTO `cliente` (`idcliente`, `nome`, `email`, `ativo`) VALUES (, 'Mulher Maravilha', 'mm@gmail.com', '1');
+INSERT INTO `cliente` (`idcliente`, `nome`, `email`, `ativo`) VALUES (NULL, 'Mulher Maravilha', 'mm@gmail.com', '1');
 
 INSERT INTO `categoria` (`idcategoria`, `categoria`, `status`) VALUES (NULL, 'Computadores', '1');
 INSERT INTO `categoria` (`idcategoria`, `categoria`, `status`) VALUES (NULL, 'Monitores', '1');
