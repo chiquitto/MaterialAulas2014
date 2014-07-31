@@ -23,7 +23,6 @@
 	color: #FFFFFF;
 	text-decoration: none;
 	top: 13px;
-	background-color: blue;
 	background-image: url(../img/flecha.png);
 	background-repeat: no-repeat;
 	background-position: right center;
@@ -35,4 +34,46 @@
 	margin-top: 10px;
 }
 
+body {
+    background-image: url(../img/fundo.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #000000;
+}
 
+#conteudo {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    background: red;
+}
+
+#textog {
+    display: none;
+}
+
+#signin, #signup {
+    background-color: #FFFFFF;
+    width: 278px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-left: 390px;
+    padding: 10px;
+    border: 1px solid #CCCCCC;
+}
+
+#signin input,
+#signup input {
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    display: block;
+    font-size: 15px;
+    padding: 5px 3px 5px 3px;
+    width: 270px;
+}
+
+#signin label,
+#signup label {
+    display: none;
+}
