@@ -7,7 +7,42 @@ require './lib/conexao.php';
 $msg = array();
 
 if ($_POST) {
+  // Pegar os dados informados pelo usuario
+  $categoria = $_POST['categoria'];
+  if(!isset($_POST['ativo']))
+  {
+    $ativo = 0;
+  }else
+  {
+    $ativo = 1;
+  }
+    // Validar os dados
+  if ($categoria == '')
+  {
+    $msg[] = 'Informe a Categoria';
+  }
+  // Se os dados estiverem corretos, salvar no BD
+  if (!$msg)
+  {
+    $sql = "INSERT into categoria
+    (categoria, status)values
+    ('$categoria','$ativo')";
   
+  $r = mysqli_query($con, $sql);
+  if (!$r){
+    $msg[] = 'Erro ao Salvar';
+    $msg[] = mysqli_error($con);
+  }else{
+    $registrook = 'sua categoria foi salva';
+    $registroid = mysqli_insert_id($con);
+
+    $url = 'categorias-editar.php?idcategoria='.$registroid;
+
+    javascriptAlertFim($registrook, $url);
+  }
+  }
+
+  // Se os dados foram salvos, mostrar mensagem pro usuario
 }
 
 ?>
