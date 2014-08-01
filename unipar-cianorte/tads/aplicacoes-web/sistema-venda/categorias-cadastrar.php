@@ -5,44 +5,43 @@ require './lib/funcoes.php';
 require './lib/conexao.php';
 
 $msg = array();
+$categoria = '';
+$ativo = 1;
 
 if ($_POST) {
-  // Pegar os dados informados pelo usuario
+  // Pegar informações
   $categoria = $_POST['categoria'];
-  if(!isset($_POST['ativo']))
-  {
-    $ativo = 0;
-  }else
-  {
+
+  if(isset($_POST['ativo'])){
     $ativo = 1;
+  } else {
+    $ativo = 0;
   }
-    // Validar os dados
-  if ($categoria == '')
-  {
-    $msg[] = 'Informe a Categoria';
+    
+  // Validar informações
+  if ($categoria == ''){
+    $msg[] = 'Informe a categoria';
   }
-  // Se os dados estiverem corretos, salvar no BD
-  if (!$msg)
-  {
-    $sql = "INSERT into categoria
-    (categoria, status)values
-    ('$categoria','$ativo')";
-  
-  $r = mysqli_query($con, $sql);
-  if (!$r){
-    $msg[] = 'Erro ao Salvar';
-    $msg[] = mysqli_error($con);
-  }else{
-    $registrook = 'sua categoria foi salva';
-    $registroid = mysqli_insert_id($con);
+  // Inserir
+  if (!$msg){
+    $sql = "insert into categoria2 
+    values (null, '$categoria', '$ativo')";
+    
+    $resultado = mysqli_query($con, $sql);
 
-    $url = 'categorias-editar.php?idcategoria='.$registroid;
+    // Testar se foi inserido
+    if (!$resultado) {
+      $msg[] = 'Nao foi possivel inserir o registro.';
+      $msg[] = mysqli_error($con); 
+    } else {
+      $idcategoria = mysqli_insert_id($con);
+      $url = 'categorias-editar.php?idcategoria=' . $idcategoria;
+      $mensagem = 'Categoria cadastrada!';  
 
-    javascriptAlertFim($registrook, $url);
-  }
-  }
+      javascriptAlertFim($mensagem, $url);
+    }
 
-  // Se os dados foram salvos, mostrar mensagem pro usuario
+  }
 }
 
 ?>
@@ -71,12 +70,12 @@ if ($_POST) {
     
   <div class="form-group">
     <label for="fcategoria">Categoria</label>
-    <input type="text" class="form-control" id="fcategoria" name="categoria" placeholder="Nome da categoria">
+    <input type="text" class="form-control" id="fcategoria" name="categoria" placeholder="Nome da categoria" value="<?php echo $categoria; ?>">
   </div>
 
   <div class="checkbox">
     <label for="fativo">
-      <input type="checkbox" name="ativo" id="fativo"> Categoria ativa
+      <input type="checkbox" name="ativo" id="fativo" <?php if ($ativo == 1){?>checked<?php } ?>> Categoria ativa
     </label>
   </div>
     
