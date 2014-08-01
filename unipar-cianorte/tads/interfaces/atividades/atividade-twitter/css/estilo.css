@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	font-family: Tahoma, Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 #topo {
@@ -54,11 +55,11 @@ body {
 
 #signin, #signup {
     background-color: #FFFFFF;
-    width: 278px;
+    width: 300px;
     margin-bottom: 10px;
     border-radius: 5px;
     margin-left: 390px;
-    padding: 10px;
+    padding: 10px 10px 0 10px;
     border: 1px solid #CCCCCC;
 }
 
@@ -69,11 +70,35 @@ body {
     border-radius: 5px;
     display: block;
     font-size: 15px;
-    padding: 5px 3px 5px 3px;
-    width: 270px;
+    padding: 4px 3px 4px 3px;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 #signin label,
 #signup label {
     display: none;
 }
+
+#signin-submit,
+#signup-submit {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#signin-submit {
+    background-image: url(../img/sprite-1.png) !important;
+    background-position: left -140px !important;
+    color: #FFFFFF;
+    width: 83px !important;
+}
+
+#signin-senha {
+    width: 185px !important;
+    float: left;
+    margin-right: 10px;
+}
+
+
+
+
