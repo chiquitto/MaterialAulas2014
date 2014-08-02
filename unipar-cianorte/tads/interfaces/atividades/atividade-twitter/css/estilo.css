@@ -1,38 +1,38 @@
 * {
-	margin: 0;
-	padding: 0;
-	font-family: Tahoma, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, Arial, sans-serif;
     box-sizing: border-box;
 }
 
 #topo {
-	background: #000000 url(../img/topo.png);
+    background: #000000 url(../img/topo.png);
 }
 
 #topo div {
-	margin-left: auto;
-	margin-right: auto;
-	width: 700px;
-	position: relative;
-	height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    position: relative;
+    height: 40px;
 }
 
 #topo div a {
-	position: absolute;
-	right: 10px;
-	font-size: 13px;
-	color: #FFFFFF;
-	text-decoration: none;
-	top: 13px;
-	background-image: url(../img/flecha.png);
-	background-repeat: no-repeat;
-	background-position: right center;
-	padding-right: 8px;
+    position: absolute;
+    right: 10px;
+    font-size: 13px;
+    color: #FFFFFF;
+    text-decoration: none;
+    top: 13px;
+    background-image: url(../img/flecha.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 8px;
 }
 
 #topo div img {
-	margin-left: 10px;
-	margin-top: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 body {
@@ -59,7 +59,7 @@ body {
     margin-bottom: 10px;
     border-radius: 5px;
     margin-left: 390px;
-    padding: 10px 10px 0 10px;
+    padding: 10px 10px 2px 10px;
     border: 1px solid #CCCCCC;
 }
 
@@ -72,7 +72,7 @@ body {
     font-size: 15px;
     padding: 4px 3px 4px 3px;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 #signin label,
@@ -89,15 +89,24 @@ body {
 #signin-submit {
     background-image: url(../img/sprite-1.png) !important;
     background-position: left -140px !important;
-    color: #FFFFFF;
+    color: #FFF;
     width: 83px !important;
+    border-color: #0066FF !important;
 }
 
 #signin-senha {
-    width: 185px !important;
+    width: 187px !important;
     float: left;
-    margin-right: 10px;
+    margin-right: 8px;
 }
+
+
+
+
+
+
+
+
 
 
 
