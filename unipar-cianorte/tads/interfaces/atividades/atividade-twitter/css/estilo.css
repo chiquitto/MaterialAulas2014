@@ -54,7 +54,8 @@ body {
 }
 
 #signin, #signup {
-    background-color: #FFFFFF;
+    background-image: linear-gradient(to bottom, #FFFFFF 0%, #EFEFEF 100%);
+    /* background-color: #FFFFFF; */
     width: 300px;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -87,8 +88,9 @@ body {
 }
 
 #signin-submit {
-    background-image: url(../img/sprite-1.png) !important;
-    background-position: left -140px !important;
+    background-image: linear-gradient(to bottom, rgb(51, 188, 239) 0%, rgb(1, 154, 210) 100%) !important;
+    /* background-image: url(../img/sprite-1.png) !important; */
+    /* background-position: left -140px !important; */
     color: #FFF;
     width: 83px !important;
     border-color: #0066FF !important;

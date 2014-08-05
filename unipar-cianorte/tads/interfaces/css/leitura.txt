@@ -1,0 +1,20 @@
+A especificidade e o efeito cascata
+http://www.maujor.com/tutorial/especificidade.php
+
+10 Seletores de CSS Que Você Deveria Usar
+http://codigofonte.uol.com.br/artigos/10-seletores-de-css-que-voce-deveria-usar
+
+Pontuação de especificidade da CSS
+http://tableless.com.br/pontuacao-especificidade-css/
+
+Guia completo dos Seletores CSS3
+http://www.maujor.com/tutorial/guia-completo-seletores-css3.php
+
+CSS Selector Reference
+http://www.w3schools.com/cssref/css_selectors.asp
+
+Especificidade CSS: Aprenda como calcular
+http://www.tutsup.com/2014/05/20/especificidade-css/
+
+CSS Avançado
+http://www.caelum.com.br/apostila-html-css-javascript/css-avancado/
