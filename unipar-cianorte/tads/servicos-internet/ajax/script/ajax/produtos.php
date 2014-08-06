@@ -15,4 +15,4 @@ $produtos = $resultado->fetchAll(PDO::FETCH_ASSOC);
 
 echo json_encode($produtos);
 
-sleep(5);
+sleep(2);

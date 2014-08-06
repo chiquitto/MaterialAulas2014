@@ -4,15 +4,22 @@ $(document).ready(paginaCarregada);
 function paginaCarregada() {
     //$('#produtosSelecao').change(produtoSelecionado);
     prepararCombobox();
+    prepararAdicionar();
 }
 
 function paginaFechada() {
     
 }
 
+function prepararAdicionar(){
+    //$('#botao').click(produtoAdicionar);
+    $('#fInfo').submit(produtoAdicionar);
+
+}
+
 function produtoSelecionado() {
     var id = $(this).val();
-    
+    fInfo
     $.ajax({
         data: {id: id},
         type: 'get',
@@ -24,8 +31,31 @@ function produtoSelecionado() {
     ;
 }
 
-function produtoAdicionar() {
-    
+function produtoAdicionar(evento){
+    evento.preventDefault(); //cancela o evento de submit do formulário
+    var codProduto = $('#produtosSelecao').val();
+    var qtd = $('#fInfoQtd').val();
+
+    $.ajax({
+        url: 'ajax/addItem.php',
+        type: 'post',
+        data: {codProduto: codProduto, qtd: qtd},
+        dataType: 'json'
+    })
+
+        .done(produtoAdicionarDone)
+        .fail(produtoAdicionarFail)
+    ;
+
+
+}
+
+function produtoAdicionarDone(){
+    alert("Adicionou");
+}
+
+function produtoAdicionarFail(){
+    alert("Não Adicionou");
 }
 
 function produtoCarregado(dados) {
