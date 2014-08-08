@@ -46,15 +46,24 @@ body {
     width: 700px;
     margin-left: auto;
     margin-right: auto;
-    background: red;
+    position: relative;
 }
 
 #textog {
-    display: none;
+    position: absolute;
+    width: 360px;
+    left: 10px;
+    color: #FFFFFF;
+    font-size: 14px;
+    top: 70px;
+}
+
+#textog * {
+    margin-bottom: 10px;
 }
 
 #signin, #signup {
-    background-image: linear-gradient(to bottom, #FFFFFF 0%, #EFEFEF 100%);
+    background-image: linear-gradient(to bottom, #FFFFFF 0%, #CECECE 100%);
     /* background-color: #FFFFFF; */
     width: 300px;
     margin-bottom: 10px;
@@ -62,6 +71,10 @@ body {
     margin-left: 390px;
     padding: 10px 10px 2px 10px;
     border: 1px solid #CCCCCC;
+}
+
+#signin {
+    margin-top: 120px;
 }
 
 #signin input,
@@ -101,6 +114,46 @@ body {
     float: left;
     margin-right: 8px;
 }
+
+
+#rodape {
+    width: 100%;
+    
+    position: absolute;
+    bottom: 20px;
+}
+
+#rodape ul {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#rodape li {
+    display: inline;
+    font-size: 10px;
+}
+
+#rodape li,
+#rodape li a
+{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* #rodape li {
+    display: inline;
+    font-size: 11px;
+    color: #FFFFFF;
+}
+
+#rodape li a
+{
+    color: inherit;
+} */
+
+
+
 
 
 
