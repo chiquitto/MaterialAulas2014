@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "FontePersonalizadaH1";
+    font-style: normal;
+    font-weight: bold;
+    src: local("Arial"),  url("../fontes/IndieFlower.ttf");
+}
+
+@font-face {
+    font-family: "FontePersonalizadaP";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Arial"),  url("../fontes/IndieFlower.ttf");
+}
+
+h1 {
+    font-family: "FontePersonalizadaH1";
+}
+
+p {
+    font-family: "FontePersonalizadaP";
+}
