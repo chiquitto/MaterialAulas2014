@@ -1,0 +1,21 @@
+Web Design Responsivo e Media Queries
+
+==
+
+Web Design Responsivo é uma abordagem de web design destinada a elaborar sites para fornecer uma ótima experiência de visualização, fácil leitura e navegação com um mínimo de redimensionamento e visionamento, para uma ampla gama de dispositivos (de monitores de computador a telefones celulares)1 2
+
+Um website definido como responsivo1 3 adapta sua exibição para o ambiente de visualização usando grades proporcionais e fluídas4 imagens flexíveis,5 6 7 8 e media queries CSS3 ,2 9 10 uma extensão da regra @media.11
+
+O conceito de grade fluída requer que as dimensões dos elementos sejam definidos por unidade relativas como percentagem, em vez de unidades absolutas como pixels ou pontos.4
+Imagens flexíveis são as que também têm suas dimensões em unidades relativas, de modo a prevenir que escapem de dentro de seu elemento HTML.5
+Media queries permitem que a página use diferentes regras de estilo CSS com base nas características do dispositivo onde o website está sendo exibido, sendo mais comum a largura de visualização do navegador web.
+
+fonte: http://pt.wikipedia.org/wiki/Web_Design_Responsivo
+
+==
+
+Veja mais em:
+
+http://dev.w3.org/csswg/mediaqueries/
+http://blog.caelum.com.br/flexibilidade-em-paginas-para-dispositivos-moveis-com-media-queries/
+http://loopinfinito.com.br/2013/11/26/media-queries-nivel-4/

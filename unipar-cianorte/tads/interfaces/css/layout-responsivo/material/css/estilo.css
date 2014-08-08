@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#conteudo div {
+    background: red;
+    float: left;
+    margin: 1%;
+    width: 31%;
+}
+
+#conteudo img {
+    width: 100%;
+}
+
+@media print {
+    #conteudo div {
+        background: none;
+    }
+}
+
+@media (min-width: 500px) {
+    #conteudo div {
+        width: 23%
+    }
+}
+
+@media (min-width: 1000px) {
+    #conteudo div {
+        width: 18%
+    }
+}
+
+@media (min-width: 1280px) {
+    #conteudo div {
+        width: 14%
+    }
+}
