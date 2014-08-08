@@ -18,8 +18,7 @@ function prepararAdicionar(){
 }
 
 function produtoSelecionado() {
-    var id = $(this).val();
-    fInfo
+    var id = $(this).val();    
     $.ajax({
         data: {id: id},
         type: 'get',
@@ -50,8 +49,13 @@ function produtoAdicionar(evento){
 
 }
 
-function produtoAdicionarDone(){
-    alert("Adicionou");
+function produtoAdicionarDone(retorno){
+    if(retorno.codigo == 0){
+        alert("Adicionou");
+        return;
+    }
+ 
+    alert(retorno.codigo + " - " + retorno.mensagem);
 }
 
 function produtoAdicionarFail(){
