@@ -152,7 +152,11 @@ body {
     color: inherit;
 } */
 
-
+@media print {
+    #signin, #signup {
+        display: none;
+    }
+}
 
 
 
