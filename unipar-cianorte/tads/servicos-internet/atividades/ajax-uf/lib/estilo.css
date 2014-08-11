@@ -1,0 +1,13 @@
+* {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+label {
+    display: block;
+    margin: 15px 0;
+}
+
+#populacao {
+    width: 100px;
+}
