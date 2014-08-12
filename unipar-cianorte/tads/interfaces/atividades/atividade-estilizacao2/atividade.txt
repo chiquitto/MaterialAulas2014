@@ -1,0 +1,15 @@
+Site original: http://bigcartel.com/
+
+Estilizar o documento.html seguindo o modelo do modelo.jpg
+O documento HTML não deve ser alterado, apenas deve ser feita a estilização usando CSS.
+
+Se o HTML precisar de alteração, enviar por escrito para o professor o motivo da alteração.
+Estas alterações deverão estar documentadas dentro arquivo CSS, assim não será necessário enviar mais de 1 arquivo para o professor.
+
+Valor da atividade: 2,0 pontos
+Entregar somente o arquivo CSS via anexo no email
+chiquitto+1anocss@unipar.br
+Até dia 28/08/2013 (não serão aceitos atrasos)
+
+Pode ser feito em equipe de 3 pessoas
+Não esquecer de enviar no email, o nome e o RA de todos os integrantes da equipe.
