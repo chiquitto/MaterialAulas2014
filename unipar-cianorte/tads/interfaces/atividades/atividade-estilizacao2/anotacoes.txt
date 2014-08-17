@@ -1,0 +1,18 @@
+Cor dos links: #708c00
+Cor de fundo da pagina: #f9fbf4
+Borda acima: #222
+Largura site: 720
+
+Altura topo: 128
+Tamanho fonte logo: 34
+Espaco acima da logo: 62
+
+Espaco acima do menu: 70
+Cor da fonte do menu: #111
+Tamanho da fonte do menu: 14
+
+Espaco acima do conteudo: 32
+
+parte2 altura: 110
+
+rodape espaco acima: 48
