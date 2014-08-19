@@ -1,0 +1,11 @@
+#produtos, input {
+    font-size: 1.2em;
+}
+
+#fInfo label {
+    display: block;
+}
+
+#produtosSelecao {
+    display: none;
+}

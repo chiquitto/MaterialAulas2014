@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Produtos</title>
+    
+    <link rel="stylesheet" type="text/css" href="./lib/estilo.css">
+    <link rel="stylesheet" type="text/css" href="./lib/produtos.css">
+    
+    <script src="./lib/jquery.js"></script>
+    <script src="./lib/produtos.js"></script>
+  </head>
+  <body>
+    
+    <h1>Produtos</h1>
+    
+    <form>
+      Selecione o produto para ver detalhes: <br>
+      <span id="idSpan">Carregando...</span>
+      <select id="produtosSelecao">
+      </select>
+    </form>
+    
+    <h2>Informação do produto selecionado</h2>
+    
+    <form id="fInfo">
+      <label>Produto: <input type="text" name="produto" id="fInfoProduto"></label>
+      
+      <label>Preço: <input type="text" name="preco" id="fInfoPreco"></label>
+      
+      <label>Estoque: <input type="text" name="estoque" id="fInfoEstoque"></label>
+      
+      <label>Qtd: <input type="text" name="qtd" id="fInfoQtd"></label>
+      
+      <input type="submit" value="Adicionar" id="botao">
+    </form>
+  
+  </body>
+</html>

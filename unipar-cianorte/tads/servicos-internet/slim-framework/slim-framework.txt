@@ -1,0 +1,17 @@
+http://www.slimframework.com/
+
+Slim é um micro-framework PHP que ajuda você a escrever rapidamente aplicações web e APIs.
+
+Recursos:
+Roteador de requisições
+Métodos HTTP padrão e personalizados 
+Curingas e condições para rotas
+Redirecionamento, parada, e passe de rotas 
+Route middleware 
+Renderização de templates com views personalizadas 
+Mensagens
+Cookies com criptografia AES-256 
+Caching HTTP 
+Suporte a logs
+Tratamento de erros e depuração
+Configuração simples
