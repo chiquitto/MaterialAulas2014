@@ -1,6 +1,6 @@
 <?php
 
-define('DIRETORIO', '/home/alisson/Trabalho/MaterialAulas2014/unipar-cianorte/tads/servicos-internet/ajax/script');
+define('DIRETORIO', '/home/unipar/Trabalho/MaterialAulas2014/unipar-cianorte/tads/servicos-internet/atividades/ajax-uf');
 
 define('DIRETORIO_AUTOLOAD', DIRETORIO . '/lib');
 
