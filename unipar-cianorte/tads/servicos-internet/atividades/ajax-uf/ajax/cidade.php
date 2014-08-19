@@ -27,5 +27,4 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
 
 echo json_encode($row);
 
-
-
+sleep(2);

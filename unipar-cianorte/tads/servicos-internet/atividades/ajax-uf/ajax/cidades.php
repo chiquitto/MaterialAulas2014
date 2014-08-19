@@ -6,10 +6,9 @@ $con = Conexao::getInstance();
 
 $uf = $_GET['uf'];
 
-$sqlCidades = "
-				select * from cidade
-				where iduf = :uf
-			";
+$sqlCidades = "select * from cidade
+    where iduf = :uf
+";
 
 
 $statement = $con->prepare($sqlCidades);
@@ -18,6 +17,6 @@ $statement->execute();
 
 $row = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-echo json_encode($row); 
+echo json_encode($row);
 
-//
+sleep(2);
