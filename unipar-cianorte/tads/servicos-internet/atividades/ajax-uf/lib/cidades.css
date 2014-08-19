@@ -1,0 +1,10 @@
+#loading {
+    background: rgba(200,200,200,0.5) url(ajax-loader.gif) no-repeat center center;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}

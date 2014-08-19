@@ -5,6 +5,8 @@ function paginaCarregada() {
 }
 
 function carregarEstado() {
+    mostrarLoading();
+    
     $.ajax({
         url: "ajax/ufs.php",
         type: "get",
@@ -13,10 +15,13 @@ function carregarEstado() {
     })
             .done(carregarEstadoOk)
             .fail(carregarEstadoFail)
+            .always(ocultarLoading)
             ;
 }
 
 function carregarCidades(iduf) {
+    mostrarLoading();
+    
     $.ajax({
         url: "ajax/cidades.php",
         type: "get",
@@ -25,10 +30,13 @@ function carregarCidades(iduf) {
     })
             .done(carregarCidadesOk)
             .fail(carregarCidadesFail)
+            .always(ocultarLoading)
             ;
 }
 
 function carregarCidade(idcid) {
+    mostrarLoading();
+    
     $.ajax({
         url: "ajax/cidade.php",
         type: "get",
@@ -37,6 +45,7 @@ function carregarCidade(idcid) {
     })
             .done(carregarCidadeOk)
             .fail(carregarCidadeFail)
+            .always(ocultarLoading)
             ;
 }
 
@@ -98,3 +107,10 @@ function carregarCidadeFail() {
     alert("Cidade não carregada, arrume seu codigo");
 }
 
+function mostrarLoading() {
+    $('#loading').show();
+}
+
+function ocultarLoading() {
+    $('#loading').hide();
+}
