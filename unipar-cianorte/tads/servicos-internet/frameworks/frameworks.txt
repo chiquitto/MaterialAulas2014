@@ -1,3 +1,37 @@
-http://www.dsc.ufcg.edu.br/~jacques/cursos/map/html/frame/oque.htm
+Frameworks
 
-http://www.phpframeworks.com/
+Hoje, perdemos muito tempo com coisas de pouca importancia.
+Pouca importancia -> Criar telas, formulários, validações, filtros, manipular conexões a banco de dados.
+Muito importante -> Regra de negócio
+
+==
+
+O que é um framework?
+
+Há várias definições para frameworks: http://jacques.dsc.ufcg.edu.br/cursos/map/html/frame/deffw.htm
+
+. Um framework captura a funcionalidade comum a várias aplicações
+. As aplicações devem ter algo razoavelmente grande em comum: pertencem a um mesmo domínio de problema
+
+== 
+
+Framework
+
+Um framework (ou arcabouço), em desenvolvimento de software, é uma abstração que une códigos comuns entre vários projetos de software provendo uma funcionalidade genérica. Um framework pode atingir uma funcionalidade específica, por configuração, durante a programação de uma aplicação. Ao contrário das bibliotecas, é o framework quem dita o fluxo de controle da aplicação, ... (Wikipedia)
+
+==
+
+Características de um framework
+
+. Um framework deve ser reusável
+. Deve ser extensível
+. Deve ser de uso seguro
+. Deve ser eficiente
+. Deve ser completo
+
+==
+
+fontes:
+http://jacques.dsc.ufcg.edu.br/cursos/map/html/frame/oque.htm
+http://jacques.dsc.ufcg.edu.br/cursos/map/html/frame/deffw.htm
+http://pt.wikipedia.org/wiki/Framework

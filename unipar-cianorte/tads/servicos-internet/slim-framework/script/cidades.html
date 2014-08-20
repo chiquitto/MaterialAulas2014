@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Cidades</title>
+    
+    <link rel="stylesheet" type="text/css" href="./lib/estilo.css">
+    <link rel="stylesheet" type="text/css" href="./lib/cidades.css">
+    
+    <script src="./lib/jquery.js"></script>
+    <script src="./lib/cidades.js"></script>
+  </head>
+  <body>
+    
+    <h1>População de cidades</h1>
+    
+    <form>
+      <label>UF/Cidade:
+          <select id="ufSelect">
+          </select>
+          /
+          <select id="cidSelect">
+            <option value="0">Selecione a cidade</option>
+          </select>
+        </label>
+        
+      <label>População: <input type="text" name="populacao" id="populacao"> habitantes</label>
+    </form>
+    
+    <div id="loading"></div>
+  
+  </body>
+</html>
