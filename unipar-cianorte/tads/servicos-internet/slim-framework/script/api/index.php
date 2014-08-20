@@ -29,7 +29,7 @@ $app->get(
 );
 
 $app->get(
-        '/cidades/:iduf', function ($iduf) use ($app){
+        '/cidades/:iduf', function ($iduf) use ($app) {
 
     $con = Conexao::getInstance();
     $sql = 'SELECT * FROM cidade where iduf = :iduf';
@@ -39,16 +39,16 @@ $app->get(
     $statement->execute();
 
     $cidades = $statement->fetchAll(PDO::FETCH_ASSOC);
-    
-    $app->response->setStatus(200);
-    $app->response->headers->set('Content-Type', 'application/json'); 
-    $app->response->write(json_encode($cidades));
 
+    $app->response->setStatus(200);
+    $app->response->headers->set('Content-Type', 'application/json');
+    $app->response->write(json_encode($cidades));
 }
 );
 
 $app->get(
-        '/cidade/:idcidade', function ($idcidade) use ($app){
+        '/cidade/:idcidade', function ($idcidade) use ($app) {
+
     $con = Conexao::getInstance();
     $sql = 'SELECT * FROM cidade WHERE idcidade = :idcidade';
 
@@ -57,14 +57,27 @@ $app->get(
     $statement->execute();
 
     $cidade = $statement->fetch(PDO::FETCH_ASSOC);
-    
+
     $app->response->setStatus(200);
-    $app->response->headers->set('Content-Type', 'application/json'); 
+    $app->response->headers->set('Content-Type', 'application/json');
     $app->response->write(json_encode($cidade));
-
-
 }
 );
 
+$app->post('/cidade', function () {
+    $saida = array(
+        'cod' => 0,
+        'msg' => '',
+    );
+    
+    $app = \Slim\Slim::getInstance();
+    $app->response->setStatus(200);
+
+    # $app->request->params('cidade')
+
+    $app->response->headers->set('Content-Type', 'application/json');
+    $app->response->write(json_encode($saida));
+});
+
 $app->run();
-sleep(2);
+#sleep(1);

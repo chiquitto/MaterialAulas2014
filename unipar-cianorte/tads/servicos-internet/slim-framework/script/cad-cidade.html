@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Cadastrar cidade</title>
+    
+    <link rel="stylesheet" type="text/css" href="./lib/estilo.css">
+    <link rel="stylesheet" type="text/css" href="./lib/cad-cidade.css">
+    
+    <script src="./lib/jquery.js"></script>
+    <script src="./lib/cad-cidade.js"></script>
+  </head>
+  <body>
+    
+    <h1>Cadastrar cidade</h1>
+    
+    <form id="frmCidade">
+      <label>UF: <select id="ufSelect"></select></label>
+      <label>Cidade: <input type="text" name="cidade" id="iCidade"></label>
+      <label>População: <input type="text" name="populacao" id="iPopulacao"> habitantes</label>
+      
+      <input type="submit" value="Salvar">
+    </form>
+    
+    <div id="loading"></div>
+  
+  </body>
+</html>

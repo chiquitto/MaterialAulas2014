@@ -1,6 +1,5 @@
 * {
     font-family: Arial, sans-serif;
-    font-size: 14px;
 }
 
 label {
@@ -8,6 +7,13 @@ label {
     margin: 15px 0;
 }
 
-#populacao {
-    width: 100px;
+#loading {
+    background: rgba(200,200,200,0.5) url(ajax-loader.gif) no-repeat center center;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
 }
