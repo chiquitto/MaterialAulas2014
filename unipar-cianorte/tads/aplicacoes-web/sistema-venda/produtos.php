@@ -8,6 +8,10 @@ $q ='';
 if(isset($_GET['q'])){
   $q =trim($_GET['q']);
 }
+$idcategoria = 0;
+if(isset($_GET['idcategoria'])){
+    $idcategoria = (int) $_GET['idcategoria'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -36,6 +40,7 @@ if(isset($_GET['q'])){
         <label class="sr-only" for="fq">Pesquisa</label>
         <select class="form-control" name="idcategoria">
             <option value="0">Categoria</option>
+            <option value="1">Segunda Serie</option>
         </select>
         <input type="search" class="form-control" id="fq" name="q" placeholder="Pesquisa" value="<?php echo $q; ?>">
       </div>
@@ -55,10 +60,18 @@ if(isset($_GET['q'])){
     </thead>
     <tbody>
       <?php
-        $sql = "Select * From produto";
+        $sql = "Select produto.idproduto, produto.produto, produto.status, categoria.categoria from produto inner join categoria on produto.idcategoria = categoria.idcategoria";
+
+    $where = array();
         if($q != ''){
-          $sql .= " Where (produto like '%$q%')";
+          $where[] = "(produto like '%$q%')";
         }
+        if($idcategoria >0){
+            $where[] = "(categoria.idcategoria =    $idcategoria)";
+        }
+    if($where){
+        $sql .= ' where '.join(' and ',$where);
+    }
       
         $consulta = mysqli_query($con,$sql);
         while( $resultado = mysqli_fetch_assoc($consulta)){
@@ -72,7 +85,7 @@ if(isset($_GET['q'])){
           <span class="label label-warning">inativo</span>
           <?php } ?>
         </td>
-        <td>{categoria}</td>
+        <td><?php echo $resultado['categoria']?></td>
         <td><?php echo $resultado['produto']; ?></td>
         <td>
           <a href="produtos-editar.php?idproduto=<?php echo $resultado['idproduto'];?>" title="Editar produto"><i class="fa fa-edit fa-lg"></i></a>

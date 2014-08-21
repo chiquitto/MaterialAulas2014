@@ -16,6 +16,7 @@ if ($_POST) {
   $descricao = $_POST['descricao'];
   $preco = $_POST['preco'];
   $saldo = (int) $_POST['saldo'];
+  $idcategoria = (int) $_POST['idcategoria'];
 
   if(isset($_POST['ativo'])){
     $ativo = PRODUTO_ATIVO;
@@ -28,12 +29,15 @@ if ($_POST) {
     $msg[] = 'Informe a descrição do produto';
   }
     
+  if ($idcategoria <=0){
+   $msg[] = 'Categoria invalida';   
+  }
   // Inserir
   if (!$msg){
     $sql = "Insert Into produto
         (produto, preco, status, idcategoria, saldo)
         Values 
-        ('$descricao', '$preco', '$ativo', 1, $saldo)";
+        ('$descricao', '$preco', '$ativo', $idcategoria, $saldo)";
     
     $resultado = mysqli_query($con, $sql);
 
@@ -78,7 +82,7 @@ if ($_POST) {
     
   <div class="form-group">
     <label for="fdescricao">Descrição</label>
-    <input type="text" class="form-control" id="fdescricao" name="descricao" placeholder="Descrição do produto" value="<?php echo $descricao; ?>" required>
+    <input type="text" class="form-control" id="fdescricao" name="descricao" placeholder="Descrição do produto" value="<?php echo $descricao; ?>">
   </div>
     
   <div class="form-group">
@@ -93,9 +97,13 @@ if ($_POST) {
     <label for="fcategoria">Categoria</label>
     <select id="fcategoria" name="idcategoria" class="form-control" required>
         <option value="0">Selecine a categoria</option>
-        <option value="1">Calça</option>
-        <option value="2">Camiseta</option>
-        <option value="3">Shorts</option>
+        <?php 
+$sql = 'select idcategoria, categoria from categoria where status = '.CATEGORIA_ATIVO;
+$consulta = mysqli_query($con, $sql);
+while($resultado = mysqli_fetch_assoc($consulta)){
+        ?>
+        <option value="<?php echo $resultado['idcategoria'];?>" <?php if($idcategoria == $resultado['idcategoria']){ ?>selected<?php }?>><?php echo $resultado['categoria']?></option>
+        <?php }?>
     </select>
   </div>
     
