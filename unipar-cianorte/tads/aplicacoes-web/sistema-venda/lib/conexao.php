@@ -6,3 +6,5 @@ if (!$con) {
 	echo '<h1>Erro para conectar no banco de dados.</h1>';
 	exit;
 }
+
+mysqli_set_charset($con, 'utf8');
