@@ -73,11 +73,25 @@ $app->post('/cidade', function () {
     $app = \Slim\Slim::getInstance();
     $app->response->setStatus(200);
 
-    # $app->request->params('cidade')
-
+    $vo = new Vo_Cidade();
+    $vo->setIduf($app->request->params('estado'));
+    $vo->setPopulacao($app->request->params('populacao'));
+    $vo->setCidade($app->request->params('cidade'));
+    
+    $modelo = new Model_Cidade();
+    try {
+        $modelo->cadastrar($vo);
+        $saida['idcidade'] = $vo->getIdcidade();
+    } catch (Exception $exc) {
+        $saida['cod'] = $exc->getCode();
+        $saida['msg'] = $exc->getMessage();
+        $app->response->setStatus(400);
+    }
+    
+    
     $app->response->headers->set('Content-Type', 'application/json');
     $app->response->write(json_encode($saida));
 });
 
 $app->run();
-#sleep(1);
+sleep(1);
