@@ -1,0 +1,27 @@
+A atividade é constituida de 2 fases:
+
+1. Desenhar o layout no Fireworks;
+2. Estilizar o arquivo HTML, de acordo com o layout.
+	O arquivo HTML não pode ser alterado em hipotese alguma.
+    
+==
+
+Deve ser entregue um pacote zip contendo:
+	. todos os arquivos (HTML, CSS e Imagens) da atividade;
+	. um arquivo JPG do layout;
+	. o arquivo com o nome e RA de cada aluno do grupo (Maximo 4 alunos por grupo)
+
+A entrega deve ser até o dia 08/09 no email chiquitto+1serie-css@unipar.br
+No corpo do email também adicione o nome e RA de todos os integrantes da equipe.
+
+==
+
+Site do projeto: http://www.csszengarden.com/
+Reposito original do projeto: https://github.com/mezzoblue/csszengarden.com/
+
+==
+
+Entrega: até o dia 08/09/2014
+Email: chiquitto+1serie-css@unipar.br
+Valor: o valor será 2,0 ou 3,0 pontos
+Equipe: até 4 pessoas
