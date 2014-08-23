@@ -4,13 +4,14 @@ require './config.php';
 require './lib/funcoes.php';
 require './lib/conexao.php';
 
+$idcategoria = 0;
+
 $q ='';
 if(isset($_GET['q'])){
   $q =trim($_GET['q']);
 }
-$idcategoria = 0;
 if(isset($_GET['idcategoria'])){
-    $idcategoria = (int) $_GET['idcategoria'];
+  $idcategoria = (int) $_GET['idcategoria'];
 }
 ?>
 <!DOCTYPE html>
@@ -40,7 +41,14 @@ if(isset($_GET['idcategoria'])){
         <label class="sr-only" for="fq">Pesquisa</label>
         <select class="form-control" name="idcategoria">
             <option value="0">Categoria</option>
-            <option value="1">Segunda Serie</option>
+            <?php 
+$sql = 'Select idcategoria,categoria from categoria where (status = 1)';
+$exec = mysqli_query($con, $sql);
+while($r = mysqli_fetch_assoc($exec)){
+
+        ?>
+        <option value="<?php echo $r['idcategoria']; ?>" <?php if($idcategoria == $r['idcategoria']){?> selected <?php } ?>><?php echo $r['categoria'];?></option>
+       <?php } ?>
         </select>
         <input type="search" class="form-control" id="fq" name="q" placeholder="Pesquisa" value="<?php echo $q; ?>">
       </div>
@@ -60,19 +68,18 @@ if(isset($_GET['idcategoria'])){
     </thead>
     <tbody>
       <?php
-        $sql = "Select produto.idproduto, produto.produto, produto.status, categoria.categoria from produto inner join categoria on produto.idcategoria = categoria.idcategoria";
-
-    $where = array();
+        $sql = "Select produto.idproduto, produto, produto.status, categoria from produto inner join categoria on produto.idcategoria = categoria.idcategoria";
+        $array = array();
         if($q != ''){
-          $where[] = "(produto like '%$q%')";
+          $array[] = "(produto like '%$q%')";
         }
-        if($idcategoria >0){
-            $where[] = "(categoria.idcategoria =    $idcategoria)";
+        if($idcategoria > 0){
+          $array[] = "(categoria.idcategoria = $idcategoria)";
         }
-    if($where){
-        $sql .= ' where '.join(' and ',$where);
-    }
-      
+        if($array){
+          $sql .= " Where ".join(' or ',$array);   
+        }
+        echo $sql;
         $consulta = mysqli_query($con,$sql);
         while( $resultado = mysqli_fetch_assoc($consulta)){
       ?>
@@ -85,7 +92,7 @@ if(isset($_GET['idcategoria'])){
           <span class="label label-warning">inativo</span>
           <?php } ?>
         </td>
-        <td><?php echo $resultado['categoria']?></td>
+        <td><?php echo $resultado['categoria'];?></td>
         <td><?php echo $resultado['produto']; ?></td>
         <td>
           <a href="produtos-editar.php?idproduto=<?php echo $resultado['idproduto'];?>" title="Editar produto"><i class="fa fa-edit fa-lg"></i></a>

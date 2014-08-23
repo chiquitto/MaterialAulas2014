@@ -28,9 +28,9 @@ if ($_POST) {
   if ($descricao == ''){
     $msg[] = 'Informe a descrição do produto';
   }
-    
-  if ($idcategoria <=0){
-   $msg[] = 'Categoria invalida';   
+  
+  if ($idcategoria <= 0){
+    $msg[] = 'Selecione a categoria';
   }
   // Inserir
   if (!$msg){
@@ -96,14 +96,15 @@ if ($_POST) {
   <div class="form-group">
     <label for="fcategoria">Categoria</label>
     <select id="fcategoria" name="idcategoria" class="form-control" required>
-        <option value="0">Selecine a categoria</option>
+        <option value="0">Selecione a categoria</option>
         <?php 
-$sql = 'select idcategoria, categoria from categoria where status = '.CATEGORIA_ATIVO;
-$consulta = mysqli_query($con, $sql);
-while($resultado = mysqli_fetch_assoc($consulta)){
+$sql = 'Select idcategoria,categoria from categoria where (status = 1)';
+$exec = mysqli_query($con, $sql);
+while($r = mysqli_fetch_assoc($exec)){
+
         ?>
-        <option value="<?php echo $resultado['idcategoria'];?>" <?php if($idcategoria == $resultado['idcategoria']){ ?>selected<?php }?>><?php echo $resultado['categoria']?></option>
-        <?php }?>
+        <option value="<?php echo $r['idcategoria']; ?>" <?php if($idcategoria == $r['idcategoria']){?> selected <?php } ?>><?php echo $r['categoria'];?></option>
+       <?php } ?>
     </select>
   </div>
     
