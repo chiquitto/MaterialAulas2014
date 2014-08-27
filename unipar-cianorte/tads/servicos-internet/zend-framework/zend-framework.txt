@@ -1,0 +1,31 @@
+O que é Zend Framework
+
+É um framework de aplicações web, open-source e orientado a objetos em PHP 5.
+Muitas vezes ele é conhecido como uma "biblioteca de componentes", por causa da sua divisão em componentes de baixo acoplamento.
+
+ZF fornece uma avançada implementação MVC que pode ser usada para estabelecer uma estrutura básica para as aplicações.
+>> mvc.txt
+>> mvc.png
+
+A lista completa dos componentes do ZF, com pequenas descrições,  pode ser encontrada no link
+http://framework.zend.com/about/components
+
+==
+
+Porque o Zend?
+
+Existem vários frameworks PHP no mercado.
+--> www.phpframeworks.com
+Vários são realmente ótimos, como o CakePHP, Symfony e CodeIgniter.
+E cada um é voltado para um caso especifico.
+
+O Zend Framework é o framework de desenvolvimento MVC mantido pela própria Zend,
+que também é a mantenedora oficial da linguagem PHP.
+
+==
+
+fontes:
+http://framework.zend.com/manual/en/learning.quickstart.intro.html
+http://pt.wikipedia.org/wiki/MVC
+http://framework.zend.com/docs/overview
+http://imasters.com.br/artigo/19986/framework/comparativo-code-igniter-versus-zend-framework

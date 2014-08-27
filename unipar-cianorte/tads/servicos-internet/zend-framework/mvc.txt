@@ -1,0 +1,32 @@
+MVC
+
+Model-view-controller (MVC) é um modelo de desenvolvimento de Software,
+atualmente considerado uma "arquitetura padrão" utilizada na Engenharia de Software.
+
+O modelo isola a "lógica" (A lógica da aplicação) da interface do usuário (Inserir e exibir dados),
+permitindo desenvolver, editar e testar separadamente cada parte.
+(http://pt.wikipedia.org/wiki/MVC)
+
+==
+Model
+Rotinas de acesso a dados e a lógica de negócio podem ser definidos nessa camada.
+Camada que define como os dados serão manipulados.
+
+==
+View
+Camada de interação com o usuário ( O mesmo sistema pode conter varias camadas View )
+Camada que define o que o usuário irá ver.
+
+==
+Controller
+É o Controller que sabe como manipular as outras camadas (Model e View) do sistema.
+
+==
+Grandes especialistas em MVC dizem: Skinny Controller, Fat Model
+
+==
+
+fontes:
+http://framework.zend.com/manual/en/learning.quickstart.intro.html
+http://pt.wikipedia.org/wiki/MVC#PHP
+http://weblog.jamisbuck.org/2006/10/18/skinny-controller-fat-model

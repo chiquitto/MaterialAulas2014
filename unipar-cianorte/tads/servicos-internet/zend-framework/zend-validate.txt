@@ -1,0 +1,52 @@
+http://framework.zend.com/manual/en/zend.validate.html
+
+==
+
+Um validador examina a entrada, e de acordo com seus requisitos, ele produz um resultado booleano.
+Se a entrada não cumprir os requisitos, o validador ainda pode fornecer informações sobre quais requisitos são necessários para que a entrada se torne válida.
+
+Ex.: Uma aplicação pode exigir que um LOGIN tenha entre 6 e 12 caracteres de comprimento, e contenha apenas caracteres alfanumericos.
+Um validador (ou varios) pode ser utilizado para essa tarefa, e se o LOGIN não cumprir todos os requisitos, seria util o validador informar quais são os requisitos que precisa ser cumprido.
+
+==
+
+Uso básico dos Validator (validadores)
+
+Todos os Validators do Zend implementam a classe Zend_Validate_Interface, que define 2 métodos:
+
+	1. isValid() - O método isValid() executa uma validação sobre um valor fornecido, retornando TRUE se o valor passa por todos os critérios do validador
+	
+	2. getMessages() - Se o isValid() retornar FALSE, use o método getMessages() para descobrir os motivos da falha da verificação. O método getMessages() retorna uma matriz (ERRO => MENSAGEM_ERRO)
+
+==
+
+Validadores padrões
+
+http://framework.zend.com/manual/en/zend.validate.set.html
+
+Alnum - Somente letras e digitos
+Alpha - Somente letras
+Barcode - Valida se o valor entregue representa um código de barras
+Between - Valida se o valor entregue esta entre dois valores (geralmente números)
+Callback - Permite você chamar uma função/método externo
+CreditCard - 
+Date - 
+Db_RecordExists and Db_NoRecordExists - Permite verificar se o valor esta cadastrado no BD
+Digits - Somente digitos
+EmailAddress - Permite verificar se o valor entregue é um endereço de email
+File - Validação para arquivos
+Float - 
+GreaterThan - Validador "Maior que"
+Hex - Permite verificar se o valor é um hexadecimal
+Hostname - Permite validar um nome de host de um conjunto de especificações conhecidas
+Iban - IBAN é a abreviação de "International Bank Account Number".
+InArray - Permite validar se o valor esta contido em um array
+Int - 
+Ip -
+Isbn - Permite validar um ISBN (International Standard Book Number)
+LessThan - Validador "Menor que"
+NotEmpty - Não vazio
+PostCode - Validar se o valor entregue é um Postal Code
+Regex - Expressões regulares
+StringLength - Permite validar se o valor entregue esta dentro de um comprimento definido
+

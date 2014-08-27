@@ -1,0 +1,134 @@
+Os nomes das classes e metodos do Zend Framework seguem o padrão CamelCase.
+
+O CamelCase é padrão para se escrever palavras agrupadas em uma só.
+Cada palavra do grupo, deve comecar em maiuscula, e as seguintes em minuscula.
+Ex.:
+	Universidade Paranaense Campus Cianorte = UniversidadeParanaenseCampusCianorte
+	UNIPAR = Unipar
+	
+Variações de CamelCase:
+lowerCamelCase são iniciados por letras minúsculas. Usado na definição de objetos;
+UpperCamelCase são iniciados por letras maiúsculas. Usado para Classes em Orientação a objetos.
+
+==
+
+As classes do Zend Framework são agrupadas em diretórios.
+O primeiro nível de diretórios é chamado de Componentes.
+
+O organização de Classes se da dentro desses diretórios.
+A nomeação das classes segue em qual diretorio ela se encontra, sempre trocando o _ pelo /
+Ex.: A classe Zend_Controller_Action esta no diretorio Zend/Controller/Action.php
+
+==
+
+O Zend separa a aplicação em Módulo (module), Controlador (controller) e Ação (action).
+Para estudos, vamos nos aprofundar apenas nos Controladores e Ações
+
+Imagine um site de noticias. Se dividirmos este site em pedaços teriamos os Controladores (Noticias,Eventos,Usuários).
+E para cada controlador teriamos as suas respectivas Ações (Noticias/VerNoticias, Noticias/Comentar)
+
+==
+
+O Zend utiliza um padrão nas URLs para definir qual controller/ação será executada.
+O padrão é http://ENDERECO_DO_SITE/controler/action
+
+Se o usuário acessar http://ENDERECO_DO_SITE/noticia/ver
+então o Zend saberá que deverá executar a action "ver" do controller "noticia"
+
+Se o usuário acessar http://ENDERECO_DO_SITE/eventos/listar
+então o Zend saberá que deverá executar a action "listar" do controller "eventos"
+
+Se na URL não existir action o padrão é index
+Ex.: http://ENDERECO_DO_SITE/eventos
+O Zend irá executar o action "index" do controller "eventos"
+
+Se na URL não existir controller o padrão é index
+Ex.: http://ENDERECO_DO_SITE
+O Zend irá executar o action "index" do controller "index"
+
+==
+
+Todo o programa ficará dentro do diretório application
+
+Dentro do diretório application existirá os diretórios controllers, models e views ( o famoso MVC )
+
+==
+
+Para criar um controller, siga os passos:
+
+1. Criar um arquivo .php no diretório /application/controllers
+O nome do arquivo sempre será o nome do controller + o sufixo "Controller" (padrão UpperCamelCase)
+Ex.: NoticiaController.php
+	
+2. Dentro do arquivo criar uma classe com o mesmo nome do arquivo (sem o .php) que extende a classe Zend_Controller_Action
+Ex.:
+<?php
+class NoticiaController extends Zend_Controller_Action { }
+?>
+	
+3. Dentro da classe criar 2 métodos públicos
+	3.1. Método init()
+	3.2. Método indexAction() - O método indexAction() se refere ao action "index"
+
+4. Criar um diretório em /application/views/scripts
+O nome do diretorio devera ser o mesmo nome do controller que você esta criando, mas em caixa baixa.
+Ex.: /application/views/scripts/evento
+
+5. Dentro do diretório que você criou no passo anterior, crie o arquivo index.phtml
+
+==
+
+Para criar um action, faça:
+
+1. No controller que você deseja criar o action, crie um metodo publico.
+O nome do método devera ser = nome do action + Action (padrão lowerCamelCase)
+Ex.:
+<?php
+public function lerAction() {}
+?>
+
+2. No diretório de /application/views/scripts/NOME_DO_CONTROLLER
+criar um arquivo .phtml com o nome do action (em caixa baixa)
+Ex.: ler.phtml
+
+==
+
+Diretórios:
+
+./application/configs
+Configurações da aplicação
+
+./application/controllers
+Controllers da aplicação ( C do MVC )
+
+./application/forms
+Formulários da aplicação ( C do MVC )
+
+./application/layouts
+Layouts da aplicação ( V do MVC )
+
+./application/models
+Models da aplicação ( M do MVC )
+
+./application/views
+As telas da aplicação ( V do MVC )
+
+./application/views/helpers
+Ajudantes das telas
+
+./application/views/scripts
+Telas da aplicação
+
+./data
+Dados da aplicação
+
+./library
+Biblioteca de códigos
+
+./public
+Diretório publico da aplicação
+
+==
+
+fontes:
+http://pt.wikipedia.org/wiki/CamelCase

@@ -1,0 +1,59 @@
+Filtros do Zend
+
+http://framework.zend.com/manual/en/zend.filter.html
+
+==
+
+O componente Zend_Filter
+
+O componente Zend_Filter prove um conjunto de filtros de dados que geralmente são necessários.
+O componente também fornece um mecanismo de encadeamento simples de vários filtros que podem ser aplicados à mesma informação.
+
+==
+
+O que é um filtro ?
+
+No mundo real, um filtro geralmente é utilizado para remover partes desnecessárias de algo.
+Por exemplo, quando estamos preparando café, utilizamos um filtro para remover o pó, para então utilizarmos o que sai do filtro.
+
+Os filtros, dentro no nosso contexto, serão utilizados para filtrar informações fornecidas à nossa aplicação.
+
+==
+
+Uso básico dos componente no Zend_Filter
+
+Todos os filtros do Zend_Filter implementam a interface Zend_Filter_Interface, que define um único método: o filter().
+
+<?php
+$htmlEntities = new Zend_Filter_HtmlEntities();
+echo $htmlEntities->filter('&'); // &amp;
+echo $htmlEntities->filter('"'); // &quot;
+?>
+
+==
+
+Filtros padrões do Zend_Filter
+
+http://framework.zend.com/manual/en/zend.filter.set.html
+
+Alnum - Remove caracteres que não são letras nem números
+Alpha - Remove qualquer caracter que não seja uma letra
+BaseName - Devolve o nome de um arquivo
+Boolean - Filtro booleano
+Callback - 
+Compress / Decompress - Compactação e Descompactação de arquivos
+Digits - Remove qualquer caracter que não é um número
+Dir - Inverso de BaseName
+Encrypt / Decrypt - Encriptar e Decriptar uma string
+HtmlEntities - Transforma qualquer código HTML em texto puro
+Int - Transforma um valor em um inteiro
+Null - Pode transformar o valor entregue para um NULL
+PregReplace - Filtro com Expressão Regular
+RealPath - Devolve o diretório real de um arquivo
+StringToLower - Converte uma string para caixa baixa
+StringToUpper - Converte uma string para caixa alta
+StringTrim - Trim em uma string
+StripNewLines - Remove new lines
+StripTags - Remove HTML de uma string
+NormalizedToLocalized - 
+LocalizedToNormalized - 
