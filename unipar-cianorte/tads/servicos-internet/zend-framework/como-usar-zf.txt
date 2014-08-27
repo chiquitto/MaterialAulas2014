@@ -1,0 +1,15 @@
+Passos para usar o Zend Framework
+
+Configurações:
+1. Copiar a pasta sistema para o diretorio do Apache;
+2. Em "sistema/private/library" descompactar o Zend.zip;
+
+Uso:
+1. No navegador acessar o endereço "public" do projeto.
+Exemplo: http://localhost/sistema/public
+
+2. Para acessar o Controller Cidade, acesse:
+http://localhost/sistema/public/cidade
+
+3. Para acessar o Action Cadastrar do Controller Cidade, acesse:
+http://localhost/sistema/public/cidade/cadastrar

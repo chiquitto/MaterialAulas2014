@@ -1,0 +1,9 @@
+* {
+    font-family: Arial;
+}
+
+#header {
+    background-color: #EEEEEE;
+    overflow: hidden;
+    padding: 5px;
+}
