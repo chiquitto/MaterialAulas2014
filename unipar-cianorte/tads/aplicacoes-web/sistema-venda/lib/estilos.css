@@ -1,4 +1,7 @@
-body { padding-top: 30px; }
+body {
+    background-color: #fdfdfd;
+    padding-top: 30px;
+}
 
 body>.container {
 	margin-bottom: 25px;

@@ -12,6 +12,10 @@ class CidadeController extends Zend_Controller_Action
     {
         
     }
+    
+    public function cadastrarAction() {
+        
+    }
 
 
 }
