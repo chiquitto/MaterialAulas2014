@@ -14,7 +14,7 @@ if(isset($_GET['q'])){
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Produtos</title>
+    <title>Usuários</title>
 
     <?php headCss(); ?>
   </head>
@@ -25,11 +25,27 @@ if(isset($_GET['q'])){
 <div class="container">
 
 <div class="page-header">
-  <h1><i class="fa fa-cubes"></i> Categorias</h1>
+  <h1><i class="fa fa-user"></i> Usuários</h1>
 </div>
 
 <div class="panel panel-default">
-  <div class="panel-heading">Categorias</div>
+  <div class="panel-heading clearfix">
+    <h3 class="panel-title pull-left">Usuários</h3>
+    
+    <div class="btn-group pull-right">
+      <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+        <i class="fa fa-bars fa-lg"></i>
+      </button>
+      <ul class="dropdown-menu slidedown">
+        <li>
+            <a href="usuarios-cadastrar.php">
+                <i class="fa fa-plus fa-fw"></i> Novo usuário
+            </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
   <div class="panel-body">
     <form class="form-inline" role="form" method="get" action="">
       <div class="form-group">
@@ -45,16 +61,17 @@ if(isset($_GET['q'])){
       <tr>
         <th>#</th>
         <th></th>
-        <th>Categoria</th>
+        <th>Nome</th>
+        <th>Email</th>
         <th></th>
       </tr>
     </thead>
     <tbody>
       <?php
-        $sql = "Select idcategoria, categoria, status from  categoria";
+        $sql = "Select idusuario, nome, email, status from usuario";
         $array = array();
         if($q != ''){
-          $array[] = "(categoria like '%$q%')";
+          $array[] = "((nome like '%$q%') or (email like '%$q%'))";
         }
         if($array){
           $sql .= " Where ".join(' or ', $array);   
@@ -64,18 +81,19 @@ if(isset($_GET['q'])){
         while( $resultado = mysqli_fetch_assoc($consulta)){
       ?>
       <tr>
-        <td><?php echo $resultado['idcategoria'];   ?></td>
+        <td><?php echo $resultado['idusuario'];   ?></td>
         <td>
-          <?php if($resultado['status'] == CATEGORIA_ATIVO){  ?>
+          <?php if($resultado['status'] == USUARIO_ATIVO){  ?>
           <span class="label label-success">ativo</span>
           <?php } else { ?>
           <span class="label label-warning">inativo</span>
           <?php } ?>
         </td>
-        <td><?php echo $resultado['categoria'];?></td>
+        <td><?php echo $resultado['nome'];?></td>
+        <td><?php echo $resultado['email'];?></td>
         <td>
-            <a href="categorias-editar.php?idcategoria=<?php echo $resultado['idcategoria'];?>" title="Editar produto"><i class="fa fa-edit fa-lg"></i></a>
-          <a href="categorias-apagar.php?idcategoria=<?php echo $resultado['idcategoria'];?>" title="Remover categoria"><i class="fa fa-times fa-lg"></i></a>
+            <a href="usuarios-editar.php?idusuario=<?php echo $resultado['idusuario'];?>" title="Editar produto"><i class="fa fa-edit fa-lg"></i></a>
+            <a href="usuarios-senha.php?idusuario=<?php echo $resultado['idusuario'];?>" title="Alterar senha"><i class="fa fa-lock fa-lg"></i></a>
         </td>
       </tr><?php
     }

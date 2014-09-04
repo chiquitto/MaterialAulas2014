@@ -14,20 +14,23 @@
       <ul class="nav navbar-nav">
         <li><a href="./">Home</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clientes <b class="caret"></b></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pessoas <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="clientes-cadastrar.php">Cadastrar</a></li>
-            <li><a href="clientes.php">Pesquisar</a></li>
+            <li><a href="clientes-cadastrar.php">Cadastrar Clientes</a></li>
+            <li><a href="clientes.php">Pesquisar clientes</a></li>
+            <li class="divider"></li>
+            <li><a href="usuarios-cadastrar.php">Cadastrar Usuários</a></li>
+            <li><a href="usuarios.php">Pesquisar Usuários</a></li>
           </ul>
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Produtos <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="produtos-cadastrar.php">Cadastrar</a></li>
-            <li><a href="produtos.php">Pesquisar</a></li>
+            <li><a href="produtos-cadastrar.php">Cadastrar produtos</a></li>
+            <li><a href="produtos.php">Pesquisar produtos</a></li>
             <li class="divider"></li>
-            <li><a href="categorias-cadastrar.php">Cadastrar Categorias</a></li>
-            <li><a href="categorias.php">Categorias</a></li>
+            <li><a href="categorias-cadastrar.php">Cadastrar categorias</a></li>
+            <li><a href="categorias.php">Pesquisar categorias</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -44,6 +47,7 @@
             <li><a href="rel-vendas.php">Vendas</a></li>
           </ul>
         </li>
+        <li><a href="logout.php">Sair</a></li>
       </ul>
   </div>
 </nav>

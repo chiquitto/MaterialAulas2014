@@ -16,3 +16,6 @@ define('CLIENTE_ATIVO', '1');
 define('PRODUTO_INATIVO', '0');
 define('PRODUTO_ATIVO', '1');
 define('PRODUTO_MANUTENCAO', '2');
+
+define('USUARIO_INATIVO', '0');
+define('USUARIO_ATIVO', '1');

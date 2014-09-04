@@ -28,6 +28,7 @@ $produto = mysqli_fetch_assoc($r);
 
 $descricao = $produto['produto'];
 $preco = $produto['preco'];
+$idcategoria = $produto['idcategoria'];
 $saldo = $produto['saldo'];
 $ativo = $produto['status'];
 
@@ -36,6 +37,7 @@ if ($_POST) {
   $descricao = $_POST['descricao'];
   $preco = $_POST['preco'];
   $saldo = (int) $_POST['saldo'];
+  $idcategoria = (int) $_POST['idcategoria'];
 
   if(isset($_POST['ativo'])){
     $ativo = PRODUTO_ATIVO;
@@ -54,7 +56,7 @@ if ($_POST) {
         Set produto = '$descricao',
             preco = '$preco',
             status = '$ativo',
-            idcategoria = 1,
+            idcategoria = $idcategoria,
             saldo = $saldo
         Where (idproduto = $idproduto)";
     
@@ -115,10 +117,15 @@ if ($_POST) {
   <div class="form-group">
     <label for="fcategoria">Categoria</label>
     <select id="fcategoria" name="idcategoria" class="form-control" required>
-        <option value="0">Selecine a categoria</option>
-        <option value="1">Calça</option>
-        <option value="2">Camiseta</option>
-        <option value="3">Shorts</option>
+        <option value="0">Selecione a categoria</option>
+        <?php 
+$sql = 'Select idcategoria,categoria from categoria where (status = 1)';
+$exec = mysqli_query($con, $sql);
+while($r = mysqli_fetch_assoc($exec)){
+
+        ?>
+        <option value="<?php echo $r['idcategoria']; ?>" <?php if($idcategoria == $r['idcategoria']){?> selected <?php } ?>><?php echo $r['categoria'];?></option>
+       <?php } ?>
     </select>
   </div>
     
