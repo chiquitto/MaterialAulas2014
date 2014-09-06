@@ -13,6 +13,7 @@ if ($_POST) {
     $nome = trim($_POST['nome']);
     $email = trim($_POST['email']);
     $senha = trim($_POST['senha']);
+    $senha2 = trim($_POST['senha2']);
 
     if (isset($_POST['ativo'])) {
         $status = USUARIO_ATIVO;
@@ -32,8 +33,21 @@ if ($_POST) {
     if ($senha == '') {
         $msg[] = "Insira uma senha";
     }
+    
+    if ($senha != $senha2){
+        $msg[] = "As senhas não coferem digite novamente";
+    }
 
+    $sql = "select idusuario from usuario where email = '$email'";
+    $consulta = mysqli_query($con, $sql);
+    
+    $resultado = mysqli_fetch_assoc($consulta);
+    if($resultado){
+        $msg[] = "Este email ja esta cadastrado.";
+    }
+    
     if (!$msg) {
+        $senha = md5('0409' . $senha);
         $sql = "Insert Into usuario (nome,email,senha,status) Values ('$nome', '$email', '$senha', $status)";
 
         $resultado = mysqli_query($con, $sql);

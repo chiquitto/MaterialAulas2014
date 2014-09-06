@@ -24,9 +24,13 @@ if (!$retorno) {
 
 if ($_POST) {
     $senha = trim($_POST['senha']);
+    $senha2 = trim($_POST['senha2']);
     
     if ($senha == '') {
         $msg[] = "Insira uma senha para o usuário";
+    }
+    if ($senha != $senha2){
+        $msg[] = "As senhas não coferem digite novamente";
     }
     
     if (!$msg) {
