@@ -2,51 +2,47 @@
 
 class Application_Form_Cidade extends Zend_Form
 {
-
-    public function init()
-    {
-        // Set the method for the display form to POST
-        $this->setMethod('post');
-
-        // Add an email element
-        $this->addElement('text', 'email', array(
-            'label'      => 'Your email address:',
-            'required'   => true,
-            'filters'    => array('StringTrim'),
-            'validators' => array(
-                'EmailAddress',
-            )
+    public function init() {
+        $nome = new Zend_Form_Element_Text("nome", array(
+            "label"=>"Nome da Cidade: ", 
+            "required"=>true 
         ));
-
-        // Add the comment element
-        $this->addElement('textarea', 'comment', array(
-            'label'      => 'Please Comment:',
-            'required'   => true,
-            'validators' => array(
-                array('validator' => 'StringLength', 'options' => array(0, 20))
-                )
+        
+        
+        $nome->addFilter(new Zend_Filter_StringToUpper());
+        $nome->addFilter(new Zend_Filter_StringTrim());
+        $nome->addValidator(new Zend_Validate_NotEmpty());
+        
+        $this->addElement($nome);
+        
+        $uf = new Zend_Form_Element_Select("uf", array(
+            "label"=>"UF: ",
+            "required"=>true  
+            
         ));
-
-        // Add a captcha
-        $this->addElement('captcha', 'captcha', array(
-            'label'      => 'Please enter the 5 letters displayed below:',
-            'required'   => true,
-            'captcha'    => array(
-                'captcha' => 'Figlet',
-                'wordLen' => 5,
-                'timeout' => 300
-            )
+        
+        $this->addElement($uf);
+        
+        $estados = array(
+            ""=>"Selecione...",
+            "PR"=>"Paraná",
+            "SC"=>"Santa Catarina",
+            "SP"=>"São Paulo",
+            "RO"=>"Roraima",
+            "MT"=>"Mato Grosso",
+            "BA"=>"Bahia",
+            "MG"=>"Minas Gerais"
+            
+            );
+        $uf->setMultiOptions($estados);
+        
+        
+        
+        $enviar = new Zend_Form_Element_Submit("enviar", array(
+            "label"=>"Enviar"
         ));
-
-        // Add the submit button
-        $this->addElement('submit', 'submit', array(
-            'ignore'   => true,
-            'label'    => 'Sign Guestbook',
-        ));
-
-        // And finally add some CSRF protection
-        $this->addElement('hash', 'csrf', array(
-            'ignore' => true,
-        ));
+        
+        $this->addElement($enviar);
     }
+   
 }
