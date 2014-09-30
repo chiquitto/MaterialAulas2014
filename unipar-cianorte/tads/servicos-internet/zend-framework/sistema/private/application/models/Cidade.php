@@ -1,6 +1,6 @@
 <?php
 
-class Application_Model_Usuario
+class Application_Model_Cidade
 {
 
 
