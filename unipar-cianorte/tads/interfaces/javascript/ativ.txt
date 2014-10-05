@@ -1,0 +1,20 @@
+1. Pegar a fruta que o usuario prefere, e usando if/else mostrar o nome de uma receita;
+Se o usuario gosta de mamao, mostrar vitamina
+Se o usuario gosta de banana, mostrar torta de banana
+Se o usuario gosta de pessego, mostrar pessego em calda
+Senao mostrar geleia da fruta que ele digitou
+
+2. Pegar a fruta que o usuario prefere, e usando switch/case mostrar o nome de uma receita;
+Se o usuario gosta de mamao, mostrar vitamina
+Se o usuario gosta de banana, mostrar vitamina
+Se o usuario gosta de bacate, mostrar vitamina
+Se o usuario gosta de pessego, mostrar pessego em calda
+Senao mostrar geleia da fruta que ele digitou
+
+3. Perguntar pro usuario se ele é do genero Masculino com window.confirm.
+E mostrar uma mensagem com uma ação relacionada ao genero selecionado.
+
+4. Pegar do usuário o nome, nome do meio e ultimo nome.
+Exibir para o usuário o nome completo dele.
+
+5. Desafio: Pegar uma URL via window.prompt, e redirecionar o usuario para a URL
