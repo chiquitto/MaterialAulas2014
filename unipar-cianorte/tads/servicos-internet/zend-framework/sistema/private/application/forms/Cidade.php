@@ -23,14 +23,15 @@ class Application_Form_Cidade extends Zend_Form {
 
         $estados = array(
             "" => "Selecione...",
-            "PR" => "Paraná",
-            "SC" => "Santa Catarina",
-            "SP" => "São Paulo",
-            "RO" => "Roraima",
-            "MT" => "Mato Grosso",
-            "BA" => "Bahia",
-            "MG" => "Minas Gerais"
         );
+        
+        $ufTabela = new Application_Model_DbTable_Uf();
+        $ufLista = $ufTabela->fetchAll();
+        
+        foreach ($ufLista as $ufLinha) {
+            $estados[$ufLinha->iduf] = $ufLinha->uf;
+        }
+        
         $uf->setMultiOptions($estados);
 
         $enviar = new Zend_Form_Element_Submit("enviar", array(

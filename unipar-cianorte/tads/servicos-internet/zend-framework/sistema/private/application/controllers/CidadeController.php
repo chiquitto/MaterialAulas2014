@@ -17,19 +17,17 @@ class CidadeController extends Zend_Controller_Action
         $formCidade = new Application_Form_Cidade();
         
         if($this->getRequest()->isPost()){
-            
             $data = $this->getRequest()->getParams();
             
             if($formCidade->isValid($data)){
+                $data = $formCidade->getValues();
                 
-                
+                $cidadeModel = new Application_Model_Cidade();
+                $cidadeModel->cadastrar($data);
             }
         }
         
-        
         $this->view->formCidade = $formCidade;
-        
-        
     }
 
 
