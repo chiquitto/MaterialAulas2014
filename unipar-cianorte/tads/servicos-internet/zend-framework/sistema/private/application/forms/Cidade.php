@@ -13,6 +13,17 @@ class Application_Form_Cidade extends Zend_Form {
         $nome->addValidator(new Zend_Validate_NotEmpty());
 
         $this->addElement($nome);
+        
+        $populacao = new Zend_Form_Element_Text("populacao", array(
+            "label" => "Populacao da cidade: ",
+            "required" => true,
+        ));
+
+        $populacao->addFilter(new Zend_Filter_StringTrim());
+        $populacao->addValidator(new Zend_Validate_NotEmpty());
+        $populacao->addValidator(new Zend_Validate_Int());
+
+        $this->addElement($populacao);
 
         $uf = new Zend_Form_Element_Select("uf", array(
             "label" => "UF: ",

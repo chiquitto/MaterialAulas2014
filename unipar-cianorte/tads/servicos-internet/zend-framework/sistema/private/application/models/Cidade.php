@@ -8,7 +8,7 @@ class Application_Model_Cidade
         
         $idcidade = $cidadeTabela->insert(array(
             'cidade' => $cidade['nome'],
-            'populacao' => 0,
+            'populacao' => $cidade['populacao'],
             'iduf' => $cidade['uf']
         ));
         
