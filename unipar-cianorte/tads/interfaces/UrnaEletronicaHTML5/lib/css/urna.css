@@ -1,0 +1,134 @@
+body>h1 {
+    background: #EFEFEF;
+    text-align: center;
+}
+
+#urna {
+    background: #EFEFEF;
+    height: 335px;
+    margin: 50px auto 0 auto;
+    width: 760px;
+}
+
+#tela, #teclado {
+    height: 315px;
+}
+
+/* Telas */
+
+#tela {
+    border: 4px solid #000;
+    border-top-color: #565656;
+    border-left-color: #565656;
+    float: left;
+    margin: 10px 0 10px 10px;
+    width: 440px;
+}
+
+#telaVoto {
+    border-bottom: 2px solid #000;
+    height: 75%;
+    width: 100%;
+}
+
+#telaVoto h1 {
+    margin: 15px 0 30px 0;
+    font-size: 2em;
+    text-align: center;
+}
+
+#telaNumero {
+    font-size: 20px;
+    margin: 15px 20px;
+}
+
+#telaNumero span {
+    border: 2px solid #000;
+    display: inline-block;
+    font-family: monospace;
+    font-size: 30px;
+    padding: 2px 4px;
+    text-align: center;
+}
+
+#telaNome, #telaPartido {
+    font-size: 20px;
+    margin: 15px 20px;
+}
+
+/* Teclado */
+
+#teclado {
+    background: #000;
+    float: right;
+    margin: 10px 10px 10px 0;
+    width: 290px;
+}
+
+#btNumero {
+    height: 235px;
+    margin: 10px auto 10px auto;
+    width: 216px;
+}
+
+#btNumero button {
+    background: #000;
+    border: 1px solid #FFF;
+    color: #FFF;
+    float: left;
+    margin: 15px;
+    width: 40px;
+}
+
+#btNumero button {
+    background: #000;
+    border: 1px inset #FFF;
+    color: #FFF;
+    cursor: pointer;
+    float: left;
+    font-size: 24px;
+    height: 40px;
+    margin: 15px 0 0 15px;
+    width: 52px;
+}
+
+#btNumero #btNumero0 {
+    margin-left: 82px;
+}
+
+#btNumero button:active {
+    background: #FFF;
+    color: #000;
+}
+
+#btAcao {
+    margin: 20px;
+    height: 34px;
+}
+
+#btBranco, #btCorrige, #btConfirma {
+    border: none;
+    color: #000;
+    cursor: pointer;
+    float: left;
+    font-size: 12px;
+    height: 34px;
+    text-transform: uppercase;
+    width: 70px;
+}
+
+#btBranco {
+    background: #FFF;
+}
+
+#btCorrige {
+    background: #F95;
+    margin: 0 20px 0 20px;
+}
+
+#btConfirma {
+    background: #87de87;
+    height: 46px;
+    position: relative;
+    top: -12px;
+}
