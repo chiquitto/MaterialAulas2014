@@ -31,6 +31,36 @@ class UfController extends Zend_Controller_Action
         
         $this->view->formUf = $formUf;
     }
+    
+    public function editarAction() {
+        $iduf = $this->getRequest()->getParam('iduf');
+        $uftabela = new Application_Model_DbTable_Uf();
+        $uf = $uftabela->fetchRow("iduf = '$iduf'");
+        if($uf === null){
+            echo 'uf nao encontrado';
+            exit();
+        }
+        //$ufarray = $uf->toArray();
+        $ufForm = new Application_Form_Uf();
+        
+        if($this->getRequest()->isPost()){
+            $dados = $this->getRequest()->getParams();
+            if($ufForm->isValid($dados)){
+                $dados = $ufForm->getValues();
+                $model = new Application_Model_Uf();
+                $model->editar($dados,$iduf);
+                $this->_helper->redirector->gotoSimpleAndExit('index');
+            }
+        }else{
+        $ufForm->populate(array(
+            "sigla"=>$uf->iduf,
+            "uf"=>$uf->uf
+                ));
+        }
+        $this->view->formUf = $ufForm;
+        
+        
+    }
 
 
 }

@@ -14,5 +14,11 @@ class Application_Model_Uf
         return $uf['sigla'];
     }
     
+    public function editar($dados,$iduf) {
+        $uf = new Application_Model_DbTable_Uf();
+        $uf->update(array("uf"=>$dados['uf']),"iduf = '$iduf'");
+        return true;        
+    }
+    
 }
 
