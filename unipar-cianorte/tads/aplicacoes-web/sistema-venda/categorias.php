@@ -14,7 +14,7 @@ if(isset($_GET['q'])){
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Produtos</title>
+    <title>Categorias</title>
 
     <?php headCss(); ?>
   </head>
