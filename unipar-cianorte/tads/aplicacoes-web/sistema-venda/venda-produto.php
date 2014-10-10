@@ -4,23 +4,20 @@ require './config.php';
 require './lib/funcoes.php';
 require './lib/conexao.php';
 ?>
+<form name="Vendas" method="POST" action="venda-produto.php">
 
-<form method="post" name="AddProduto">
-    <select name="idproduto">
-        <?php
-            $sql= "select * from produto where status = ".PRODUTO_ATIVO;
-            $consulta = mysqli_query($con, $sql);
-            while($resultado = mysqli_fetch_assoc($consulta)){
-        
-        ?>
-        
-        <option value="<?php echo $resultado['idproduto'];?>"> <?php echo $resultado['produto'];?> (R$ <?php echo number_format($resultado['preco'], 2, ',', '.');?>) </option>
-        
-        
-        <?php
-            }    
-        ?>
-    </select>
+<select name="idproduto">
+  <?php
+  $sql= 'select * from produto where status='.PRODUTO_ATIVO;
+  $result = mysqli_query($con,$sql);
+  while($linha = mysqli_fetch_assoc($result))
+  {
+?>
+  <option value="<?php echo $linha['idproduto']; ?>"><?php echo $linha['produto'];?> (R$<?php echo number_format($linha['preco'], 2, ",", "."); ?>)</option>
+
+  <?php } ?>
+  </select>  
 
 
 </form>
+

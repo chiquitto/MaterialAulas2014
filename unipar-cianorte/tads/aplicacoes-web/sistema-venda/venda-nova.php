@@ -1,26 +1,28 @@
 <?php
-
 require './protege.php';
 require './config.php';
 require './lib/funcoes.php';
 require './lib/conexao.php';
 
-// Pegar idcliente
+$data = date('Y-m-d');
+//pegar id cliente
 $idcliente = $_GET['idcliente'];
 
-// Abrir venda para cliente
-$data = date('Y-m-d');
 
-$sql = "insert into venda (data, idcliente, status) values ('$data', $idcliente, 0)";
-$insert = mysqli_query($con, $sql);
+//Criar um registro na tabela venda
+$sql = "insert into venda values(null,'$data',$idcliente,'0')";
+$result = mysqli_query($con, $sql);
 
-// Pegar idvenda
+
+//Pegar o codigo da venda
 $idvenda = mysqli_insert_id($con);
 
-// Salvar idvenda na sessao
+
+//SALVAR CODIGO DA VENDA EM SESSAO
 $_SESSION['idvenda'] = $idvenda;
 
-// Redirecionar usuario para venda-produto.php
 
+//Redirecionar usuario
+//venda-produto.php
 header('location:venda-produto.php');
 
