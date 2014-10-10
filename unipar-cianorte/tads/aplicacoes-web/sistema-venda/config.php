@@ -19,3 +19,4 @@ define('PRODUTO_MANUTENCAO', '2');
 
 define('USUARIO_INATIVO', '0');
 define('USUARIO_ATIVO', '1');
+
