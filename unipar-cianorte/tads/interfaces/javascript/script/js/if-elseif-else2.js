@@ -1,4 +1,4 @@
-﻿var n = 250;
+var n = 250;
 
 if ( n < 50 ) {
 	window.alert('Numero é menor que 50');
@@ -29,4 +29,3 @@ else if ( n < 200 ) {
 else {
 	window.alert('Numero é maior/igual a 200');
 }
-

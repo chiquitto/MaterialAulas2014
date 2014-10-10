@@ -1,4 +1,4 @@
-﻿var fruta = 'maca';
+var fruta = 'maca';
 
 if ( fruta == 'maca' ) {
 	window.alert('Você gosta de maçã.');

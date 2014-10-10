@@ -1,4 +1,4 @@
-﻿var a = 5;
+var a = 5;
 
 switch ( a ) {
 	case 1:

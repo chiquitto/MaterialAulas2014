@@ -1,4 +1,4 @@
-﻿var msg = 'Qual a sua ultima nota';
+var msg = 'Qual a sua ultima nota';
 
 var r = window.prompt(msg);
 

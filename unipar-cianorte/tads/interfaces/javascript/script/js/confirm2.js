@@ -1,4 +1,4 @@
-﻿var msg = 'Você esta com nota vermelha?';
+var msg = 'Você esta com nota vermelha?';
 
 var r = window.confirm(msg);
 
