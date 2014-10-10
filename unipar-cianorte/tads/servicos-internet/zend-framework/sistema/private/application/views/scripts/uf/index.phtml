@@ -1,1 +1,25 @@
 <h1>Lista de UFs</h1>
+
+<table border="1">
+    <thead>
+        <tr>
+            <td>Sigla</td>
+            <td>Estado</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+           foreach ($this->listaUf as $uf){
+        ?>
+        <tr>
+            <td><?php echo $uf['iduf']; ?></td>
+            <td><?php echo $uf['uf'];?></td>
+            <td>
+                
+                <a href="uf/editar/iduf/<?php echo $uf['iduf'];?>">Editar</a>
+            </td>
+        </tr>
+        <?php }?>
+    </tbody>
+</table>

@@ -1,1 +1,28 @@
 <h1>Lista de Cidades</h1>
+
+
+<table border="1">
+    <thead>
+        <tr>
+            <td>Nome</td>
+            <td>População</td>
+            <td>Uf</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+           foreach ($this->listaCidade as $cidade){
+        ?>
+        <tr>
+            <td><?php echo $cidade['cidade']; ?></td>
+            <td><?php echo $cidade['populacao'];?></td>
+            <td><?php echo $cidade['iduf'];?></td>
+            <td>
+                
+                <a href="cidade/editar/idcidade/<?php echo $cidade['idcidade'];?>">Editar</a>
+            </td>
+        </tr>
+        <?php }?>
+    </tbody>
+</table>

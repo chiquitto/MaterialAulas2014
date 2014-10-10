@@ -10,6 +10,11 @@ class UfController extends Zend_Controller_Action
 
     public function indexAction()
     {
+        $dbtable = new Application_Model_DbTable_Uf();
+        $uf = $dbtable->fetchAll();
+        $ufArray = $uf->toArray();
+        
+        $this->view->listaUf = $ufArray;
         
     }
     
