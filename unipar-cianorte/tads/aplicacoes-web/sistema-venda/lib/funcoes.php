@@ -8,8 +8,37 @@
 function headCss() {
 ?>
 <link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<?php headCssTema(TWITTER_BOOTSTRAP_TEMA); ?>
+
 <link href="./lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 <link href="./lib/estilos.css" rel="stylesheet"><?php
+}
+
+function headCssTema($tema=null) {
+    $href = '';
+    switch($tema) {
+        case 'bootstrap';
+            $href = './lib/bootstrap/css/bootstrap-theme.min.css';
+            break;
+        
+        case 'cosmo':
+        case 'cyborg':
+        case 'darkly':
+        case 'journal':
+        case 'readable':
+        case 'sandstone':
+        case 'simplex':
+        case 'slate':
+        case 'superhero':
+        case 'yeti':
+            $href = "./lib/bootswatch/$tema/bootstrap.min.css";
+            break;
+    }
+    
+    if ($href) {
+        ?><link href="<?php echo $href; ?>" rel="stylesheet"><?php
+    }
 }
 
 /**
