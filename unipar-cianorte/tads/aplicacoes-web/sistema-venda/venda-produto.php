@@ -5,10 +5,22 @@ require './config.php';
 require './lib/funcoes.php';
 require './lib/conexao.php';
 
-$q ='';
-if(isset($_GET['q'])){
-  $q =trim($_GET['q']);
+$msgOk = array();
+$msgAviso = array();
+
+/*
+Valores para acao
+1 = Incluir produto na venda
+2 = Remover produto na venda
+*/
+$acao = 0;
+if (isset($_GET['acao'])) {
+  $acao = (int) $_GET['acao'];
 }
+elseif (isset($_POST['acao'])) {
+  $acao = (int) $_POST['acao'];
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -26,65 +38,75 @@ if(isset($_GET['q'])){
 <div class="container">
 
 <div class="page-header">
-  <h1><i class="fa fa-camera"></i> Venda #<?php echo $_SESSION['idvenda']; ?></h1>
+  <h1><i class="fa fa-shopping-cart"></i> Andamento da venda #<?php echo $_SESSION['idvenda']; ?></h1>
 </div>
 
+<?php if ($msgOk) { msgHtml($msgOk, 'success'); } ?>
+<?php if ($msgAviso) { msgHtml($msgAviso, 'warning'); } ?>
+
 <form role="form" method="post" action="venda-produto.php">
-<div class="panel panel-default">
-  <div class="panel-heading">Adicionar produto</div>
   
-  <div class="panel-body">
-    
-    <div class="container-fluid">
-      <div class="row">
-        
-        <div class="col-xs-12 col-sm-6 col-md-8">
-          <div class="form-group">
-            <label for="fidproduto">Produto</label>
-            <select id="fidproduto" name="idproduto" class="form-control" required>
-              <option value="">Selecione um produto</option>
-              <?php
-              $sql= 'Select * from produto where status=' . PRODUTO_ATIVO;
-              $result = mysqli_query($con,$sql);
-              while($linha = mysqli_fetch_assoc($result)) {
-              ?>
-              <option value="<?php echo $linha['idproduto']; ?>"><?php echo $linha['produto'];?> (R$ <?php echo number_format($linha['preco'], 2, ",", "."); ?>)</option>
-              <?php } ?>
-            </select>
-          </div>
-        </div>
-        
-        <div class="col-xs-12 col-sm-3 col-md-2">
-          <div class="form-group">
-            <label for="fqtd">Quantidade</label>
-            <input type="number" class="form-control" id="fqtd" value="0" name="qtd" min="1" required>
-          </div>
-        </div>
-        
-        <div class="col-xs-12 col-sm-3 col-md-2">
-          <div class="form-group">
-            <label for="fpreco">Preço unitário</label>
-            <div class="input-group">
-              <span class="input-group-addon">R$</span>
-              <input type="text" class="form-control" id="fpreco" name="preco" required>
+  <input type="hidden" name="acao" value="1">
+  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Adicionar produto</h3>
+    </div>
+
+    <div class="panel-body">
+
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-xs-12 col-sm-6 col-md-8">
+            <div class="form-group">
+              <label for="fidproduto">Produto</label>
+              <select id="fidproduto" name="idproduto" class="form-control" required>
+                <option value="">Selecione um produto</option>
+                <?php
+                $sql = 'Select * From produto Where status=' . PRODUTO_ATIVO;
+                $result = mysqli_query($con,$sql);
+                while($linha = mysqli_fetch_assoc($result)) {
+                ?>
+                <option value="<?php echo $linha['idproduto']; ?>"><?php echo $linha['produto'];?> (R$ <?php echo number_format($linha['preco'], 2, ",", "."); ?>)</option>
+                <?php } ?>
+              </select>
             </div>
           </div>
+
+          <div class="col-xs-12 col-sm-3 col-md-2">
+            <div class="form-group">
+              <label for="fqtd">Quantidade</label>
+              <input type="number" class="form-control" id="fqtd" value="0" name="qtd" min="1" required>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-3 col-md-2">
+            <div class="form-group">
+              <label for="fpreco">Preço unitário</label>
+              <div class="input-group">
+                <span class="input-group-addon">R$</span>
+                <input type="text" class="form-control" id="fpreco" name="preco" required>
+              </div>
+            </div>
+          </div>
+
         </div>
-        
       </div>
+
     </div>
-    
+
+    <div class="panel-footer">
+      <button type="submit" class="btn btn-primary">Inserir</button>
+      <button type="reset" class="btn btn-danger">Limpar</button>
+    </div>
   </div>
-  
-  <div class="panel-footer">
-    <button type="submit" class="btn btn-primary">Inserir</button>
-    <button type="reset" class="btn btn-danger">Limpar</button>
-  </div>
-</div>
 </form>
   
 <div class="panel panel-default">
-  <div class="panel-heading">Produtos da venda</div>
+  <div class="panel-heading">
+    <h3 class="panel-title">Produtos da venda</h3>
+  </div>
 
   <table class="table table-striped table-hover">
     <thead>
@@ -102,7 +124,7 @@ if(isset($_GET['q'])){
         <td>Notebook</td>
         <td>R$ 1.000,00</td>
         <td>R$ 3.000,00</td>
-        <td><a href="venda-produto-apagar.php?idproduto=0" title="Remover produto da venda"><i class="fa fa-times fa-lg"></i></a></td>
+        <td><a href="venda-produto.php?acao=2&idproduto={{idproduto}}" title="Remover produto da venda"><i class="fa fa-times fa-lg"></i></a></td>
       </tr>
     </tbody>
     <tfoot>
@@ -118,7 +140,9 @@ if(isset($_GET['q'])){
   
 <form class="form-horizontal" method="post" action="venda-fechar.php">
 <div class="panel panel-success">
-  <div class="panel-heading">Fechamento da venda</div>
+  <div class="panel-heading">
+    <h3 class="panel-title">Fechamento da venda</h3>
+  </div>
   
   <div class="panel-body">
     

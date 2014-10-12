@@ -20,7 +20,7 @@ require './lib/conexao.php';
 <div class="container">
 
 <div class="page-header">
-  <h1><i class="fa fa-camera"></i> Vendas</h1>
+  <h1><i class="fa fa-shopping-cart"></i> Vendas</h1>
 </div>
 
 <div class="panel panel-default">
@@ -57,7 +57,8 @@ require './lib/conexao.php';
         <td>Zé da silva</td>
         <td>R$ 1.000,00</td>
         <td>
-          <a href="#" title="Continuar venda"><i class="fa fa-play fa-lg"></i></a>
+          <a href="venda-continuar.php?idvenda={{idvenda}}" title="Continuar venda"><i class="fa fa-play fa-lg"></i></a>
+          <a href="venda-detalhes.php?idvenda={{idvenda}}" title="Detalhes da venda"><i class="fa fa-align-justify fa-lg"></i></a>
         </td>
       </tr>
     </tbody>

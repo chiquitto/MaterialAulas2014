@@ -72,7 +72,7 @@ if(isset($_GET['q'])){
         <td>
           <a href="clientes-editar.php?idcliente=<?php echo $resultado['idcliente'];?>" title="Editar cliente"><i class="fa fa-edit fa-lg"></i></a>
           <a href="clientes-apagar.php?idcliente=<?php echo $resultado['idcliente'];?>" title="Remover cliente"><i class="fa fa-times fa-lg"></i></a>
-          <a href="venda-nova.php?idcliente=<?php echo $resultado['idcliente'];?>" title="Nova Venda"><i class="fa fa-camera fa-lg"></i></a>
+          <a href="venda-nova.php?idcliente=<?php echo $resultado['idcliente'];?>" title="Nova Venda"><i class="fa fa-share fa-lg"></i></a>
         </td>
       </tr><?php
     }

@@ -4,8 +4,6 @@ require './config.php';
 require './lib/funcoes.php';
 require './lib/conexao.php';
 
-$data = date('Y-m-d');
-
 //pegar id cliente
 $idcliente = $_GET['idcliente'];
 
@@ -13,10 +11,13 @@ $idcliente = $_GET['idcliente'];
 $idusuario = $_SESSION['idusuario'];
 
 //Criar um registro na tabela venda
+$data = date('Y-m-d');
+$status = VENDA_ABERTA;
+
 $sql = "Insert into venda
 (data, idcliente, status, idusuario)
 Values
-('$data', $idcliente, '0', $idusuario)";
+('$data', $idcliente, $status, $idusuario)";
 $result = mysqli_query($con, $sql);
 
 //Pegar o codigo da venda
