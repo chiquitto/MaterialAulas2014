@@ -1,4 +1,5 @@
 <?php
+
 require './protege.php';
 require './config.php';
 require './lib/funcoes.php';

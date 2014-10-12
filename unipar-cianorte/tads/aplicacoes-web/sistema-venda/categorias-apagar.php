@@ -1,7 +1,9 @@
 <?php
-    require './config.php';
-    require './lib/conexao.php';
-    require './lib/funcoes.php';
+
+require './protege.php';
+require './config.php';
+require './lib/conexao.php';
+require './lib/funcoes.php';
 
 if(isset($_GET['idcategoria'])){
     $idcategoria = (int) $_GET['idcategoria'];
