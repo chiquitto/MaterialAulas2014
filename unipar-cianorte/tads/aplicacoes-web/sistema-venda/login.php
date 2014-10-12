@@ -39,42 +39,55 @@ if($_POST){
     
     <style type="text/css">
         body {
-            background-color: #efefef;
             padding-top: 40px;
             padding-bottom: 40px;
           }
 
           .container {
             max-width: 330px;
-            padding: 15px;
-            margin: 0 auto;
           }
+      
+          form { margin-bottom: 15px; }
     </style>
   </head>
   <body>
 
-      <div class="container">
-          
+    <div class="container">
+
+      <div class="row">
+        <div class="col-xs-12">
+
           <h2 class="form-signin-heading">Faça seu login</h2>
 
           <form class="form-signin" role="form" method="post" action="login.php">
-              <div class="form-group">
-                  <label for="femail" class="sr-only">Email: </label>
-                  <input type="email" class="form-control" id="femail" name="email" placeholder="Endereço de e-mail">
-              </div>
+            <div class="form-group">
+              <label for="femail" class="sr-only">Email: </label>
+              <input type="email" class="form-control" id="femail" name="email" placeholder="Endereço de e-mail">
+            </div>
 
-              <div class="form-group">
-                  <label for="fsenha" class="sr-only">Senha: </label>
-                  <input type="password" class="form-control" id="fsenha" name="senha" placeholder="Senha">
-              </div>
+            <div class="form-group">
+              <label for="fsenha" class="sr-only">Senha: </label>
+              <input type="password" class="form-control" id="fsenha" name="senha" placeholder="Senha">
+            </div>
 
-              <button type="submit" class="btn btn-primary btn-block">Fazer login</button>
+            <button type="submit" class="btn btn-primary btn-block">Fazer login</button>
           </form>
-
+          
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="alert alert-info" role="alert">
+            <strong>Email/Senha padrão:</strong> admin@admin.com/unipar
+          </div>
+        </div>
       </div>
 
-      <script src="./lib/jquery.js"></script>
-      <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    </div>
+
+    <script src="./lib/jquery.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 
   </body>
 </html>
