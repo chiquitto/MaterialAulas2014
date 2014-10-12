@@ -1,0 +1,11 @@
+1. Criar um HTML com um 3 botoes, um link e uma figura.
+
+2. Ao carregar a imagem, exibir uma mensagem que a figura foi carregada.
+
+3. Ao clicar no link, mostrar para o usuário para qual URL ele será redirecionado. Dica -> link.href
+
+4.1. No botão 1, quando o usuário clicar solicitar o nome dele;
+
+4.2. No botão 2, quando o usuário clicar solicitar o sobrenome dele;
+
+4.3. No botão 3, quando o usuário clicar mostrar o nome completo
