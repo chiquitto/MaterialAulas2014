@@ -4,6 +4,11 @@ require './protege.php';
 require './config.php';
 require './lib/funcoes.php';
 require './lib/conexao.php';
+
+$q ='';
+if(isset($_GET['q'])){
+  $q =trim($_GET['q']);
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -48,20 +53,56 @@ require './lib/conexao.php';
       </tr>
     </thead>
     <tbody>
+        <?php
+        $sql = "Select
+	v.idvenda,
+	v.data,
+	c.nome clienteNome,
+    v.status vendaStatus,
+	(Select Sum(vi.preco * vi.qtd) From vendaitem vi Where (vi.idvenda = v.idvenda)) precoTotal
+From venda v
+Inner Join cliente c
+	On (c.idcliente = v.idcliente)
+Inner Join usuario u
+	On (u.idusuario = v.idusuario)";
+        
+        $array = array();
+        if($q != ''){
+          $array[] = "(c.nome like '%$q%')";
+        }
+        if($q != ''){
+          $array[] = "(u.nome like '%$q%')";
+        }
+        
+        if($array){
+          $sql .= " Where ".join(' or ', $array);   
+        }
+      
+        $consulta = mysqli_query($con,$sql);
+        while($resultado = mysqli_fetch_assoc($consulta)){
+            $vendaData = strtotime($resultado['data']);
+      ?>
       <tr>
-        <td>1</td>
+        <td><?php echo $resultado['idvenda']; ?></td>
         <td>
+          <?php if($resultado['vendaStatus'] == VENDA_FECHADA) { ?>
           <span class="label label-success">fechada</span>
+          <?php } else { ?>
           <span class="label label-warning">aberta</span>
+          <?php } ?>
         </td>
-        <td>10/10/2014</td>
-        <td>Zé da silva</td>
-        <td>R$ 1.000,00</td>
+        <td><?php echo date('d/m/Y', $vendaData); ?></td>
+        <td><?php echo $resultado['clienteNome']; ?></td>
+        <td>R$ <?php echo number_format($resultado['precoTotal'], 2, ",", "."); ?></td>
         <td>
-          <a href="venda-continuar.php?idvenda={{idvenda}}" title="Continuar venda"><i class="fa fa-play fa-lg"></i></a>
-          <a href="venda-detalhes.php?idvenda={{idvenda}}" title="Detalhes da venda"><i class="fa fa-align-justify fa-lg"></i></a>
+          <?php if($resultado['vendaStatus'] == VENDA_FECHADA) { ?>
+          <a href="venda-detalhes.php?idvenda=<?php echo $resultado['idvenda']; ?>" title="Detalhes da venda"><i class="fa fa-align-justify fa-lg"></i></a>
+          <?php } else { ?>
+          <a href="venda-continuar.php?idvenda=<?php echo $resultado['idvenda']; ?>" title="Continuar venda"><i class="fa fa-play fa-lg"></i></a>
+          <?php } ?>
         </td>
       </tr>
+        <?php } ?>
     </tbody>
   </table>
 </div>

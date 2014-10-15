@@ -8,6 +8,34 @@ require './lib/conexao.php';
 $msgOk = array();
 $msgAviso = array();
 
+if (!isset($_SESSION['idvenda'])) {
+  header('location:vendas.php');
+  exit;
+}
+
+$idvenda = $_SESSION['idvenda'];
+
+$sql = "Select
+	v.idvenda,
+	v.data,
+	c.nome clienteNome,
+	u.nome usuarioNome
+From venda v
+Inner Join cliente c
+	On (c.idcliente = v.idcliente)
+Inner Join usuario u
+	On (u.idusuario = v.idusuario)
+Where
+    (v.idvenda = $idvenda)
+    And (v.status = " . VENDA_ABERTA . ")";
+$consulta = mysqli_query($con, $sql);
+$venda = mysqli_fetch_assoc($consulta);
+
+if (!$venda) {
+  header('location:vendas.php');
+  exit;
+}
+
 /*
 Valores para acao
 1 = Incluir produto na venda
@@ -19,6 +47,40 @@ if (isset($_GET['acao'])) {
 }
 elseif (isset($_POST['acao'])) {
   $acao = (int) $_POST['acao'];
+}
+
+if ($acao == 1) {
+    $idproduto = (int) $_POST['idproduto'];
+    
+    $sql = "Select * From produto Where (idproduto = $idproduto)";
+    $consulta = mysqli_query($con, $sql);
+    $produto = mysqli_fetch_assoc($consulta);
+    
+    $precoProduto = $produto['preco'];
+    $precoPago = $_POST['preco'];
+    $qtd = $_POST['qtd'];
+    
+    $sql = "INSERT INTO vendaitem
+(idproduto, idvenda, preco, precopago, qtd)
+VALUES
+($idproduto, $idvenda, $precoProduto, $precoPago, $qtd)";
+    $inserir = mysqli_query($con, $sql);
+    
+    if ($inserir) {
+        $msgOk[] = "Adicionado $qtd x " . $produto['produto'];
+    }
+    else {
+        $msgAviso[] = "Erro para inserir o produto na venda: " . mysqli_error($con);
+    }
+}
+
+if ($acao == 2) {
+    $idproduto = (int) $_GET['idproduto'];
+    
+    $sql = "Delete From vendaitem Where (idproduto = $idproduto)";
+    $consulta = mysqli_query($con, $sql);
+    
+    $msgOk[] = "Produto removido da venda";
 }
 
 ?>
@@ -38,7 +100,7 @@ elseif (isset($_POST['acao'])) {
 <div class="container">
 
 <div class="page-header">
-  <h1><i class="fa fa-shopping-cart"></i> Andamento da venda #<?php echo $_SESSION['idvenda']; ?></h1>
+  <h1><i class="fa fa-shopping-cart"></i> Andamento da venda #<?php echo $idvenda; ?></h1>
 </div>
 
 <?php if ($msgOk) { msgHtml($msgOk, 'success'); } ?>
@@ -48,7 +110,7 @@ elseif (isset($_POST['acao'])) {
   
   <input type="hidden" name="acao" value="1">
   
-  <div class="panel panel-default">
+  <div class="panel panel-info">
     <div class="panel-heading">
       <h3 class="panel-title">Adicionar produto</h3>
     </div>
@@ -103,7 +165,7 @@ elseif (isset($_POST['acao'])) {
   </div>
 </form>
   
-<div class="panel panel-default">
+<div class="panel panel-primary">
   <div class="panel-heading">
     <h3 class="panel-title">Produtos da venda</h3>
   </div>
@@ -119,19 +181,38 @@ elseif (isset($_POST['acao'])) {
       </tr>
     </thead>
     <tbody>
+        <?php
+        $sql = "Select
+	v.idproduto,
+	p.produto,
+	v.precopago,
+	v.qtd
+From vendaitem v
+Inner Join produto p
+	On (p.idproduto = v.idproduto)
+Where (v.idvenda = $idvenda)";
+        $consulta = mysqli_query($con, $sql);
+        
+        $vendaTotal = 0;
+        
+        while($produto = mysqli_fetch_assoc($consulta)) {
+            $total = $produto['qtd'] * $produto['precopago'];
+            $vendaTotal += $total;
+        ?>
       <tr>
-        <td>3</td>
-        <td>Notebook</td>
-        <td>R$ 1.000,00</td>
-        <td>R$ 3.000,00</td>
-        <td><a href="venda-produto.php?acao=2&idproduto={{idproduto}}" title="Remover produto da venda"><i class="fa fa-times fa-lg"></i></a></td>
+        <td><?php echo $produto['qtd']; ?></td>
+        <td><?php echo $produto['produto']; ?></td>
+        <td>R$ <?php echo number_format($produto['precopago'], 2, ',', '.'); ?></td>
+        <td>R$ <?php echo number_format($total, 2, ',', '.'); ?></td>
+        <td><a href="venda-produto.php?acao=2&idproduto=<?php echo $produto['idproduto']; ?>" title="Remover produto da venda"><i class="fa fa-times fa-lg"></i></a></td>
       </tr>
+        <?php } ?>
     </tbody>
     <tfoot>
       <tr>
         <th></th>
         <th colspan="2">Total da venda</th>
-        <th>R$ 10.000,00</th>
+        <th>R$ <?php echo number_format($vendaTotal, 2, ',', '.'); ?></th>
         <th></th>
       </tr>
     </tfoot>
@@ -149,24 +230,24 @@ elseif (isset($_POST['acao'])) {
     <div class="form-group">
       <label for="fcliente" class="col-sm-2 control-label">Código:</label>
       <div class="col-sm-2">
-        <p class="form-control-static">{{Código da venda}}</p>
+        <p class="form-control-static"><?php echo $idvenda; ?></p>
       </div>
       
       <label for="fcliente" class="col-sm-2 control-label">Data:</label>
       <div class="col-sm-2">
-        <p class="form-control-static">{{Data da venda}}</p>
+          <p class="form-control-static"><?php echo date('d/m/Y', strtotime($venda['data'])); ?></p>
       </div>
       
       <label for="fcliente" class="col-sm-2 control-label">Total:</label>
       <div class="col-sm-2">
-        <p class="form-control-static">{{Total da venda}}</p>
+        <p class="form-control-static">R$ <?php echo number_format($vendaTotal, 2, ',', '.'); ?></p>
       </div>
     </div>
     
     <div class="form-group">
       <label for="fcliente" class="col-sm-2 control-label">Cliente:</label>
       <div class="col-sm-4">
-        <p class="form-control-static">{{Nome do cliente}}</p>
+        <p class="form-control-static"><?php echo $venda['clienteNome']; ?></p>
       </div>
       
       <label for="fcliente" class="col-sm-2 control-label">CPF:</label>
@@ -178,7 +259,7 @@ elseif (isset($_POST['acao'])) {
     <div class="form-group">
       <label for="fcliente" class="col-sm-2 control-label">Vendedor:</label>
       <div class="col-sm-4">
-        <p class="form-control-static">{{Nome do vendedor}}</p>
+        <p class="form-control-static"><?php echo $venda['usuarioNome']; ?></p>
       </div>
     </div>
     
