@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulário com Javascript</title>
+  <meta charset="utf-8">
+  
+  <script type="text/javascript" src="form2.js"></script>
+  <script type="text/javascript" src="cpf-cnpj.js"></script>
+  <link rel="stylesheet" type="text/css" href="form2.css">
+</head>
+<body>
+  <h1>Cadastro de clientes</h1>
+  
+  <form id="fform">
+    <p>
+      Selecione o tipo de cadastro:
+      <br>
+      
+      <label for="ftipoF">
+        <input type="radio" name="tipo" id="ftipoF" value="F"> Pessoa física
+      </label>
+      <br>
+      
+      <label for="ftipoJ">
+        <input type="radio" name="tipo" id="ftipoJ" value="J"> Pessoa jurídica
+      </label>
+    </p>
+    
+    <div id="pessoaF">
+      <p>
+        Nome:
+        <input type="text" name="nome" id="fnome">
+      </p>
+
+      <p>
+        CPF:
+        <input type="text" name="cpf" id="cpf">
+      </p>
+    </div>
+    
+    <div id="pessoaJ">
+      <p>
+        Razão social:
+        <input type="text" name="rsocial" id="frsocial">
+      </p>
+      
+      <p>
+        Nome fantasia:
+        <input type="text" name="nomefantasia" id="fnomefantasia">
+      </p>
+
+      <p>
+        CNPJ:
+        <input type="text" name="cnpj" id="cnpj">
+      </p>
+    </div>
+    
+    <div id="pessoaFJ">
+      <p>
+        Email:
+        <input type="email" name="email" id="femail">
+      </p>
+
+      <p>
+        Confirme o email:
+        <input type="email" name="email2" id="femail2">
+      </p>
+
+      <p>
+        Senha:
+        <input type="password" name="senha" id="fsenha">
+      </p>
+
+      <p>
+        Confirme a senha:
+        <input type="password" name="senha2" id="fsenha2">
+      </p>
+
+      <p>
+        <input type="submit" name="submit" id="fsubmit" value="Salvar">
+      </p>
+    </div>
+  </form>
+</body>
+</html>
+

@@ -1,6 +1,6 @@
 var nomeUsuario;
 
-var pegarNome = function() {
+var pegarNome = function () {
   nomeUsuario = window.prompt('Qual seu nome?');
 }
 

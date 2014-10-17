@@ -1,0 +1,17 @@
+Formulario 1
+
+Quando carregar a pagina
+  1. Pegar nome e sobrenome do usuario via window.prompt e, adiciona-lo nos campos correspondentes;
+
+Quando clicar em salvar
+  2. Verificar se o campo email é igual ao campo "Repita o Email";
+  3. Verificar se o campo senha é igual ao campo "Repita a Senha";
+  4. Se alguma das verificações falhar, o usuário deve ser avisado da falha e o formulario não deve ser enviado;
+  
+Formulario 2
+
+1. O usuário deve selecionar entre cadastrar uma pessoa F ou J;
+  Se o usuario escolher Pessoa F, então mostrar formulario de Pessoa F
+  Se o usuario escolher Pessoa J, então mostrar formulario de Pessoa J
+
+2. Validar todo o resto das informações
