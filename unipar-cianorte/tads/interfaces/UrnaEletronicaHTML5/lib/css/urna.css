@@ -22,6 +22,7 @@ body>h1 {
     border-left-color: #565656;
     float: left;
     margin: 10px 0 10px 10px;
+    position: relative;
     width: 440px;
 }
 
@@ -34,7 +35,8 @@ body>h1 {
 #telaVoto h1 {
     margin: 15px 0 30px 0;
     font-size: 2em;
-    text-align: center;
+    padding-left: 120px;
+    text-align: left;
 }
 
 #telaNumero {
@@ -54,6 +56,30 @@ body>h1 {
 #telaNome, #telaPartido {
     font-size: 20px;
     margin: 15px 20px;
+}
+
+#telaFoto {
+    border: 2px solid #000;
+    height: 132px;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    width: 132px;
+}
+
+#telaFoto img {
+    height: 128px;
+    width: 128px;
+}
+
+#tela aside {
+    font-size: .9em;
+    padding: 5px;
+}
+
+#tela aside strong {
+    font-weight: normal;
+    text-transform: uppercase;
 }
 
 /* Teclado */
