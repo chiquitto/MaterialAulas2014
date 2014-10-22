@@ -21,6 +21,27 @@ elseif (isset($_POST['acao'])) {
   $acao = (int) $_POST['acao'];
 }
 
+if ($acao == 1){
+  $idproduto = $_POST['idproduto'];
+  $precoPago = $_POST['preco'];
+  $qtd = $_POST['qtd'];
+  $idvenda = $_SESSION['idvenda'];
+  
+  $consulta = "Select preco from produto where idproduto = $idproduto";
+  $executa = mysqli_query($con, $consulta);
+  $resultado = mysqli_fetch_assoc($executa);
+  
+  $preco = $resultado['preco'];
+  
+  $sql = "Insert into vendaitem values($idproduto,$idvenda,$preco, $precoPago, $qtd)";
+  
+  $executa = mysqli_query($con, $sql);
+  
+  $msgOK[] = "Produto inserido com sucesso!";
+}
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -119,13 +140,20 @@ elseif (isset($_POST['acao'])) {
       </tr>
     </thead>
     <tbody>
+      <?php
+      $consulta = "select vendaitem.qtd, produto.produto, vendaitem.preco, vendaitem.precopago, produto.idproduto from vendaitem inner join produto on vendaitem.idproduto = produto.idproduto where vendaitem.idvenda = {$_SESSION['idvenda']}";
+
+$executa = mysqli_query($con, $consulta);
+while($resultado = mysqli_fetch_assoc($executa)){
+      ?>
       <tr>
-        <td>3</td>
-        <td>Notebook</td>
-        <td>R$ 1.000,00</td>
-        <td>R$ 3.000,00</td>
-        <td><a href="venda-produto.php?acao=2&idproduto={{idproduto}}" title="Remover produto da venda"><i class="fa fa-times fa-lg"></i></a></td>
+        <td><?php echo $resultado['qtd'];?></td>
+        <td><?php echo $resultado['produto'];?></td>
+        <td><?php echo $resultado['precopago'];?></td>
+        <td><?php echo $resultado['precopago']* $resultado['qtd'];?></td>
+        <td><a href="venda-produto.php?acao=2&idproduto=<?php $resultado['idproduto']?>" title="Remover produto da venda"><i class="fa fa-times fa-lg"></i></a></td>
       </tr>
+      <?php } ?>
     </tbody>
     <tfoot>
       <tr>

@@ -1,0 +1,40 @@
+Os dois SGBDs mais utilizados atualmente são Oracle e MySql.
+
+Oracle é um software comercial, ou seja, é preciso comprar uma licensa para utilizado (Exceto versões com limitações);
+MySql é um software com licensa GPL (livre).
+
+==
+
+Parte 1:
+
+Para proxima aula: Pesquisar uma característica/funcionalidade existente no MySql e inexistente no Oracle, e escrever um texto - no formato de proposta para parte 2 - com 5 linhas;
+
+Este texto será avaliado pelo professor, e a proposta poderá ser alterada.
+
+Entregar o texto impresso, em uma folha com os nomes/RAs dos integrantes da equipe.
+
+Data de entrega: 23/10/2014
+Valor: 0,5 pontos
+Equipes com até 4 pessoas;
+
+==
+
+Parte 2:
+
+Pré-requisito: Parte 1 aprovada pelo professor
+
+Desenvolver um texto entre 15 e 20 linhas (título não conta como linha do texto) discutindo o que foi apresentado no texto da parte 1.
+
+Data da entrega: até 05/11/2014
+Valor: ?
+Entregar no email: chiquitto+2serie-bd@unipar.br
+Formato: entregar em formato PDF
+Equipes com até 4 pessoas;
+
+==
+
+Fontes:
+http://www.fabriciolima.net/blog/2013/12/06/lista-com-um-ranking-de-popularidade-de-sgbds/
+http://pt.wikipedia.org/wiki/Oracle_(banco_de_dados)
+http://pt.wikipedia.org/wiki/MySQL
+http://pt.wikipedia.org/wiki/GNU_General_Public_License
