@@ -1,6 +1,11 @@
 var vazio = '&nbsp;';
 var foto = './lib/img/candidatos/{numero}.png';
 
+// V=Vereador P=Prefeito
+var votacaoCargo;
+
+var votacaoNumero;
+
 /*
 http://www.icons101.com/icon/id_60221/setid_928/Pokemon_by_HEKTakun/202_Wobbuffet
 PMB = Partido dos Monstros de Bolso
@@ -36,5 +41,96 @@ candidatos['vereador'][12] = ['77250', 'Ho-oh', 'PMB'];
 window.onload = iniciar;
 
 function iniciar() {
-    //window.alert('Iniciar');
+    document.getElementById('btBranco').onclick = btBrancoClique;
+  
+  document.getElementById('btCorrige').onclick = btCorrigeClique;
+  
+  document.getElementById('btConfirma').onclick = btConfirmaClique;
+  
+  /*
+  for(i = 0; i <= 9; i++) {
+    document.getElementById('btNumero' + i).onclick = btNumericoClique;
+  }
+  */
+  
+  var botoes = document.querySelectorAll('#btNumero button');
+  var i;
+  for (i = 0; i < botoes.length; i++) {
+    botoes[i].onclick = btNumericoClique;
+  }
 }
+
+function btNumericoClique() {
+  window.alert(this.innerHTML);
+}
+
+function btBrancoClique() {
+  window.alert('Você esta votando em branco');
+}
+
+function btCorrigeClique() {
+  window.alert('Você esta corrigindo o voto');
+}
+
+function btConfirmaClique() {
+  window.alert('Confirma voto');
+}
+
+function telaPrepararVereador() {
+
+}
+
+function telaPrepararPrefeito() {
+
+}
+
+function telaMostrar() {
+
+}
+
+function telaOcultar() {
+
+}
+
+function telaTrocarNome() {
+
+}
+
+function telaTrocarPartido() {
+
+}
+
+function telaTrocarFoto() {
+
+}
+
+function telaMostrarFoto() {
+
+}
+
+function telaOcultarFoto() {
+
+}
+
+function telaTrocarCargo() {
+
+}
+
+function telaAdicionaNumero() {
+
+}
+
+function telaDesenharNumeros() {
+
+}
+
+function votacaoFim() {
+
+}
+
+function votacaoIniciar() {
+
+}
+
+
+
