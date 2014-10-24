@@ -41,7 +41,7 @@ candidatos['vereador'][12] = ['77250', 'Ho-oh', 'PMB'];
 window.onload = iniciar;
 
 function iniciar() {
-    document.getElementById('btBranco').onclick = btBrancoClique;
+  document.getElementById('btBranco').onclick = btBrancoClique;
   
   document.getElementById('btCorrige').onclick = btCorrigeClique;
   
@@ -58,6 +58,8 @@ function iniciar() {
   for (i = 0; i < botoes.length; i++) {
     botoes[i].onclick = btNumericoClique;
   }
+  
+  votacaoIniciar();
 }
 
 function btNumericoClique() {
@@ -77,7 +79,10 @@ function btConfirmaClique() {
 }
 
 function telaPrepararVereador() {
-
+  telaTrocarCargo();
+  telaPrepararNumeros();
+  
+  telaMostrar();
 }
 
 function telaPrepararPrefeito() {
@@ -85,7 +90,8 @@ function telaPrepararPrefeito() {
 }
 
 function telaMostrar() {
-
+  document.getElementById('telaVoto')
+  .style.display = 'block';
 }
 
 function telaOcultar() {
@@ -94,6 +100,11 @@ function telaOcultar() {
 
 function telaTrocarNome() {
 
+}
+
+function telaOcultarNome() {
+  document.getElementById('telaNome')
+  .style.display = 'none';
 }
 
 function telaTrocarPartido() {
@@ -113,7 +124,16 @@ function telaOcultarFoto() {
 }
 
 function telaTrocarCargo() {
-
+  var cargo;
+  if (votacaoCargo == 'V') {
+    cargo = 'Vereador';
+  }
+  else {
+    cargo = 'Prefeito';
+  }
+  
+  document.querySelector('#telaVoto h1')
+  .innerHTML = cargo;
 }
 
 function telaAdicionaNumero() {
@@ -121,7 +141,34 @@ function telaAdicionaNumero() {
 }
 
 function telaDesenharNumeros() {
+  
+}
 
+function telaPrepararNumeros() {
+  var qtd;
+  if (votacaoCargo == 'V') {
+    qtd = 5;
+  }
+  else {
+    qtd = 2;
+  }
+  
+  var ultimoSlot = qtd - 1;
+  
+  var slots = document
+  .querySelectorAll('#telaNumero span');
+  
+  var i;
+  for ( i = 0; i < slots.length; i++ ) {
+    if ( i <= ultimoSlot ) {
+      slots[i].style.display = 'inline';
+    }
+    else {
+      slots[i].style.display = 'none';
+    }
+    
+    slots[i].innerHTML = vazio;
+  }
 }
 
 function votacaoFim() {
@@ -129,8 +176,19 @@ function votacaoFim() {
 }
 
 function votacaoIniciar() {
-
+  votacaoVereador();
 }
+
+function votacaoVereador() {
+  votacaoCargo = 'V';
+  votacaoNumero = new Array();
+  
+  telaPrepararVereador();
+}
+
+
+
+
 
 
 
