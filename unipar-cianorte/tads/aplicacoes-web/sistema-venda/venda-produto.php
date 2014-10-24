@@ -8,6 +8,27 @@ require './lib/conexao.php';
 $msgOk = array();
 $msgAviso = array();
 
+$idvenda = $_SESSION['idvenda'];
+
+$sql = "Select
+	venda.data,
+	cliente.nome clienteNome,
+	usuario.nome usuarioNome
+From venda
+Inner Join cliente
+  On venda.idcliente = cliente.idcliente
+Inner Join usuario
+  On venda.idusuario = usuario.idusuario
+Where venda.idvenda = $idvenda";
+
+$consulta = mysqli_query($con, $sql);
+$venda = mysqli_fetch_assoc($consulta);
+
+if (!$venda) {
+  header('location:vendas.php');
+  exit;
+}
+
 /*
 Valores para acao
 1 = Incluir produto na venda
@@ -25,7 +46,7 @@ if ($acao == 1){
   $idproduto = $_POST['idproduto'];
   $precoPago = $_POST['preco'];
   $qtd = $_POST['qtd'];
-  $idvenda = $_SESSION['idvenda'];
+  
   
   $consulta = "Select preco from produto where idproduto = $idproduto";
   $executa = mysqli_query($con, $consulta);
@@ -144,13 +165,16 @@ if ($acao == 1){
       $consulta = "select vendaitem.qtd, produto.produto, vendaitem.preco, vendaitem.precopago, produto.idproduto from vendaitem inner join produto on vendaitem.idproduto = produto.idproduto where vendaitem.idvenda = {$_SESSION['idvenda']}";
 
 $executa = mysqli_query($con, $consulta);
+$vendaTotal = 0;
 while($resultado = mysqli_fetch_assoc($executa)){
+  $produtoTotal = $resultado['precopago']* $resultado['qtd'];
+  $vendaTotal += $produtoTotal;
       ?>
       <tr>
         <td><?php echo $resultado['qtd'];?></td>
         <td><?php echo $resultado['produto'];?></td>
         <td><?php echo $resultado['precopago'];?></td>
-        <td><?php echo $resultado['precopago']* $resultado['qtd'];?></td>
+        <td><?php echo $produtoTotal;?></td>
         <td><a href="venda-produto.php?acao=2&idproduto=<?php $resultado['idproduto']?>" title="Remover produto da venda"><i class="fa fa-times fa-lg"></i></a></td>
       </tr>
       <?php } ?>
@@ -159,7 +183,7 @@ while($resultado = mysqli_fetch_assoc($executa)){
       <tr>
         <th></th>
         <th colspan="2">Total da venda</th>
-        <th>R$ 10.000,00</th>
+        <th>R$ <?php echo $vendaTotal; ?></th>
         <th></th>
       </tr>
     </tfoot>
@@ -177,17 +201,23 @@ while($resultado = mysqli_fetch_assoc($executa)){
     <div class="form-group">
       <label for="fcliente" class="col-sm-2 control-label">Código:</label>
       <div class="col-sm-2">
-        <p class="form-control-static">{{Código da venda}}</p>
+        <p class="form-control-static"><?php echo $idvenda; ?></p>
       </div>
+      
+      <?php
+      $dtVenda = strtotime($venda['data']);
+      ?>
       
       <label for="fcliente" class="col-sm-2 control-label">Data:</label>
       <div class="col-sm-2">
-        <p class="form-control-static">{{Data da venda}}</p>
+        <p class="form-control-static">
+          <?php echo date('d/m/Y', $dtVenda); ?>
+        </p>
       </div>
       
       <label for="fcliente" class="col-sm-2 control-label">Total:</label>
       <div class="col-sm-2">
-        <p class="form-control-static">{{Total da venda}}</p>
+        <p class="form-control-static"><?php echo $vendaTotal; ?></p>
       </div>
     </div>
     
