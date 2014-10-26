@@ -81,8 +81,8 @@ function btConfirmaClique() {
 function telaPrepararVereador() {
   telaTrocarCargo();
   telaPrepararNumeros();
-  
-  telaMostrar();
+  telaOcultarNome();
+  telaOcultarPartido();
 }
 
 function telaPrepararPrefeito() {
@@ -109,6 +109,11 @@ function telaOcultarNome() {
 
 function telaTrocarPartido() {
 
+}
+
+function telaOcultarPartido() {
+  document.getElementById('telaPartido')
+  .style.display = 'none';
 }
 
 function telaTrocarFoto() {
@@ -184,6 +189,7 @@ function votacaoVereador() {
   votacaoNumero = new Array();
   
   telaPrepararVereador();
+  telaMostrar();
 }
 
 
