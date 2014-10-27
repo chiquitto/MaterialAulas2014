@@ -1,0 +1,3 @@
+Usando como base os exemplos criados em sala de aula[1], criar um CRUD para marcas e veiculos respeitando a estrutura de BD em "der.pdf"
+
+[1] https://github.com/chiquitto/MaterialAulas2014/tree/master/unipar-cianorte/tads/servicos-internet/zend-framework/sistema
