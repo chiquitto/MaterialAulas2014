@@ -63,7 +63,12 @@ function iniciar() {
 }
 
 function btNumericoClique() {
-  window.alert(this.innerHTML);
+  votacaoAdicionaNumero(this.innerHTML);
+  telaAdicionaNumero();
+  
+  if ( votacaoVerificaSlots() ) {
+    var candidato = votacaoPesquisaCandidato();
+  }
 }
 
 function btBrancoClique() {
@@ -83,6 +88,7 @@ function telaPrepararVereador() {
   telaPrepararNumeros();
   telaOcultarNome();
   telaOcultarPartido();
+  telaOcultarFoto();
 }
 
 function telaPrepararPrefeito() {
@@ -125,7 +131,8 @@ function telaMostrarFoto() {
 }
 
 function telaOcultarFoto() {
-
+  document.getElementById('telaFoto')
+  .style.display = 'none';
 }
 
 function telaTrocarCargo() {
@@ -142,7 +149,11 @@ function telaTrocarCargo() {
 }
 
 function telaAdicionaNumero() {
-
+  var i = votacaoNumero.length - 1;
+  var numero = votacaoNumero[i];
+  
+  var slot = document.getElementById('slot' + i);
+  slot.innerHTML = numero;
 }
 
 function telaDesenharNumeros() {
@@ -192,7 +203,46 @@ function votacaoVereador() {
   telaMostrar();
 }
 
+function votacaoAdicionaNumero(numero) {
+  var i = votacaoNumero.length;
+  votacaoNumero[i] = numero;
+}
 
+function votacaoVerificaSlots() {
+  var qtd;
+  
+  if (votacaoCargo == 'V') {
+    qtd = 5;
+  }
+  else {
+    qtd = 2;
+  }
+  
+  return (votacaoNumero.length == qtd);
+}
+
+function votacaoPesquisaCandidato() {
+  var cargo;
+  
+  if ( votacaoCargo == 'V' ) {
+    cargo = 'vereador';
+  }
+  else {
+    cargo = 'prefeito';
+  }
+  
+  var n = votacaoNumero.join('');
+  var pesquisa = candidatos[cargo];
+  
+  var i;
+  for( i = 0; i < pesquisa.length; i++ ) {
+    if ( pesquisa[i][0] == n) {
+      return pesquisa[i];
+    }
+  }
+  
+  return null;
+}
 
 
 
