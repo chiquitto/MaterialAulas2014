@@ -68,6 +68,16 @@ function btNumericoClique() {
   
   if ( votacaoVerificaSlots() ) {
     var candidato = votacaoPesquisaCandidato();
+	
+	if ( candidato == null ) {
+	  window.alert('O candidato não existe');
+	  btCorrigeClique();
+	  return false;
+	}
+	
+	telaTrocarNome( candidato[1] );
+	telaTrocarPartido( candidato[2] );
+	telaTrocarFoto( candidato[0] );
   }
 }
 
@@ -76,11 +86,28 @@ function btBrancoClique() {
 }
 
 function btCorrigeClique() {
-  window.alert('Você esta corrigindo o voto');
+  if ( votacaoCargo == 'V' ) {
+    votacaoVereador();
+  }
+  else {
+    votacaoPrefeito();
+  }
 }
 
 function btConfirmaClique() {
-  window.alert('Confirma voto');
+  if ( votacaoVerificaSlots() ) {
+    switch (votacaoCargo) {
+	  case 'V':
+	    //votacaoPrefeito();
+		votacaoFim();
+		break;
+	  
+	  case 'P':
+	    votacaoFim();
+		
+	    break;
+	}
+  }
 }
 
 function telaPrepararVereador() {
@@ -104,8 +131,12 @@ function telaOcultar() {
 
 }
 
-function telaTrocarNome() {
-
+function telaTrocarNome(nome) {
+  var e = document.querySelector('#telaNome strong');
+  e.innerHTML = nome;
+  
+  document.getElementById('telaNome')
+  .style.display = 'block';
 }
 
 function telaOcultarNome() {
@@ -113,8 +144,12 @@ function telaOcultarNome() {
   .style.display = 'none';
 }
 
-function telaTrocarPartido() {
-
+function telaTrocarPartido(partido) {
+  document.querySelector('#telaPartido strong')
+  .innerHTML = partido;
+  
+  document.getElementById('telaPartido')
+  .style.display = 'block';
 }
 
 function telaOcultarPartido() {
@@ -122,12 +157,17 @@ function telaOcultarPartido() {
   .style.display = 'none';
 }
 
-function telaTrocarFoto() {
-
+function telaTrocarFoto(numero) {
+  var img = document.querySelector('#telaFoto img');
+  var imgSrc = foto.replace('{numero}', numero);
+  
+  img.src = imgSrc;
+  telaMostrarFoto();
 }
 
 function telaMostrarFoto() {
-
+  document.getElementById('telaFoto')
+  .style.display = 'block';
 }
 
 function telaOcultarFoto() {
@@ -188,7 +228,8 @@ function telaPrepararNumeros() {
 }
 
 function votacaoFim() {
-
+  window.alert('FIM');
+  votacaoIniciar();
 }
 
 function votacaoIniciar() {
