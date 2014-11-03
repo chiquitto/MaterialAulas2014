@@ -1,4 +1,4 @@
-Criar um jogo usando as tecnologias HTML, CSS e Javascript.
+Criar um jogo (baseado em algum jogo de Super Nintendo) usando as tecnologias HTML, CSS e Javascript.
 
 O jogo deverá conter:
   . Um arquivo HTML 5
@@ -19,5 +19,5 @@ Email: chiquitto+1serie-gamejs@unipar.br
 Entregar um pacote .zip contendo:
 
 . arquivos do game;
-. arquivo com RAs e Nomes completo dos integrantes da equipe;
+. arquivo com RAs e Nomes completos dos integrantes da equipe;
 . arquivo com uma explicação de como jogar
