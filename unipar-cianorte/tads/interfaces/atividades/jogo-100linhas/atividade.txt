@@ -1,0 +1,23 @@
+Criar um jogo usando as tecnologias HTML, CSS e Javascript.
+
+O jogo deverá conter:
+  . Um arquivo HTML 5
+  . Um arquivo CSS
+  . Um arquivo Javascript (com no máximo 100 linhas e 1 instrução por linha)
+  . Imagens
+  
+==
+
+Valor: 1,5 pontos
+Equipes de até 4 pessoas
+Entregar até: 11/11/2014
+Para cada dia de atraso -0,5 pontos
+Email: chiquitto+1serie-gamejs@unipar.br
+
+==
+
+Entregar um pacote .zip contendo:
+
+. arquivos do game;
+. arquivo com RAs e Nomes completo dos integrantes da equipe;
+. arquivo com uma explicação de como jogar
