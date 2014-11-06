@@ -98,8 +98,7 @@ function btConfirmaClique() {
   if ( votacaoVerificaSlots() ) {
     switch (votacaoCargo) {
 	  case 'V':
-	    //votacaoPrefeito();
-		votacaoFim();
+	    votacaoPrefeito();
 		break;
 	  
 	  case 'P':
@@ -119,7 +118,11 @@ function telaPrepararVereador() {
 }
 
 function telaPrepararPrefeito() {
-
+  telaTrocarCargo();
+  telaPrepararNumeros();
+  telaOcultarNome();
+  telaOcultarPartido();
+  telaOcultarFoto();
 }
 
 function telaMostrar() {
@@ -128,7 +131,8 @@ function telaMostrar() {
 }
 
 function telaOcultar() {
-
+  document.getElementById('telaVoto')
+  .style.display = 'none';
 }
 
 function telaTrocarNome(nome) {
@@ -228,11 +232,18 @@ function telaPrepararNumeros() {
 }
 
 function votacaoFim() {
-  window.alert('FIM');
-  votacaoIniciar();
+  telaOcultar();
+  
+  document.getElementById('telaFim')
+  .style.display = 'block';
+  
+  setTimeout(votacaoIniciar, 2000);
 }
 
 function votacaoIniciar() {
+  document.getElementById('telaFim')
+  .style.display = 'none';
+  
   votacaoVereador();
 }
 
@@ -241,6 +252,14 @@ function votacaoVereador() {
   votacaoNumero = new Array();
   
   telaPrepararVereador();
+  telaMostrar();
+}
+
+function votacaoPrefeito() {
+  votacaoCargo = 'P';
+  votacaoNumero = new Array();
+  
+  telaPrepararPrefeito();
   telaMostrar();
 }
 

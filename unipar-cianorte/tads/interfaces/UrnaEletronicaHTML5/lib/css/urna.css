@@ -85,6 +85,8 @@ body>h1 {
     text-transform: uppercase;
 }
 
+#telaFim { display: none; }
+
 /* Teclado */
 
 #teclado {
