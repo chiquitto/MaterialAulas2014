@@ -11,6 +11,22 @@ $idcliente = $_GET['idcliente'];
 //pegar id usuario
 $idusuario = $_SESSION['idusuario'];
 
+// Verificar se existe uma venda aberta para $idcliente
+// Se existir não abrir outra venda
+$sql = "Select idvenda
+From venda
+Where
+  (idcliente = $idcliente)
+  And (status = " . VENDA_ABERTA . ")";
+$consulta = mysqli_query($con, $sql);
+$venda = mysqli_fetch_assoc($consulta);
+if ($venda) {
+  // Existe outra venda
+  header('location:venda-nova.php?idvenda=' . $venda['idvenda']);
+  exit;
+}
+
+// Criar uma venda
 //Criar um registro na tabela venda
 $data = date('Y-m-d');
 $status = VENDA_ABERTA;

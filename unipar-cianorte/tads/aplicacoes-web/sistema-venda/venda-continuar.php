@@ -6,11 +6,11 @@ require './lib/funcoes.php';
 require './lib/conexao.php';
 
 // Pegar idvenda
-if (!isset($_SESSION['idvenda'])) {
+if (!isset($_GET['idvenda'])) {
   header('location:vendas.php');
   exit;
 }
-$idvenda = $_SESSION['idvenda'];
+$idvenda = (int) $_GET['idvenda'];
 
 // Validar idvenda
 $sql = "Select idvenda
@@ -26,11 +26,8 @@ if (!$venda) {
   exit;
 }
 
-// Fechar venda
-$sql = "Update venda Set status=" . VENDA_FECHADA
-        . " Where (idvenda = $idvenda)";
-mysqli_query($con, $sql);
-unset($_SESSION['idvenda']);
+// Criar o idvenda na sessao
+$_SESSION['idvenda'] = $venda['idvenda'];
 
 // Redirecionar usuario para vendas.php
-header('location:venda-detalhes.php?idvenda=' . $idvenda);
+header('location:venda-produto.php');
