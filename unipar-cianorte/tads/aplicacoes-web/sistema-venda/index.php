@@ -50,7 +50,7 @@ require './lib/conexao.php';
         </a>
       </div>
 
-      <div class="btn-group">
+      <!--<div class="btn-group">
         <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown">
           <i class="fa fa-bar-chart-o fa-lg"></i>  Relatórios <span class="caret"></span>
         </button>
@@ -59,7 +59,7 @@ require './lib/conexao.php';
           <li><a href="rel-produtos.php">Produtos</a></li>
           <li><a href="rel-vendas.php">Vendas</a></li>
         </ul>
-      </div>
+      </div>-->
     </p>
   </div>
 </div>

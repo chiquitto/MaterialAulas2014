@@ -42,9 +42,8 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Relatórios <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="rel-clientes.php">Clientes</a></li>
-            <li><a href="rel-produtos.php">Produtos</a></li>
-            <li><a href="rel-vendas.php">Vendas</a></li>
+            <li><a href="rel1.php">Compras por cliente</a></li>
+            <li><a href="rel2.php">Compras - Valor de venda x Valor pago</a></li>
           </ul>
         </li>
         <li><a href="logout.php">Sair</a></li>

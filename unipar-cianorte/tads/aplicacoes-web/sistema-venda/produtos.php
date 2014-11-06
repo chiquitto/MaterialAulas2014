@@ -35,7 +35,9 @@ if(isset($_GET['idcategoria'])){
 </div>
 
 <div class="panel panel-default">
-  <div class="panel-heading">Produtos</div>
+  <div class="panel-heading">
+    <h3 class="panel-title">Produtos</h3>
+  </div>
   <div class="panel-body">
     <form class="form-inline" role="form" method="get" action="">
       <div class="form-group">

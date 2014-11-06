@@ -30,7 +30,9 @@ if(isset($_GET['q'])){
 </div>
 
 <div class="panel panel-default">
-  <div class="panel-heading">Vendas</div>
+  <div class="panel-heading">
+    <h3 class="panel-title">Vendas</h3>
+  </div>
   <div class="panel-body">
     <form class="form-inline" role="form" method="get" action="">
       <div class="form-group">
