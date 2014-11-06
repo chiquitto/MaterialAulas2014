@@ -8,14 +8,21 @@
 </head>
 <body>
 <div id="header">
-    <div id="header-logo" style="float: left">
+    <div id="header-logo">
         <strong>ZF Quickstart Application</strong>
     </div>
-    <div id="header-navigation" style="float: right">
-        <!-- <a href="<?php echo $this->url(
-            array('controller'=>'guestbook'),
-            'default',
-            true) ?>">Guestbook</a> -->
+    <div id="header-navigation">
+        <?php echo $this->navigation(); ?>
+    </div>
+    <div id="header-breadcrumbs">
+        Você esta em: <?php
+        echo $this->navigation()
+                ->breadcrumbs()
+                ->setLinkLast(true)
+                ->setMinDepth(0)
+                ->setSeparator(' - ')
+                ->render();
+        ?>
     </div>
 </div>
 

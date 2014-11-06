@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+
+    <nav>
+        
+        <cidade>
+            <label>Cidade</label>
+            <controller>cidade</controller>
+            <action>index</action>
+            
+            <pages>
+                <cadCidade>
+                    <label>Cadastrar cidade</label>
+                    <controller>cidade</controller>
+                    <action>cadastrar</action>
+                </cadCidade>
+            </pages>
+        </cidade>
+        
+        <uf>
+            <label>Estados</label>
+            <controller>uf</controller>
+            <action>index</action>
+            
+            <pages>
+                <cadUf>
+                    <label>Cadastrar UF</label>
+                    <controller>uf</controller>
+                    <action>cadastrar</action>
+                </cadUf>
+            </pages>
+        </uf>
+        
+    </nav>
+    
+</config>
