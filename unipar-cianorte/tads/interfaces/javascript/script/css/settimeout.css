@@ -1,0 +1,23 @@
+* {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+}
+
+#tela {
+  border: 5px solid #000;
+  height: 300px;
+  margin: 30px auto 0 auto;
+  position: relative;
+  width: 300px;
+}
+
+#q {
+  background: red;
+  display: block;
+  height: 15px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 15px;
+}
