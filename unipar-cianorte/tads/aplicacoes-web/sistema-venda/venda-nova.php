@@ -22,7 +22,7 @@ $consulta = mysqli_query($con, $sql);
 $venda = mysqli_fetch_assoc($consulta);
 if ($venda) {
   // Existe outra venda
-  header('location:venda-nova.php?idvenda=' . $venda['idvenda']);
+  header('location:venda-continuar.php?idvenda=' . $venda['idvenda']);
   exit;
 }
 

@@ -13,8 +13,8 @@ $agrupar = isset($_GET['agrupar']) ? 1 : 0;
 $sql = "Select
   v.idvenda,
   c.idcliente,
-  c.nome cliente,
-  vi.precopago, vi.qtd
+  c.nome clienteNome,
+  sum(vi.precopago * vi.qtd) precoTotal
 From venda v
 Inner Join cliente c
   On c.idCliente = v.idCliente
@@ -27,17 +27,44 @@ $where[] = "(v.status = '" . VENDA_FECHADA . "')";
 
 # http://php.net/manual/en/function.strtotime.php
 # http://php.net/manual/en/datetime.formats.relative.php
-// $periodo = 1;
-// $where[] = "(v.data >='" . date('Y-m-d', $periodo) . "')";
+ switch ($periodo) {
+   case 1 : 
+     $periodo = strtotime('today - 7day');
+     break;
+   case 2 :
+     $periodo = strtotime('today - 15day');
+     break;
+   case 3 :
+     $periodo = strtotime('today - 1month');
+     break;
+   case 4 :
+     $periodo = strtotime('today - 3month');
+     break;
+   case 5 :
+     $periodo = strtotime('first day of january');
+     break;
+   case 6 :
+     $periodo = strtotime('today - 1year');
+     break;
+   
+   default : 
+     exit;
+ }
+   
+ $where[] = "(v.data >='" . date('Y-m-d', $periodo) . "')";
 
 
 $sql .= "\nWhere ".join(' and ',$where);
 
 // Group By
+if ($agrupar == 1) {
+  $sql.= "\ngroup by idcliente";
+} else {
+$sql .= "\ngroup by idvenda";
+}
+//echo '<pre>' . $sql . '</pre>';
 
-echo '<pre>' . $sql . '</pre>';
-
-exit;
+//exit;
 
 ?>
 <!DOCTYPE html>
