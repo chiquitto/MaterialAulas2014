@@ -1,0 +1,11 @@
+github.com/chiquitto/MaterialAulas2014
+
+/unipar-cianorte/tads/interfaces/javascript/form/form1.html
+
+Quando carregar a pagina
+  1. Pegar nome e sobrenome do usuario via window.prompt e, adiciona-lo nos campos correspondentes;
+
+Quando clicar em salvar
+  2. Verificar se o campo email é igual ao campo "Repita o Email";
+  3. Verificar se o campo senha é igual ao campo "Repita a Senha";
+  4. Se alguma das verificações falhar, o usuário deve ser avisado da falha e o formulario não deve ser enviado;
